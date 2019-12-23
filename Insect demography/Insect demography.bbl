@@ -1,341 +1,282 @@
 \begin{thebibliography}{10}
-\providecommand{\url}[1]{{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
-  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
-  \urlstyle{rm}\Url}\fi
-
-\bibitem{Ackley2017a}
-Ackley, S., Hargrove, J.: {A dynamic model for estimating adult female
-  mortality from ovarian dissection data for the tsetse fly Glossina pallidipes
-  Austen sampled in Zimbabwe}.
-\newblock PLoS Neglected Tropical Diseases \textbf{11}(8) (2017).
-\newblock \doi{10.1371/journal.pntd.0005813}
-
-\bibitem{Adams2005}
-Adams, B.M., Banks, H.T., Banks, J.E., Stark, J.D.: {Population dynamics models
-  in plant-insect herbivore-pesticide interactions}.
-\newblock Mathematical Biosciences \textbf{196}(1), 39--64 (2005).
-\newblock \doi{10.1016/j.mbs.2004.09.001}
-
-\bibitem{Are2019}
-Are, E.B., Hargrove, J.W.: {Extinction probabilities , times to extinction ,
-  basic reproduction number and growth rates for tsetse ( Glossina spp )
-  populations as a function of temperature}.
-\newblock BioRxiv(Preprint)  (2019)
-
-\bibitem{Artzrouni2003}
-Artzrouni, M., Gouteux, J.P.: {Estimating tsetse population parameters:
-  Application of a mathematical model with density-dependence}.
-\newblock Medical and Veterinary Entomology \textbf{17}(3), 272--279 (2003).
-\newblock \doi{10.1046/j.1365-2915.2003.00437.x}
-
-\bibitem{Barclay2011d}
-Barclay, H., Vreysen, M.: {A dynamic population model for tsetse (Diptera:
-  Glossinidae) area-wide integrated pest management}.
-\newblock Population Ecology \textbf{53}(1), 89--110 (2011).
-\newblock \doi{10.1007/s10144-010-0224-7}
-
-\bibitem{Beier1998}
-Beier, J.C.: {Malaria Parasite development in Mosquitoes}.
-\newblock Annu. Rev. Entomol \textbf{43}, 519--43 (1998)
-
-\bibitem{Burt2015}
-Burt, A.: {Heritable strategies for controlling insect vectors of disease}.
-\newblock Philosophical Transactions of the Royal Society B: Biological
-  Sciences \textbf{369}(1645), 1--8 (2014).
-\newblock \doi{10.1098/rstb.2013.0432}
-
-\bibitem{Clemons2010}
-Clemons, A., Mori, A., Haugen, M., Severson, D.W., Duman-Scheel, M.: {Culturing
-  and egg collection of Aedes aegypti}.
-\newblock Cold Spring Harbor Protocols \textbf{5}(10), 1--5 (2010).
-\newblock \doi{10.1101/pdb.prot5507}
-
-\bibitem{Conrad2002}
-Conrad, K.F., Woiwod, I.P., Perry, J.N.: {Long-term decline in abundance and
-  distribution of the garden tiger moth ( Arctia caja ) in Great Britain}.
-\newblock Biological Conservation \textbf{106}, 329--337 (2002)
-
-\bibitem{Edney1962}
-Edney, R., Barrass, E.: {The body temperature of the Tsetse fly, Glossina
-  Morsitans Westwood (Diptera, Muscidae)}.
-\newblock J. Ins. Physiol. \textbf{8}, 469--481 (1962)
-
-\bibitem{Esterhuizen2006}
-Esterhuizen, J., {Kappmeier Green}, K., Nevill, E.M., {Van Den Bossche}, P.:
-  {Selective use of odour-baited, insecticide-treated targets to control tsetse
-  flies Glossina austeni and G. brevipalpis in South Africa}.
-\newblock Medical and Veterinary Entomology \textbf{20}(4), 464--469 (2006).
-\newblock \doi{10.1111/j.1365-2915.2006.00650.x}
-
-\bibitem{Habel2015}
-Habel, J.C., Segerer, A., Ulrich, W., Torchyk, O., Weisser, W.W., Schmitt, T.:
-  {Butterfly community shifts over two centuries}.
-\newblock Conservation biology \textbf{30}(4), 754--762 (2015).
-\newblock \doi{10.1111/cobi.12656}
-
-\bibitem{Hallmann2017}
-Hallmann, C.A., Sorg, M., Jongejans, E., Siepel, H., Hofland, N., Sumser, H.,
-  Ho, T., Schwan, H., Stenmans, W., Mu, A., Goulson, D., Kroon, H.D.: {More
-  than 75 percent decline over 27 years in total flying insect biomass in
-  protected areas}.
-\newblock PLoS ONE \textbf{12}(10) (2017)
-
-\bibitem{Hargrove1999a}
-Hargrove, J.: {Reproductive abnormalities in tsetse flies in Zimbabwe}.
-\newblock Entomologia Experimentalis et Applicata \textbf{92}(1), 89--99
-  (1999).
-\newblock \doi{10.1023/A:1003793522792}
-
-\bibitem{Hargrove2004a}
-Hargrove, J.: {Tsetse population dynamics}.
-\newblock In: The Trypanosomiases, CABI Publishing, pp. 113--135 (2004)
-
-\bibitem{Hargrove2005a}
-Hargrove, J.: {Extinction probabilities and times to extinction for populations
-  of tsetse flies Glossina spp. (Diptera: Glossinidae) subjected to various
-  control measures}.
-\newblock Bulletin of Entomological Research \textbf{95}(1), 13--21 (2005).
-\newblock \doi{10.1079/BER2004335}
-
-\bibitem{Hargrove2019}
-Hargrove, J., English, S., Torr, S.J., Lord, J., Haines, L.R., {Van Schalkwyk},
-  C., Patterson, J., Vale, G.: {Wing length and host location in tsetse
-  (Glossina spp.): Implications for control using stationary baits}.
-\newblock Parasites and Vectors \textbf{12}(1), 1--13 (2019).
-\newblock \doi{10.1186/s13071-018-3274-x}
-
-\bibitem{Hargrove1991}
-Hargrove, J.W.: {Ovarian ages of tsetse flies (Diptera: Glossinidae) caught
-  from mobile and stationary baits in the presence and absence of humans}.
-\newblock Bulletin of Entomological Research \textbf{81}(1), 43--50 (1991).
-\newblock \doi{10.1017/S0007485300053220}
-
-\bibitem{Hargrove2012c}
-Hargrove, J.W.: {Age-specific changes in sperm levels among female tsetse
-  (Glossina spp.) with a model for the time course of insemination}.
-\newblock Physiological Entomology \textbf{37}(3), 278--290 (2012).
-\newblock \doi{10.1111/j.1365-3032.2012.00845.x}
-
-\bibitem{Hargrove2000}
-Hargrove, J.W., Omolo, S., Msalilwa, J.S., Fox, B.: {Insecticide-treated cattle
-  for tsetse control: The power and the problems}.
-\newblock Medical and Veterinary Entomology \textbf{14}(2), 123--130 (2000).
-\newblock \doi{10.1046/j.1365-2915.2000.00226.x}
-
-\bibitem{Hargrove2011}
-Hargrove, J.W., Ouifki, R., Ameh, J.E.: {A general model for mortality in adult
-  tsetse (Glossina spp.)}.
-\newblock Medical and Veterinary Entomology \textbf{25}(4), 385--394 (2011).
-\newblock \doi{10.1111/j.1365-2915.2011.00953.x}
-
-\bibitem{Hargrove2019a}
-Hargrove, J.W., Vale, G.A.: {Models for the rates of pupal development, fat
-  consumption and mortality in tsetse (Glossina spp)}.
-\newblock Bulletin of Entomological Research pp. 1--15 (2019).
-\newblock \doi{10.1017/S0007485319000233}
-
-\bibitem{Branch1995}
-{Hargrove, J. W., Holloway, M.T.P., Vale, G. A., Gough}, A., Hall, D.: {Catches
-  of tsetse flies (Glossina spp.) (Diptera: Glossinidae) from traps baited with
-  large doses of natural and synthetic host odour.}
-\newblock Bulletin of Entomological Research, \textbf{85}, 215--227 (1995)
-
-\bibitem{HargroveJ.W.HollowayM.T.P.ValeG.A.GoughA.J.E.Hall1995}
-{Hargrove, J. W., Holloway, M.T.P., Vale, G. A., Gough, A.J.E., Hall}, D.:
-  {Catches of tsetse flies (Glossina spp.) (Diptera: Glossinidae) from traps
-  baited with large doses of natural and synthetic host odour.}
-\newblock Bulletin of Entomological Research \textbf{85}, 215--227. (1995)
-
-\bibitem{Harris1965}
-Harris, T.E.: {The Theory of Branching Processes}.
-\newblock Tech. Rep. R-381-PR (1965).
-\newblock \doi{10.1080/00401706.1965.10490235}
-
-\bibitem{Hocking1963}
-Hocking, K.S., Lamerton, J.F., Lewis, E.A.: {Tsetse-Fly Control and
-  Eradication}.
-\newblock Bull. Org. mond. Santd Bull. and Bull. Wid Hith Org. \textbf{28},
-  811--823 (1963)
-
-\bibitem{Ilyinykh2011}
-Ilyinykh, A.: {Analysis of the causes of declines in Western Siberian outbreaks
-  of the nun moth Lymantria monacha}.
-\newblock BioControl \textbf{56}, 123--131 (2011).
-\newblock \doi{10.1007/s10526-010-9316-8}
-
-\bibitem{Society2014}
-{Jeff Ollerton, Hilary Erenler, Mike Edwards}, R.C.: {Extinctions of aculeate
-  pollinators in Britain and the role of large-scale agricultural changes}.
-\newblock Science \textbf{346}(6215), 1360--1363 (2014)
-
-\bibitem{Kajunguri2019}
-Kajunguri, D., Are, E.B., Hargrove, J.W.: {Improved estimates for extinction
-  probabilities and times to extinction for populations of tsetse ( Glossina
-  spp )}.
-\newblock PLoS Negl Trop Dis \textbf{13}(4), 1--15 (2019)
-
-\bibitem{Kioy2004}
-Kioy, D., Jannin, J., Mattock, N.: {Human African trypanosomiasis}.
-\newblock Nature Reviews Microbiology \textbf{2}(3), 186--187 (2004).
-\newblock \doi{10.1038/nrmicro848}
-
-\bibitem{Kleynhans2011e}
-Kleynhans, E., Terblanche, J.: {Complex interactions between temperature and
-  relative humidity on water balance of adult tsetse (Glossinidae, Diptera):
-  implications for climate change}.
-\newblock Frontiers in Physiology \textbf{2 OCT}, 1--10 (2011).
-\newblock \doi{10.3389/fphys.2011.00074}
-
-\bibitem{Lin2015}
-Lin, S., DeVisser, M.H., Messina, J.P.: {An agent-based model to simulate
-  tsetse fly distribution and control techniques: A case study in Nguruman,
-  Kenya}.
-\newblock Ecological Modelling \textbf{314}, 80--89 (2015).
-\newblock \doi{10.1016/j.ecolmodel.2015.07.015}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.ecolmodel.2015.07.015}
-
-\bibitem{Lister2018}
-Lister, B.C., Garcia, A.: {Climate-driven declines in arthropod abundance
-  restructure a rainforest food web}.
-\newblock PNAS \textbf{2015} (2018).
-\newblock \doi{10.1073/pnas.1722477115}
-
-\bibitem{Lord2018}
-Lord, J.S., Hargrove, J.W., Tor, S.J., Vale, G.A.: {Climate change and African
-  trypanosomiasis vector populations in Zimbabwe ' s Zambezi Valley : A
-  mathematical modelling study}.
-\newblock PLoS Med pp. 1--18 (2018).
-\newblock \doi{https://doi.org/ 10.1371/journal.pmed.1002675}
-
-\bibitem{Mbewe2018a}
-Mbewe, N.J., Saini, R.K., Torto, B., Irungu, J., Yusuf, A.A., Pirk, C.W.:
-  {Sticky small target: an effective sampling tool for tsetse fly Glossina
-  fuscipes fuscipes Newstead, 1910}.
-\newblock Parasites {\&} vectors \textbf{11}(1), 268 (2018).
-\newblock \doi{10.1186/s13071-018-2840-6}
-
-\bibitem{Nilsson2017}
-Nilsson, S.G., Franz{\'{e}}n, M., J{\"{o}}nsson, E.: {Long-term land-use
-  changes and extinction of specialised butterflies}.
-\newblock Insect Conservation and Diversity (2008) \textbf{1}(September 2008),
-  197--207 (2017).
-\newblock \doi{10.1111/j.1752-4598.2008.00027.x}
-
-\bibitem{Ockinger2007}
-{\"{O}}ckinger, E., Smith, H.G.: {Semi-natural grasslands as population sources
-  for pollinating insects in agricultural landscapes}.
-\newblock Journal of Applied Ecology \textbf{44}, 50--59 (2007).
-\newblock \doi{10.1111/j.1365-2664.2006.01250.x}
 
 \bibitem{Ollerton2011}
-Ollerton, J., Winfree, R., Tarrant, S.: {How many fl owering plants are
-  pollinated by animals ?}
-\newblock Oikos \textbf{120}(321), 321--326 (2011).
-\newblock \doi{10.1111/j.1600-0706.2010.18644.x}
+J.~Ollerton, R.~Winfree, and S.~Tarrant, ``{How many fl owering plants are
+  pollinated by animals ?},'' {\em Oikos}, vol.~120, no.~321, pp.~321--326,
+  2011.
 
-\bibitem{Pagabeleguem2016f}
-Pagabeleguem, S., Ravel, S., Dicko, A.H., Vreysen, M.J., Parker, A., Takac, P.,
-  Huber, K., Sidib{\'{e}}, I., Gimonneau, G., Bouyer, J.: {Influence of
-  temperature and relative humidity on survival and fecundity of three tsetse
-  strains}.
-\newblock Parasites and Vectors \textbf{9}(1), 1--13 (2016).
-\newblock \doi{10.1186/s13071-016-1805-x}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1186/s13071-016-1805-x}
-
-\bibitem{Peck2012a}
-Peck, S.L., Bouyer, J.: {Mathematical Modeling, Spatial Complexity, and
-  Critical Decisions in Tsetse Control}.
-\newblock Journal of Economic Entomology \textbf{105}(5), 1477--1486 (2012).
-\newblock \doi{10.1603/ec12067}
-
-\bibitem{Pelton2019}
-Pelton, E.M., Schultz, C.B., Jepsen, S.J., Black, S.H., Crone, E.E.: {Western
-  Monarch Population Plummets : Status , Probable Causes , and Recommended
-  Conservation Actions}.
-\newblock Frontiers in Ecology and Evolution \textbf{7}(July) (2019).
-\newblock \doi{10.3389/fevo.2019.00258}
-
-\bibitem{PhelpsR.J.&Burrows}
-{Phelps, R.J. {\&} Burrows}, P.M.: {Puparial duration in Glossina morsitans
-  orientalis under conditions of constant temperature}.
-\newblock Entomologia Experimentalis et Applicata \textbf{12}, 33--43 (1969)
-
-\bibitem{Potts2010}
-Potts, S.G., Biesmeijer, J.C., Kremen, C., Neumann, P., Schweiger, O., Kunin,
-  W.E.: {Global pollinator declines : trends , impacts and drivers}.
-\newblock Trends in Ecology {\&} Evolution \textbf{25}(6), 345--353 (2010).
-\newblock \doi{10.1016/j.tree.2010.01.007}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.tree.2010.01.007}
-
-\bibitem{Ramos-Elorduy1997}
-Ramos-Elorduy, J., Manuel, J., Moreno, P., Prado, E.E., Perez, M.A., Otero,
-  J.L., Guevara, O.L.D.: {Nutritional Value of Edible Insects from the State of
-  Oaxaca , Mexico}.
-\newblock Journal of Food Composition and Analysis \textbf{157}(10), 142--157
-  (1997)
-
-\bibitem{Rogers1984}
-Rogers, D.J., Randolph, S.E.: {Rogers Randolph Kuzoe 1984 Local variation in
-  population dynamics of G palpalis I Natural population regulation}.
-\newblock Bull. ent. res. (74), 403--423 (1984)
-
-\bibitem{RogersD.J.Randolph1984}
-{Rogers, D. J., Randolph}, S.E.: {A review of density-dependent processes in
-  tsetse populations.}
-\newblock Insect Science and its Application (5), 397--402 (1984)
-
-\bibitem{RStudioTeam2016}
-RStudioTeam: {RStudio: Integrated Development for R}.
-\newblock RStudio, Inc., Boston, MA  (2016).
-\newblock \doi{http://www.rstudio.com/}
-
-\bibitem{Shaw2015}
-Shaw, A.P., Tirados, I., Mangwiro, C.T., Esterhuizen, J., Lehane, M.J., Torr,
-  S.J., Kovacic, V.: {Costs Of Using “Tiny Targets” to Control Glossina
-  fuscipes fuscipes, a Vector of Gambiense Sleeping Sickness in Arua District
-  of Uganda}.
-\newblock PLoS Neglected Tropical Diseases \textbf{9}(3), 1--19 (2015).
-\newblock \doi{10.1371/journal.pntd.0003624}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1371/journal.pntd.0003624}
-
-\bibitem{Shaw2013}
-Shaw, A.P., Torr, S.J., Waiswa, C., Cecchi, G., Wint, G.R., Mattioli, R.C.,
-  Robinson, T.P.: {Estimating the costs of tsetse control options: An example
-  for Uganda}.
-\newblock Preventive Veterinary Medicine \textbf{110}(3-4), 290--303 (2013).
-\newblock \doi{10.1016/j.prevetmed.2012.12.014}.
-\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.prevetmed.2012.12.014}
-
-\bibitem{VanSwaay2013}
-van Swaay, C., van Strien, A., Harpke, A., Fontaine, B., Stefanescu, C., Roy,
-  D., K{\"{u}}hn, E., {\~{O}}nuao, E., Regan, E., {\v{S}}vitra, G., Prokofev,
-  I., Heli{\"{o}}l{\"{a}}, J., Settele, J., Pettersson, L., Botham, M., Musche,
-  M., Titeux, N., Cornish, N., Leopold, P., Juillard, R., Verovnik, R.,
-  {\"{O}}berg, S., Popov, S., Collins, S., Goloschchapova, S., Roth, T.,
-  Brereton, T., Warren, M.: {The European Grassland Butterfly Indicator:
-  1990–2011}.
-\newblock Tech. Rep.~11 (2013)
+\bibitem{Ockinger2007}
+E.~{\"{O}}ckinger and H.~G. Smith, ``{Semi-natural grasslands as population
+  sources for pollinating insects in agricultural landscapes},'' {\em Journal
+  of Applied Ecology}, vol.~44, pp.~50--59, 2007.
 
 \bibitem{Tobias2016}
-Tobias, N.J.: {Insect Vectors of Disease : Untapped Reservoirs for New
-  Antimicrobials ?}
-\newblock Frontires in Microbiology \textbf{7}(December), 1--5 (2016).
-\newblock \doi{10.3389/fmicb.2016.02085}
+N.~J. Tobias, ``{Insect Vectors of Disease : Untapped Reservoirs for New
+  Antimicrobials ?},'' {\em Frontires in Microbiology}, vol.~7, no.~December,
+  pp.~1--5, 2016.
 
 \bibitem{Wamwiri2016}
-Wamwiri, F.N., Changasi, R.E.: {Tsetse Flies ( Glossina ) as Vectors of Human
-  African Trypanosomiasis : A Review}.
-\newblock BioMed Research International \textbf{2016}, 1--8 (2016).
-\newblock \doi{10.1155/2016/6201350}
+F.~N. Wamwiri and R.~E. Changasi, ``{Tsetse Flies ( Glossina ) as Vectors of
+  Human African Trypanosomiasis : A Review},'' {\em BioMed Research
+  International}, vol.~2016, pp.~1--8, 2016.
+
+\bibitem{Beier1998}
+J.~C. Beier, ``{Malaria Parasite development in Mosquitoes},'' {\em Annu. Rev.
+  Entomol}, vol.~43, pp.~519--43, 1998.
+
+\bibitem{Ramos-Elorduy1997}
+J.~Ramos-Elorduy, J.~Manuel, P.~Moreno, E.~E. Prado, M.~A. Perez, J.~L. Otero,
+  and O.~L.~D. Guevara, ``{Nutritional Value of Edible Insects from the State
+  of Oaxaca , Mexico},'' {\em Journal of Food Composition and Analysis},
+  vol.~157, no.~10, pp.~142--157, 1997.
+
+\bibitem{Burt2015}
+A.~Burt, ``{Heritable strategies for controlling insect vectors of disease},''
+  {\em Philosophical Transactions of the Royal Society B: Biological Sciences},
+  vol.~369, no.~1645, pp.~1--8, 2014.
+
+\bibitem{Shaw2013}
+A.~P. Shaw, S.~J. Torr, C.~Waiswa, G.~Cecchi, G.~R. Wint, R.~C. Mattioli, and
+  T.~P. Robinson, ``{Estimating the costs of tsetse control options: An example
+  for Uganda},'' {\em Preventive Veterinary Medicine}, vol.~110, no.~3-4,
+  pp.~290--303, 2013.
+
+\bibitem{Hocking1963}
+K.~S. Hocking, J.~F. Lamerton, and E.~A. Lewis, ``{Tsetse-Fly Control and
+  Eradication},'' {\em Bull. Org. mond. Santd Bull. and Bull. Wid Hith Org.},
+  vol.~28, pp.~811--823, 1963.
+
+\bibitem{Conrad2002}
+K.~F. Conrad, I.~P. Woiwod, and J.~N. Perry, ``{Long-term decline in abundance
+  and distribution of the garden tiger moth ( Arctia caja ) in Great
+  Britain},'' {\em Biological Conservation}, vol.~106, pp.~329--337, 2002.
+
+\bibitem{Potts2010}
+S.~G. Potts, J.~C. Biesmeijer, C.~Kremen, P.~Neumann, O.~Schweiger, and W.~E.
+  Kunin, ``{Global pollinator declines : trends , impacts and drivers},'' {\em
+  Trends in Ecology {\&} Evolution}, vol.~25, no.~6, pp.~345--353, 2010.
+
+\bibitem{Ilyinykh2011}
+A.~Ilyinykh, ``{Analysis of the causes of declines in Western Siberian
+  outbreaks of the nun moth Lymantria monacha},'' {\em BioControl}, vol.~56,
+  pp.~123--131, 2011.
+
+\bibitem{VanSwaay2013}
+C.~van Swaay, A.~van Strien, A.~Harpke, B.~Fontaine, C.~Stefanescu, D.~Roy,
+  E.~K{\"{u}}hn, E.~{\~{O}}nuao, E.~Regan, G.~{\v{S}}vitra, I.~Prokofev,
+  J.~Heli{\"{o}}l{\"{a}}, J.~Settele, L.~Pettersson, M.~Botham, M.~Musche,
+  N.~Titeux, N.~Cornish, P.~Leopold, R.~Juillard, R.~Verovnik, S.~{\"{O}}berg,
+  S.~Popov, S.~Collins, S.~Goloschchapova, T.~Roth, T.~Brereton, and M.~Warren,
+  ``{The European Grassland Butterfly Indicator: 1990–2011},'' Tech. Rep.~11,
+  2013.
+
+\bibitem{Lister2018}
+B.~C. Lister and A.~Garcia, ``{Climate-driven declines in arthropod abundance
+  restructure a rainforest food web},'' {\em PNAS}, vol.~2015, 2018.
+
+\bibitem{Hallmann2017}
+C.~A. Hallmann, M.~Sorg, E.~Jongejans, H.~Siepel, N.~Hofland, H.~Sumser, T.~Ho,
+  H.~Schwan, W.~Stenmans, A.~Mu, D.~Goulson, and H.~D. Kroon, ``{More than 75
+  percent decline over 27 years in total flying insect biomass in protected
+  areas},'' {\em PLoS ONE}, vol.~12, no.~10, 2017.
+
+\bibitem{Habel2015}
+J.~C. Habel, A.~Segerer, W.~Ulrich, O.~Torchyk, W.~W. Weisser, and T.~Schmitt,
+  ``{Butterfly community shifts over two centuries},'' {\em Conservation
+  biology}, vol.~30, no.~4, pp.~754--762, 2015.
+
+\bibitem{Pelton2019}
+E.~M. Pelton, C.~B. Schultz, S.~J. Jepsen, S.~H. Black, and E.~E. Crone,
+  ``{Western Monarch Population Plummets : Status , Probable Causes , and
+  Recommended Conservation Actions},'' {\em Frontiers in Ecology and
+  Evolution}, vol.~7, no.~July, 2019.
+
+\bibitem{Lord2018}
+J.~S. Lord, J.~W. Hargrove, S.~J. Tor, and G.~A. Vale, ``{Climate change and
+  African trypanosomiasis vector populations in Zimbabwe ' s Zambezi Valley : A
+  mathematical modelling study},'' {\em PLoS Med}, pp.~1--18, 2018.
+
+\bibitem{Nilsson2017}
+S.~G. Nilsson, M.~Franz{\'{e}}n, and E.~J{\"{o}}nsson, ``{Long-term land-use
+  changes and extinction of specialised butterflies},'' {\em Insect
+  Conservation and Diversity (2008)}, vol.~1, no.~September 2008, pp.~197--207,
+  2017.
+
+\bibitem{Kioy2004}
+D.~Kioy, J.~Jannin, and N.~Mattock, ``{Human African trypanosomiasis},'' {\em
+  Nature Reviews Microbiology}, vol.~2, no.~3, pp.~186--187, 2004.
+
+\bibitem{Ackley2017a}
+S.~Ackley and J.~Hargrove, ``{A dynamic model for estimating adult female
+  mortality from ovarian dissection data for the tsetse fly Glossina pallidipes
+  Austen sampled in Zimbabwe},'' {\em PLoS Neglected Tropical Diseases},
+  vol.~11, no.~8, 2017.
 
 \bibitem{Ylioja1999}
-Ylioja, T., Roininen, H., Ayres, M.P., Rousi, M., Price, P.W.: {Host-driven
-  population dynamics in an herbivorous insect}.
-\newblock Proceedings of the National Academy of Sciences of the United States
-  of America \textbf{96}(19), 10735--10740 (1999).
-\newblock \doi{10.1073/pnas.96.19.10735}
+T.~Ylioja, H.~Roininen, M.~P. Ayres, M.~Rousi, and P.~W. Price, ``{Host-driven
+  population dynamics in an herbivorous insect},'' {\em Proceedings of the
+  National Academy of Sciences of the United States of America}, vol.~96,
+  no.~19, pp.~10735--10740, 1999.
+
+\bibitem{Artzrouni2003}
+M.~Artzrouni and J.~P. Gouteux, ``{Estimating tsetse population parameters:
+  Application of a mathematical model with density-dependence},'' {\em Medical
+  and Veterinary Entomology}, vol.~17, no.~3, pp.~272--279, 2003.
+
+\bibitem{Hargrove2005a}
+J.~Hargrove, ``{Extinction probabilities and times to extinction for
+  populations of tsetse flies Glossina spp. (Diptera: Glossinidae) subjected to
+  various control measures},'' {\em Bulletin of Entomological Research},
+  vol.~95, no.~1, pp.~13--21, 2005.
+
+\bibitem{Adams2005}
+B.~M. Adams, H.~T. Banks, J.~E. Banks, and J.~D. Stark, ``{Population dynamics
+  models in plant-insect herbivore-pesticide interactions},'' {\em Mathematical
+  Biosciences}, vol.~196, no.~1, pp.~39--64, 2005.
+
+\bibitem{Barclay2011d}
+H.~Barclay and M.~Vreysen, ``{A dynamic population model for tsetse (Diptera:
+  Glossinidae) area-wide integrated pest management},'' {\em Population
+  Ecology}, vol.~53, no.~1, pp.~89--110, 2011.
+
+\bibitem{Peck2012a}
+S.~L. Peck and J.~Bouyer, ``{Mathematical Modeling, Spatial Complexity, and
+  Critical Decisions in Tsetse Control},'' {\em Journal of Economic
+  Entomology}, vol.~105, no.~5, pp.~1477--1486, 2012.
+
+\bibitem{Lin2015}
+S.~Lin, M.~H. DeVisser, and J.~P. Messina, ``{An agent-based model to simulate
+  tsetse fly distribution and control techniques: A case study in Nguruman,
+  Kenya},'' {\em Ecological Modelling}, vol.~314, pp.~80--89, 2015.
+
+\bibitem{Kajunguri2019}
+D.~Kajunguri, E.~B. Are, and J.~W. Hargrove, ``{Improved estimates for
+  extinction probabilities and times to extinction for populations of tsetse (
+  Glossina spp )},'' {\em PLoS Negl Trop Dis}, vol.~13, no.~4, pp.~1--15, 2019.
+
+\bibitem{Are2019}
+E.~B. Are and J.~W. Hargrove, ``{Extinction probabilities , times to extinction
+  , basic reproduction number and growth rates for tsetse ( Glossina spp )
+  populations as a function of temperature},'' {\em BioRxiv(Preprint)}, 2019.
+
+\bibitem{PhelpsR.J.&Burrows}
+P.~M. {Phelps, R.J. {\&} Burrows}, ``{Puparial duration in Glossina morsitans
+  orientalis under conditions of constant temperature},'' {\em Entomologia
+  Experimentalis et Applicata}, vol.~12, pp.~33--43, 1969.
+
+\bibitem{Hargrove2012c}
+J.~W. Hargrove, ``{Age-specific changes in sperm levels among female tsetse
+  (Glossina spp.) with a model for the time course of insemination},'' {\em
+  Physiological Entomology}, vol.~37, no.~3, pp.~278--290, 2012.
+
+\bibitem{Hargrove2019}
+J.~Hargrove, S.~English, S.~J. Torr, J.~Lord, L.~R. Haines, C.~{Van Schalkwyk},
+  J.~Patterson, and G.~Vale, ``{Wing length and host location in tsetse
+  (Glossina spp.): Implications for control using stationary baits},'' {\em
+  Parasites and Vectors}, vol.~12, no.~1, pp.~1--13, 2019.
+
+\bibitem{Clemons2010}
+A.~Clemons, A.~Mori, M.~Haugen, D.~W. Severson, and M.~Duman-Scheel,
+  ``{Culturing and egg collection of Aedes aegypti},'' {\em Cold Spring Harbor
+  Protocols}, vol.~5, no.~10, pp.~1--5, 2010.
+
+\bibitem{Harris1965}
+T.~E. Harris, ``{The Theory of Branching Processes},'' Tech. Rep. R-381-PR,
+  1965.
+
+\bibitem{RStudioTeam2016}
+RStudioTeam, ``{RStudio: Integrated Development for R},'' {\em RStudio, Inc.,
+  Boston, MA}, 2016.
+
+\bibitem{Hargrove2004a}
+J.~Hargrove, ``{Tsetse population dynamics},'' in {\em The Trypanosomiases,
+  CABI Publishing}, pp.~113--135, 2004.
+
+\bibitem{Hargrove2019a}
+J.~W. Hargrove and G.~A. Vale, ``{Models for the rates of pupal development,
+  fat consumption and mortality in tsetse (Glossina spp)},'' {\em Bulletin of
+  Entomological Research}, pp.~1--15, 2019.
+
+\bibitem{Hargrove1999a}
+J.~Hargrove, ``{Reproductive abnormalities in tsetse flies in Zimbabwe},'' {\em
+  Entomologia Experimentalis et Applicata}, vol.~92, no.~1, pp.~89--99, 1999.
+
+\bibitem{Rogers1984}
+D.~J. Rogers and S.~E. Randolph, ``{Rogers Randolph Kuzoe 1984 Local variation
+  in population dynamics of G palpalis I Natural population regulation},'' {\em
+  Bull. ent. res.}, no.~74, pp.~403--423, 1984.
+
+\bibitem{RogersD.J.Randolph1984}
+S.~E. {Rogers, D. J., Randolph}, ``{A review of density-dependent processes in
+  tsetse populations.},'' {\em Insect Science and its Application}, no.~5,
+  pp.~397--402, 1984.
+
+\bibitem{Hargrove2011}
+J.~W. Hargrove, R.~Ouifki, and J.~E. Ameh, ``{A general model for mortality in
+  adult tsetse (Glossina spp.)},'' {\em Medical and Veterinary Entomology},
+  vol.~25, no.~4, pp.~385--394, 2011.
+
+\bibitem{Edney1962}
+R.~Edney and E.~Barrass, ``{The body temperature of the Tsetse fly, Glossina
+  Morsitans Westwood (Diptera, Muscidae)},'' {\em J. Ins. Physiol.}, vol.~8,
+  pp.~469--481, 1962.
+
+\bibitem{Kleynhans2011e}
+E.~Kleynhans and J.~Terblanche, ``{Complex interactions between temperature and
+  relative humidity on water balance of adult tsetse (Glossinidae, Diptera):
+  implications for climate change},'' {\em Frontiers in Physiology}, vol.~2
+  OCT, pp.~1--10, 2011.
+
+\bibitem{Pagabeleguem2016f}
+S.~Pagabeleguem, S.~Ravel, A.~H. Dicko, M.~J. Vreysen, A.~Parker, P.~Takac,
+  K.~Huber, I.~Sidib{\'{e}}, G.~Gimonneau, and J.~Bouyer, ``{Influence of
+  temperature and relative humidity on survival and fecundity of three tsetse
+  strains},'' {\em Parasites and Vectors}, vol.~9, no.~1, pp.~1--13, 2016.
+
+\bibitem{Hargrove2000}
+J.~W. Hargrove, S.~Omolo, J.~S. Msalilwa, and B.~Fox, ``{Insecticide-treated
+  cattle for tsetse control: The power and the problems},'' {\em Medical and
+  Veterinary Entomology}, vol.~14, no.~2, pp.~123--130, 2000.
+
+\bibitem{Esterhuizen2006}
+J.~Esterhuizen, K.~{Kappmeier Green}, E.~M. Nevill, and P.~{Van Den Bossche},
+  ``{Selective use of odour-baited, insecticide-treated targets to control
+  tsetse flies Glossina austeni and G. brevipalpis in South Africa},'' {\em
+  Medical and Veterinary Entomology}, vol.~20, no.~4, pp.~464--469, 2006.
+
+\bibitem{Shaw2015}
+A.~P. Shaw, I.~Tirados, C.~T. Mangwiro, J.~Esterhuizen, M.~J. Lehane, S.~J.
+  Torr, and V.~Kovacic, ``{Costs Of Using “Tiny Targets” to Control
+  Glossina fuscipes fuscipes, a Vector of Gambiense Sleeping Sickness in Arua
+  District of Uganda},'' {\em PLoS Neglected Tropical Diseases}, vol.~9, no.~3,
+  pp.~1--19, 2015.
+
+\bibitem{Mbewe2018a}
+N.~J. Mbewe, R.~K. Saini, B.~Torto, J.~Irungu, A.~A. Yusuf, and C.~W. Pirk,
+  ``{Sticky small target: an effective sampling tool for tsetse fly Glossina
+  fuscipes fuscipes Newstead, 1910},'' {\em Parasites {\&} vectors}, vol.~11,
+  no.~1, p.~268, 2018.
+
+\bibitem{Hargrove1991}
+J.~W. Hargrove, ``{Ovarian ages of tsetse flies (Diptera: Glossinidae) caught
+  from mobile and stationary baits in the presence and absence of humans},''
+  {\em Bulletin of Entomological Research}, vol.~81, no.~1, pp.~43--50, 1991.
+
+\bibitem{HargroveJ.W.HollowayM.T.P.ValeG.A.GoughA.J.E.Hall1995}
+D.~{Hargrove, J. W., Holloway, M.T.P., Vale, G. A., Gough, A.J.E., Hall},
+  ``{Catches of tsetse flies (Glossina spp.) (Diptera: Glossinidae) from traps
+  baited with large doses of natural and synthetic host odour.},'' {\em
+  Bulletin of Entomological Research}, vol.~85, pp.~215--227., 1995.
+
+\bibitem{Branch1995}
+A.~{Hargrove, J. W., Holloway, M.T.P., Vale, G. A., Gough} and D.~Hall,
+  ``{Catches of tsetse flies (Glossina spp.) (Diptera: Glossinidae) from traps
+  baited with large doses of natural and synthetic host odour.},'' {\em
+  Bulletin of Entomological Research,}, vol.~85, pp.~215--227, 1995.
+
+\bibitem{Society2014}
+R.~C. {Jeff Ollerton, Hilary Erenler, Mike Edwards}, ``{Extinctions of aculeate
+  pollinators in Britain and the role of large-scale agricultural changes},''
+  {\em Science}, vol.~346, no.~6215, pp.~1360--1363, 2014.
 
 \end{thebibliography}

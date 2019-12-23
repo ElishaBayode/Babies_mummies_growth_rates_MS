@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2018.3.19)  20 DEC 2019 15:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2018.3.19)  23 DEC 2019 16:45
 entering extended mode
 **"./Insect demography.tex"
 ("Insect demography.tex"
@@ -668,20 +668,20 @@ LaTeX Warning: Label `extinctionYoungadult' multiply defined.
 )
 \openout1 = `"Insect demography.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
 
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
@@ -772,108 +772,108 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 92.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 92.
+LaTeX Info: Redefining \celsius on input line 95.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 95.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 92.
-Package gensymb Info: Using \Omega for \ohm on input line 92.
+LaTeX Info: Redefining \ohm on input line 95.
+Package gensymb Info: Using \Omega for \ohm on input line 95.
 
 Package gensymb Warning: Not defining \micro.
 
 SVJour3 warning: Missing \journalname
-LaTeX Font Info:    Try loading font information for U+msa on input line 125.
+LaTeX Font Info:    Try loading font information for U+msa on input line 128.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 125.
+LaTeX Font Info:    Try loading font information for U+msb on input line 128.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 186.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 189.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 189.
 
 <Tsetseflowchat3.png, id=15, 959.08313pt x 455.45157pt>
 File: Tsetseflowchat3.png Graphic file (type png)
 
 <use Tsetseflowchat3.png>
-Package pdftex.def Info: Tsetseflowchat3.png used on input line 195.
+Package pdftex.def Info: Tsetseflowchat3.png used on input line 198.
 (pdftex.def)             Requested size: 338.58632pt x 160.78645pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--211
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
 
  []
 
 [3 <./Tsetseflowchat3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 [4] [5]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 368.
+ on input line 371.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
@@ -885,13 +885,13 @@ Package epstopdf Info: Source file: <Nov26-1.eps>
 (epstopdf)                    size: 10653 bytes
 (epstopdf)             Command: <epstopdf --outfile=Nov26-1-eps-converted-to.pd
 f Nov26-1.eps>
-(epstopdf)             \includegraphics on input line 477.
+(epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 <Nov26-1-eps-converted-to.pdf, id=44, 721.69624pt x 522.95375pt>
 File: Nov26-1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Nov26-1-eps-converted-to.pdf>
-Package pdftex.def Info: Nov26-1-eps-converted-to.pdf used on input line 477.
+Package pdftex.def Info: Nov26-1-eps-converted-to.pdf used on input line 495.
 (pdftex.def)             Requested size: 362.77264pt x 262.87267pt.
 
 
@@ -906,13 +906,13 @@ Package epstopdf Info: Source file: <demoOct102.eps>
 (epstopdf)                    size: 8308 bytes
 (epstopdf)             Command: <epstopdf --outfile=demoOct102-eps-converted-to
 .pdf demoOct102.eps>
-(epstopdf)             \includegraphics on input line 492.
+(epstopdf)             \includegraphics on input line 510.
 Package epstopdf Info: Output file is already uptodate.
- <demoOct102-eps-converted-to.pdf, id=48, 721.69624pt x 522.95375pt>
+ <demoOct102-eps-converted-to.pdf, id=49, 721.69624pt x 522.95375pt>
 File: demoOct102-eps-converted-to.pdf Graphic file (type pdf)
 
 <use demoOct102-eps-converted-to.pdf>
-Package pdftex.def Info: demoOct102-eps-converted-to.pdf used on input line 492
+Package pdftex.def Info: demoOct102-eps-converted-to.pdf used on input line 510
 .
 (pdftex.def)             Requested size: 362.77264pt x 262.87267pt.
 
@@ -927,14 +927,14 @@ Package epstopdf Info: Source file: <demoOct103.eps>
 (epstopdf)                    size: 8377 bytes
 (epstopdf)             Command: <epstopdf --outfile=demoOct103-eps-converted-to
 .pdf demoOct103.eps>
-(epstopdf)             \includegraphics on input line 506.
+(epstopdf)             \includegraphics on input line 524.
 Package epstopdf Info: Output file is already uptodate.
 
-<demoOct103-eps-converted-to.pdf, id=66, 721.69624pt x 522.95375pt>
+<demoOct103-eps-converted-to.pdf, id=67, 721.69624pt x 522.95375pt>
 File: demoOct103-eps-converted-to.pdf Graphic file (type pdf)
 
 <use demoOct103-eps-converted-to.pdf>
-Package pdftex.def Info: demoOct103-eps-converted-to.pdf used on input line 506
+Package pdftex.def Info: demoOct103-eps-converted-to.pdf used on input line 524
 .
 (pdftex.def)             Requested size: 362.77264pt x 262.87267pt.
  [10 <./demoOct103-eps-converted-to.pdf>]
@@ -946,51 +946,48 @@ Package epstopdf Info: Source file: <demoOct1004.eps>
 (epstopdf)                    size: 8225 bytes
 (epstopdf)             Command: <epstopdf --outfile=demoOct1004-eps-converted-t
 o.pdf demoOct1004.eps>
-(epstopdf)             \includegraphics on input line 522.
+(epstopdf)             \includegraphics on input line 540.
 Package epstopdf Info: Output file is already uptodate.
 
-<demoOct1004-eps-converted-to.pdf, id=76, 721.69624pt x 522.95375pt>
+<demoOct1004-eps-converted-to.pdf, id=77, 721.69624pt x 522.95375pt>
 File: demoOct1004-eps-converted-to.pdf Graphic file (type pdf)
 
 <use demoOct1004-eps-converted-to.pdf>
-Package pdftex.def Info: demoOct1004-eps-converted-to.pdf used on input line 52
-2.
+Package pdftex.def Info: demoOct1004-eps-converted-to.pdf used on input line 54
+0.
 (pdftex.def)             Requested size: 362.77264pt x 262.87267pt.
  [11 <./demoOct1004-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--545
+Underfull \hbox (badness 10000) in paragraph at lines 561--563
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
 
-Underfull \vbox (badness 2189) has occurred while \output is active []
-
- [12]
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
@@ -1000,13 +997,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5089 strings out of 493622
- 70666 string characters out of 3143632
- 152586 words of memory out of 3000000
- 8372 multiletter control sequences out of 15000+200000
- 12456 words of font info for 47 fonts, out of 3000000 for 9000
+ 5088 strings out of 493622
+ 70679 string characters out of 3143632
+ 154595 words of memory out of 3000000
+ 8370 multiletter control sequences out of 15000+200000
+ 12808 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 38i,8n,24p,1568b,390s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,24p,1568b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiK
@@ -1017,16 +1014,17 @@ c/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
 b10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib7
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on "Insect demography.pdf" (15 pages, 339713 bytes).
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Insect demography.pdf" (15 pages, 366103 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

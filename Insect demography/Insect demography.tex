@@ -58,6 +58,8 @@ grestore
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{gensymb} 
 \usepackage{float}
+% \usepackage{notoccite}
+ %\usepackage{natbib}
 %\bibliographystyle{abbrvnat}
 %\setcitestyle{authoryear,open={((},close={))}}
 %\usepackage[style=authoryear]{biblatex}
@@ -89,6 +91,7 @@ grestore
 % Insert the name of "your journal" with
 % \journalname{myjournal}
 %
+
 \begin{document}
 
 \title{Insect Demography: ***%\thanks{Grants or other notes
@@ -137,7 +140,7 @@ These results offer insights into insect population dynamics and provide tools t
 
 \section{Introduction}
 \label{intro}
-
+ 
 Insects play key ecological roles, both positive and negative, for the health of plants and animals, including humans, and for the environment in general \cite{Ollerton2011,Ockinger2007}.    Many are important vectors of plant and animal diseases, often of public health importance \cite{Tobias2016,Wamwiri2016,Beier1998}, others are beneficial in, for example, pollination, a few serves as source of protein for massive numbers of species of animals including humans \cite{Ramos-Elorduy1997}. Biologists are accordingly interested in insect population persistence for various reasons. On one hand, conservationists are concerned about the ecological implications of extinction of insect populations, whereas vector biologists may be interested in the control/elimination of insect vectors \cite{Burt2015,Shaw2013,Hocking1963}.  In whichever way we look at things, the study of insect population dynamics is clearly an important area of research. \\
 
 
@@ -148,7 +151,7 @@ There have been claims, in the literature, that various insect populations are e
 Since insects are cold blooded, their body temperature is basically determined by the ambient temperature that they are experiencing – making them vulnerable, for example, to the effects of global warming. There is therefore a growing concern about how increases in global temperature, and other environmental disruptions, will impact insect populations. In recent years, questions involving extinction of several insect populations are now being asked more frequently \cite{Nilsson2017}. Accordingly, there is a need to continue to improve the accuracy of our prediction of the probability of extinction events in insects – and indeed other animals and plants. \\
 
 
-The life history of insects occurs in well-defined stages and the possibility therefore exists of counting insect population according to the numbers of different stages. One may choose to count the numbers in a particular juvenile stage or, alternatively, at some more mature stages. The question then arises as to whether it makes any difference which developmental stage is counted when one is calculating – for example – the probability that an insect population goes extinct.  We investigate this problem, using populations of tsetse (Glossina spp) as an illustrative example. Tsetse are vectors of trypanosomiasis \cite{Kioy2004,Wamwiri2016}; a deadly disease called African sleeping sickness in humans and nagana in livestock \cite{Kioy2004}. The life cycle of the fly involves four distinct stages; namely, larva, pupa, newly emerged adult, and mature adult – the last stage in females being defined as those flies that are larvipositing \cite{Ackley2017a}. We pose the question of whether it matters which stage we count. How would accounting for different insect life stages affect our calculation of the probability that an insect population will persist under various circumstances? \\
+The life history of insects occurs in well-defined stages and the possibility therefore exists of counting insect population according to the numbers of different stages. One may choose to count the numbers in a particular juvenile stage or, alternatively, at some more mature stages. The question then arises as to whether it makes any difference which developmental stage is counted when one is calculating – for example – the probability that an insect population goes extinct.  We investigate this problem, using populations of tsetse (Glossina spp) as an illustrative example. Tsetse are vectors of trypanosomiasis \cite{Wamwiri2016,Kioy2004}; a deadly disease called African sleeping sickness in humans and nagana in livestock \cite{Kioy2004}. The life cycle of the fly involves four distinct stages; namely, larva, pupa, newly emerged adult, and mature adult – the last stage in females being defined as those flies that are larvipositing \cite{Ackley2017a}. We pose the question of whether it matters which stage we count. How would accounting for different insect life stages affect our calculation of the probability that an insect population will persist under various circumstances? \\
 
 
 Several workers have developed varieties of mathematical models to explain different phenomena in insect population dynamics, but are generally not clear about which developmental stage(s) are being counted \cite{Ylioja1999,Artzrouni2003,Hargrove2005a,Adams2005,Barclay2011d,Peck2012a,Lin2015,Kajunguri2019}.  As far as we are aware, no published work in the literature has explicitly considered the implication of counting insects at different stages for the estimation of extinction probabilities for insect populations. Hargrove \cite{Hargrove2005a} developed and analysed a branching process model to derive expressions for extinction probabilities, times to extinction, reproduction number and variance for closed populations of tsetse. The results reported in \cite{Hargrove2005a} agree with published work in the literature on tsetse vital rates, and showed that quite small increases in mortality rates,  could drive any population of tsetse to extinction. Kajunguri et al \cite{Kajunguri2019} improved on some of the assumptions in \cite{Hargrove2005a}, specifically, the assumption about the relationship between the male to female sex ratio of pupae produced and how this affects extinction probabilities. They also provided mathematical proofs of the results presented in \cite{Hargrove2005a}. The work has been extended to provide estimates of extinction probabilities, growth rates, reproduction number and times to extinction as a function of the temperature that the flies are experiencing \cite{Are2019}. \\
@@ -439,6 +442,19 @@ which is identical to $q_{o}.$
 \subsubsection*{\bf Remark II}
 When the inital population consists of $N$ larvae, $N$ newly emerged adults or $N$ larviposing adults, repectively, assuming that for each population, the reproduction and survival processes are independent, extinction probabilites for each each counting stage will be raised to power $N$. That is, the extinction probability will be $q_d^N$, $q_e^N$ and $q_o^N$, repectively.  
 
+
+\subsection{Extinction probability for  populations starting with individuals at different life stages}
+ Extinction probability for a population consisting of individuals at different life stages in the pioneer population, can be estimated  from equations (\ref{extictionLarva}), (\ref{extinctionYoungadult}) and (\ref{OvulatingAdultExtinct}). If we assume that extinction probabilities for each counting point are independent, then the probability that a tsetse population which starts with $N_1$ larvae, $N_2$ newly emerged adults females and $N_3$ larvipositing adult females, goes extinct, is; 
+
+
+$$\tilde{q} = q_{d}^{N_1}q_{e}^{N_2}q_{o}^{N_3}.$$ When $N_1 = N_2 =N_3=1$, then
+
+\begin{equation}
+\label{jointextinction}
+\tilde{q} = \frac{(1-p_{l})(1- p_{l}+p_{l}p_{c} - p_{c}p_{l}p_{o})(1-p_{c}p_{o}p_{l})}{p_{l}^{3}p_{c}^{2}p_{o}},
+\end{equation} 
+where $\tilde{q}$ is the probability of extinction for a tsetse population starting with a larva, a newly emerged adult female and a larvipositng female.  
+
 \subsection{Example 1}
 
 We provide an example to show that previous estimates for extinction probabilities for tsetse populations are special cases of model 4. It can be shown easily that the models presented in \cite{Hargrove2005a,Kajunguri2019,Are2019} correspond to case II of model 4. 
@@ -462,6 +478,8 @@ p_{k}= \frac{\epsilon \Omega^{\nu}\lambda^{k\tau}(1-\lambda^{\tau})\beta^{k}\phi
 \end{equation}
 
 Setting  $ p_{o}= \epsilon \Omega^{\nu}$ , $p_{l} =\lambda^{\tau} $  and $p_{c} = \beta \phi^{\sigma} $ in case II of model 4 shows that the models used in the works cited above, are special cases of model 4. 
+
+
 
 \section{Numerical Results}
 
@@ -589,8 +607,9 @@ A limitation of the present study is that we do not consider density dependencie
 
 % BibTeX users please use one of
 %\bibliographystyle{spbasic}      % basic style, author-year citations
-\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
 %\bibliographystyle{spphys}       % APS-like style for physics
+\bibliographystyle{ieeetr}
 \nocite{*}
 \bibliography{mybibloInsectdemo}   % name your BibTeX data base
 %\printbibliography

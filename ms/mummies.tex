@@ -161,8 +161,7 @@ Several workers have developed varieties of mathematical models to explain diffe
 In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing that the population can start with either larvae/pupae, or newly emerged adults, or mature/larvipositing females and we compare the outcomes for each of these scenarios. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population consists only of individuals at one of the three life stages defined above. We discuss, in detail, the implications of our results to tsetse population persistence, particularly in the context of tsetse control/eradication exercises. \\
 
 
- 
-
+JD: Not good form to put default commands inside section heads. Leave it along for now.
 \subsection{\bf Brief description of tsetse life cycle}
 
 Tsetse typically mate once in their life-time: the sperm deposited by a fertile male, during mating, is sufficient for the female to fertilize all subsequent eggs throughout her life. A female fly produces, typically every 9-11 days, a single larva, which may weigh as much or even more than she does herself.  The larva borrows into the soil and pupates within minutes. The pupal period lasts 30 - 50 days \cite{PhelpsR.J.&Burrows}, depending on soil temperature. After the pupal period, an immature adult emerges. It takes 7-9 days, depending on temperature, for the newly emerged adults to attain full maturation – approaches which involves the development of a mature thoracic musculature and fat reserves. During this period females are typically inseminated by a male tsetse, and virtually all will have ovulated by the age of 10 days \cite{Hargrove2012c}. The fully developed adult typically larviposits every 9-11 days afterwards \cite{Hargrove2019}. Unlike other insects, say mosquitoes, which can produce up to 100 eggs at a time \cite{Clemons2010}, tsetse produce a single offspring at a time, consequently, their birth rate is relatively low. 
@@ -182,27 +181,27 @@ Tsetse typically mate once in their life-time: the sperm deposited by a fertile 
 
 % For one-column wide figures use
 
-\section{Mathematical Models}
-In this section, we develop three models, each representing different counting stage in the life history of tsetse. This models account for the three stages of tsetse life cycle. We acknowledge that  counting point may differ from  starting point, however for simplicity sake, we assume that the count point is the same as the starting point. The models are developed based on the schematic presented in Figure \ref{fig:tsetseflowchat3}, with the following variables and parameter descriptions:
+\section{Mathematical Model}
+
+Our model of tsetse demography is based on the schematic presented in Figure \ref{fig:flowchart}, with three state variables:
 
 \begin{itemize}
-\item[•] $p_c$: probability a newly deposited larva survives to emerge as a young female adult
-\item[•] $p_o$: probability a newly emerged adult survives to reach larviposition loop
-\item[•] $p_{l}$: probability of surviving a larviposition loop
-\item[•] $P_{d}$: larva deposited
-\item[•] $A_{e}$: young adult emerges
-\item[•] $A_{o}$: adult enters larviposition loop 
+\item[•] $L$: Newly deposited larvae
+\item[•] $A_{e}$: Emergent adults
+\item[•] $A_{o}$: Adults entering larviposition loop
 \end{itemize}
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Tsetseflowchat3}
+	\includegraphics[width=0.7\linewidth]{Tsetseflowchat3.png}
 	\caption{A schematic diagram for counting tsetse}
-	\label{fig:tsetseflowchat3}
+	\label{fig:flowchart}
 \end{figure}
+
+JD: Let's work on terminology (and on the diagram): The $p$s should match the $A$s, (meaning we should change $p_c$ to $p_e$. $p_\ell$ will look cooler if written like that, and should be further to the right. We need to discuss our assumption about what happens when you survive the loop. Right now, I guess we're assuming a larva is deposited with probability 1. We can probably keep that assumption, but we need to discuss it if we do.)
 
 For each counting stage we derive an offspring probability distribution, and analyse the reproductive number and extinction probability.    
 
-\subsection{\bf Model 1: Counting point - Larva}
+\subsection{Model 1: Counting point - Larva}
 
 Here we develop a distribution function for the probability that a newly deposited larva develops to the stage of larviposition and produces exactly $k$ surviving female larvae in her life time. A deposited larva survives then emerge as a young female adult with probability $p_{c}$, reaches the larvipostion loop with probability $p_o$, and completes one successful larviposition cycle with probability $p_{l}$. The probability that the female larva reaches the larviposition loop and produces exactly $k$ larvae before it dies is:
 
@@ -222,7 +221,7 @@ where $ 0\leq s \leq 1.$ \\
 
 Equation (\ref{GenFunction}) can be used to obtain the reproduction number and extinction probabilities for tsetse populations. 
 
-\subsubsection{\bf Reproduction number $R_{d}$}
+\subsubsection{Reproduction number $R_{d}$}
 
 The reproduction number $R_{d}$ is the expected number of larvae that a newly deposited female larva is expected to produce in her lifetime. $R_{d}$ is defined as $G'(1)$ (the first derivative of $G(s)$ w.r.t $s$), and is given by:
 
@@ -233,7 +232,7 @@ R_{d} = G'(1) = \frac{p_{c}p_{o}p_{l}}{1-p_{l}}.
 
 
 
-\subsubsection{\bf Extinction probability  $q_{d}$}
+\subsubsection{Extinction probability  $q_{d}$}
 
 To calculate the extinction probability for a tsetse population starting with a single newly deposited larva, we rewrite $p_{k}^{d}$ in the form $bc^{k-1}$ with $k =1,2,...$ and $b,c > 0$ (this is to allow us to follow the proceedure used by Harris \cite{Harris1965} to calculate the extinction probability). It follows from  \cite{Harris1965}, that the generating function is a fractional linear type. The extinction probability is the smaller root of $G(s)=s$, given by: 
 
@@ -256,7 +255,7 @@ q_{d} = \frac{1-p_{c}p_{o}p_{l}}{p_{l}}, p_{l} \neq 0.
 
 
 
-\subsection{\bf Model 2: Counting point - Newly emerged adult}
+\subsection{Counting point - Newly emerged adult}
 
 In similar fashion to the development of model 1, we obtain a distribution function for the probability that a newly emerged female adult tsetse reaches the larviposition loop and produces exactly $k$ surviving young female adults.
 A newly emerged adult fly survives to the larvipositing stage  with probability $p_{o}$  and  completes one successful larviposition cycle with probability $p_{l}$. Our interest is in the number of deposited larvae that emerge as young adults. The probability that a newly emerged female tsetse produces exactly $k$ surviving newly emerged female adults, before dying, is: 
@@ -266,7 +265,7 @@ A newly emerged adult fly survives to the larvipositing stage  with probability 
 p_{k}^{e} = p_{o}(\frac{p_{c}p_{l}}{p_{c}p_{l} + 1 - p_{l}} )^{k}\frac{1-p_{l}}{p_{c}p_{l} + 1 - p_{l}}, k =0,1,2,...
 \end{equation}      
 
-\subsubsection{\bf Reproduction number $R_{e}$}
+\subsubsection{Reproduction number $R_{e}$}
 
 The number of young adults a young adult female is expected to produce in her life time is obtained by following the same procedure used for equation (\ref{larvareproductiveNum}).
 
@@ -276,7 +275,7 @@ R_{e} = G'(1) = \frac{p_{c}p_{o}p_{l}}{1-p_{l}},
 \end{equation}  
 where $G(s) = \sum_{k=0}^{\infty} p_{k}^{e}s^{k}  $, $0\leq s \leq 1$, is the generating function for $p_{k}^{e}$.
 
-\subsubsection{\bf Extinction probability  $q_{e}$}
+\subsubsection{Extinction probability  $q_{e}$}
 
 The probability of extinction for a population of tsetse starting with a single newly emerged female fly is obtained by rewriting equation (\ref{distributionYoungadult}) in the form $bc^{k-1}$, where,
 
@@ -292,7 +291,7 @@ q_{e} = \frac{1- p_{l}(1 -p_{c}(1- p_{o}))}{p_{l}p_{c}}
 \end{equation}
 
 
-\subsection{\bf Model 3: Counting point - Larvipositing adult}
+\subsection{Counting point - Larvipositing adult}
 
 The distribution function for the probability that a larvipositing  adult produces exactly $k$ surviving larvipositing adults is obtained as follows: a larvipositing female adult completes  a successful  larviposition loop with probability $p_{l}$ and each larva she deposits develops to emerge as a female adult with probability $p_{c}$, and reaches the larviposition stage with probability $p_{o}$.  The probability that a larvipositing tsetse produces exactly $k$ surviving larvipositing female, before it dies, is thus:
 
@@ -304,7 +303,7 @@ p_{k}^{o} = (\frac{p_{o}p_{c}p_{l}}{p_{o}p_{c}p_{l} + 1 - p_{l}})^{k}\frac{1 - p
 
 
 
-\subsubsection{\bf Reproduction number $R_{o}$}
+\subsubsection{Reproduction number $R_{o}$}
 The reproduction number for tsetse population, starting with a single larvipositing female, is obtained by following the procedure decribed earlier. 
 \begin{equation}
 \label{OvulatingadultreproductiveNum}
@@ -312,7 +311,7 @@ R_{o} = G'(1) = \frac{p_{c}p_{o}p_{l}}{1-p_{l}},
 \end{equation}  
 where $G(s) = \sum_{k=0}^{\infty} p_{k}^{o}s^{k}  $, $0\leq s \leq 1$, is the generating function for $p_{k}^{o}$.
 
-\subsubsection{\bf Extinction probability  $q_{o}$}
+\subsubsection{Extinction probability  $q_{o}$}
 
 The reproduction number for a tsetse population, starting with a single larviposting female in the initail population, is obtained by writing  (\ref{OvulatingAdultdistribution}) in terms of  $R_{o}$. This yields:
 
@@ -337,7 +336,7 @@ q_{o} = \frac{1-p_{l}}{p_{c}p_{o}p_{l}} = \frac{1}{R_{o}},
 \end{equation}
 where $R_o > 1$.
 
-\section{\bf Relationship between $q_{o}$, $q_{e}$ and $q_{d}$}
+\section{Relationship between $q_{o}$, $q_{e}$ and $q_{d}$}
 
 In this section, we establish a relationship between extinction probabilities for tsetse populations, starting with different life stages in the initial population. 
 

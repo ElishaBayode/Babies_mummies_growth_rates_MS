@@ -20,8 +20,7 @@ Sources += Tsetseflowchat3.png Nov26-1-eps-converted-to.pdf demoOct102-eps-conve
 
 Sources += mybibloInsectdemo.bib
 
-$(Sources):
-	$(CP) ../*/$@ .
+Sources += .gitignore
 
 ## mummies.pdf: mummies.tex
 

@@ -18,6 +18,8 @@ Sources += svjour3.cls svglov3.clo
 
 Sources += Tsetseflowchat3.png Nov26-1-eps-converted-to.pdf demoOct102-eps-converted-to.pdf demoOct103-eps-converted-to.pdf demoOct1004-eps-converted-to.pdf
 
+Sources += mybibloInsectdemo.bib
+
 $(Sources):
 	$(CP) ../*/$@ .
 

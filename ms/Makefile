@@ -14,7 +14,7 @@ vim_session:
 
 Sources += $(wildcard *.tex)
 
-Sources += svjour3.cls
+Sources += svjour3.cls svglov3.clo
 
 $(Sources):
 	$(CP) ../*/$@ .

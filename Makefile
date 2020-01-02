@@ -14,6 +14,8 @@ current: target
 vim_session:
 	bash -cl "vmt"
 
+subdirs += ms
+
 ######################################################################
 
 ### Makestuff

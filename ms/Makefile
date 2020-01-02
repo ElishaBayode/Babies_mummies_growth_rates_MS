@@ -14,7 +14,14 @@ vim_session:
 
 Sources += $(wildcard *.tex)
 
+Sources += svjour3.cls
+
+$(Sources):
+	$(CP) ../*/$@ .
+
 ## mummies.pdf: mummies.tex
+
+Ignore += example.eps
 
 ######################################################################
 

@@ -23,8 +23,10 @@ Sources += mybibloInsectdemo.bib
 
 Sources += .gitignore
 
+## https://ElishaBayode.github.io//Babies_mummies_growth_rates_MS/
 ## mummies.pdf: mummies.tex
-## math.pdf: math.tex
+## math.html: math.md
+## math.jax.html: math.md
 
 Ignore += example.eps
 
@@ -53,3 +55,4 @@ makestuff/Makefile:
 -include makestuff/projdir.mk
 
 -include makestuff/texdeps.mk
+-include makestuff/pandoc.mk

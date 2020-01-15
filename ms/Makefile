@@ -24,6 +24,7 @@ Sources += mybibloInsectdemo.bib
 Sources += .gitignore
 
 ## mummies.pdf: mummies.tex
+## math.pdf: math.tex
 
 Ignore += example.eps
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>math</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="thoughts">Thoughts</h2>
+<p>I’ve been looking at the document, and made some suggestions. But I wanted to share some broader ideas with you at this point.</p>
+<p>The more I look at this, the more that I feel the math could be much simpler. All of the interesting math can be driven through the basic ideas from S4. Most of what’s currently in S2 and S3 belongs in our notebooks (making sure we’re right, not in the paper).</p>
+<p>A way to make this briefer interesting and possibly easier to follow could be to have two different diagrams. One is the biological diagram, similar to what we already have. The biological diagram has <span class="math inline">\(p_d\)</span>, <span class="math inline">\(p_\ell\)</span>, <span class="math inline">\(p_e\)</span>, <span class="math inline">\(p_v\)</span>. (I’m suggesting <span class="math inline">\(p_v\)</span> to replace <span class="math inline">\(p_o\)</span> as standing for ovulation, just because o looks like zero.) The other would be a computational (or censusing) diagram, based on what we actually measure (in our model world). We would replace the larvae, pupae and eclosee with ust a box showing where we measure (and somehow make it clear that this can vary). <span class="math inline">\(p_d\)</span>, <span class="math inline">\(p_e\)</span> and <span class="math inline">\(p_v\)</span> would thus be replaced by <span class="math inline">\(p_c\)</span> and <span class="math inline">\(p_m\)</span> (probability from loop completion to producing something that is censused, and probability from being censused to becoming “mature” (entering the loop)).</p>
+<p>In my mind, there is also a math (or dynamical) diagram, but I think this diagram can be incorporated into the computational diagram. We just show an arrow that skips the census box and has <span class="math inline">\(p_r = p_c p_m\)</span>.</p>
+<p>I feel it would be helpful to do the main geometric sum when we introduced the generating function. Almost everything follows from that. I’m not sure why we need specific citations for our solutions for the two basic equations, since they seem pretty straightforward.</p>
+<p>Another idea that might help the exposition would be the talk a bit more about odds. For me, <span class="math inline">\(\cal R\)</span> is just equal to <span class="math inline">\(p_r \sigma_\ell\)</span>, where <span class="math inline">\(p_r\)</span> is the probability of recruitment (above) and <span class="math inline">\(\sigma_\ell\)</span> is the <em>odds</em> of completing the loop. I think we can come up with a nice explanation of why the odds come in there. I also think we can simplify conceptually by talking about <span class="math inline">\(p_b\)</span> and <span class="math inline">\(\sigma_b\)</span> as the probability and odds of giving birth before dying from the loop.</p>
+<p>[I’m also struggling with notation for odds. I would love to use a script small o, but don’t know how to do that. For now, I’m using σ because it looks a little like that.]</p>
+<p>It will also be interesting to discuss how best to parameterize the biological model. This can be done largely in parallel with the computational model. The big question in my mind is at what point do we think we know the sex of a fly? In other words, what kind of counting and sexing are people actually doing in the field.</p>
+<h2 id="math">Math</h2>
+<p>Since I’ve been doing math to try to get things straight, I thought I should outline the skeleton here. I’m sure it’s mostly or entirely consistent with what you’re doing, but I would like to boil it down to the simplest components (and to rely more on odds, if you agree).</p>
+<p>An invidual at the census point:</p>
+<ul>
+<li>reaches the loop with probability <span class="math inline">\(p_m\)</span></li>
+<li>goes around the loop producing offspring that will be counted or else dying
+<ul>
+<li>the probability of producing before dying <span class="math inline">\(p_b\)</span> has <em>odds</em> of <span class="math inline">\(\sigma_b = \frac{p_b}{1-p_b} = \frac{p_\ell p_c}{1-p_\ell} = \sigma_\ell p_c\)</span></li>
+</ul></li>
+</ul>
+<p>The total number of censused individuals produced by a censused individual is:</p>
+<ul>
+<li>0, if it doesn’t reach the loop (probability <span class="math inline">\(1-p_m\)</span>)</li>
+<li><span class="math inline">\(k\)</span>, which could also be 0, if it reaches the loop and then fails after <span class="math inline">\(k\)</span> successes, with probability <span class="math inline">\(p_m p_b^k (1-p_b)\)</span></li>
+</ul>
+<p>The generating function is:</p>
+<p><span class="math display">\[G(s) = 1-p_m + p_m (1-p_b) \sum_k p_b^k s^k = 1-p_m 
+    + \frac{p_m (1-p_b)}{1-p_b s} \]</span></p>
+<p>We get <span class="math inline">\(\cal R\)</span> by calculating <span class="math inline">\(G&#39;(1)\)</span>:</p>
+<ul>
+<li><span class="math inline">\(G&#39;(s) = \frac{p_m p_b (1-p_b)}{(1-p_b s)^2}\)</span></li>
+<li><span class="math inline">\(G&#39;(1) = \frac{p_m p_b}{(1-p_b)}\)</span> = p_m <em>b = p_m p_c </em>= p_r _$</li>
+</ul>
+<p>I really like how simple this comes out (and how we can calculate it without ever calculating <span class="math inline">\(p_b\)</span>!).</p>
+<p>We get the extinction probability <span class="math inline">\(y\)</span> by solving <span class="math inline">\(G(y) = y\)</span>. The slick way to do this is by saying <span class="math inline">\(G(1-z) = 1-z\)</span>, where <span class="math inline">\(z\)</span> is the non-extinction probability, and then factoring out a <span class="math inline">\(z\)</span>. This gives:</p>
+<p><span class="math display">\[ z = p_m(1-1/\cal R).\]</span></p>
+<p>So we see that everything is very slick and sensible. The only messiness we can’t get rid of comes from calculating <span class="math inline">\(z\)</span> from <span class="math inline">\(y\)</span>.</p>
+</body>
+</html>

@@ -98,7 +98,7 @@ Several workers have developed varieties of mathematical models to explain diffe
 
 
 
-In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing that the population can start with either larvae/pupae, or newly emerged adults, or mature/larvipositing females and we compare the outcomes for each of these scenarios. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population consists only of individuals at one of the three life stages defined above. We discuss, in detail, the implications of our results to tsetse population persistence, particularly in the context of tsetse control/eradication exercises. \\
+In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing that the population can start with either larvae/pupae, or newly emerged adults, or mature/larvipositing females and we compare the outcomes for each of these scenarios. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population consists only of individuals at one of the three life stages defined above. We analyze the extinction probability for tsetse population where there are individuals in the different life stages. We discuss, in detail, the implications of our results to tsetse population persistence, particularly in the context of tsetse control/eradication exercises. \\
 
 
 \jd{Not good form to put default commands inside section heads. Leave it alone for now. We can fiddle with styles or something later if necessary (but really we should follow the Springer style and let them worry about it.}
@@ -122,294 +122,188 @@ Tsetse typically mate once in their life-time: the sperm deposited by a fertile 
 % For one-column wide figures use
 
 \section{Mathematical Model}
+Our model of tsetse demography is based on two flow diagrams (Figures \ref{fig:bioflowchart} and \ref{fig:compflowchart}). The first flow diagram illustrates the biological processes associated with tsetse life cycle. The state variables and the parameters are described below.   
 
-Our model of tsetse demography is based on the schematic presented in Figure \ref{fig:flowchart}, with three state variables:
-
-\begin{itemize}
-\item[•] $L$: Newly deposited larvae
-\item[•] $A_{e}$: Emergent adults
-\item[•] $A_{o}$: Adults entering larviposition loop
-\end{itemize}
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Tsetseflowchart.png}
-	\caption{A schematic diagram for counting tsetse}
-	\label{fig:flowchart}
+	\includegraphics[width=0.7\linewidth]{Bioflowchart.png}
+	\caption{\textbf{A Schematic diagram for tsetse lifecycle}. The directed arrows pointing to, and away from the boxes, indicate various biological processes in the lifecycle of a female tsetse. These include larviposition, emergence as young adult, and development from young adults to mature adults. The lines pointing downward show losses at various life stages.}
+	\label{fig:bioflowchart}
 \end{figure}
 
-For each counting stage we derive an offspring probability distribution, and analyse the reproductive number and extinction probability.    
+\begin{itemize}
+	\item[•] $L$: Newly deposited larvae
+	\item[•] $A_{e}$: Emergent adults
+	\item[•] $A_{o}$: Adults entering larviposition loop
+	\item[•] $p_{\ell}$: Probability of completing a larviposition loop 
+	\item[•] $p_d$: Probability of depositing a live female larva 
+	\item[•] $p_e$: Probability a deposited female larva emerges as adult 
+	\item[•] $p_{\nu}$: Probability a newly emerged adult reaches the larviposition loop 
+\end{itemize}
 
-\subsection{Counting larvae}
+The second flow diagram, on the other hand, presents tsetse counting system. 
 
-We start from a single, newly deposited female larva, and ask for the probability distribution of newly deposited female larvae that it will generate:
+
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Compflowchart.png}
+	\caption{\textbf{Schematic diagram for counting tsetse}. The dashed box indicates that the stage at which the individuals are counted can vary. The dashed line from $A_{o}$ to $C$, shows the process of producing offspring that are counted, while the solid line from $C$ to $A_{o}$ indicates the process of being counted, and developing to maturity (reaching larviposition loop).}
+	\label{fig:compflowchart}
+\end{figure}
+
+The $C$ inside the dashed box indicates the point where tsetse are counted, while $A_{o}$ is as described above. The counting point can vary. For some reasons, one may choose to count tsetse at the juvenile stages, or at the mature stages e.g. larviposing females. The framework we present here allows us to calculate the extinction probability and the basic reproduction number for tsetse population, for all possible counting stages.  This implies that the extinction probability and reproduction number, for the different counting stages, can easily be obtained from the generalised framework we developed here. 
+
+The list below shows variables and parameters description.
 
 \begin{itemize}
-\item the larva reaches the larvaposition loop (emerges and then matures) with probability $p_c p_o$
-\item produces a surviving female larva before dying with odds $p_\ell p_d / (1-p_\ell)$, corresponding to a probability of $s_l = \frac{p_\ell p_d}{1 - p_\ell + p_d p_\ell}$
-\item dies before producing a surviving with probability of $1-s_l$
+	\item[•] $A_{o}$: Adults entering larviposition loop
+	\item[•] $C$: The census point
+	\item[•]$p_m$: Probability from being counted to becoming “mature” (entering the loop)
+    \item[•]$p_c$: Probability from loop completion to producing something that is counted
+    \item[•]$p_r$: Probability of recruitment ($p_r = p_mp_c$)
+\end{itemize}
+
+
+
+\subsubsection{Model formulaton}
+
+An invidual at the census point: 
+
+\begin{itemize}
+\item [•] reaches the loop with probability $p_m$
+\item [•] goes around the loop producing offspring that will be counted or else dying, 
+\end{itemize}
+
+the probability of producing before dying $p_b$ has odds of: 
+$$\sigma_b = \frac{p_b}{1-p_b} = \frac{p_\ell p_c}{1-p_\ell} = \sigma_\ell p_c$$.\\
+
+The total number of censused individuals produced by a censused individual is: 
+
+\begin{itemize}
+\item [•] 0, if it does not reach the loop (probability $1-p_m$) and
+\item [•] $k$, which could also be 0, if it reaches the loop and then fails after $k$ successes, with probability $p_m p_b^k (1-p_b)$.\\
+\end{itemize}  
+
+The generating function is:
+
+
+$$G(s) = 1-p_m + p_m (1-p_b) \sum_k p_b^k s^k = 1-p_m + \frac{p_m (1-p_b)}{1-p_b s}.$$
+
+
+
+We get ${\cal R}$, the reproduction number, by calculating $G'(1)$, where $$G'(s) = \frac{p_m p_b (1-p_b)}{(1-p_b s)^2}.$$  Hence, \\
+
+$ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
+
+
+We get the extinction probability $y$ by solving $G(y) = y$. We can simplify things by solving   $G(1-z) = 1-z$, where $z$ is the non-extinction probability, and then factoring out a $z$. This gives:
+
+$$ z = p_m(1-1/{\cal R}).$$
+
+Therefore,  the probability of extinction for tsetse populations at any counting point is:
+
+\begin{equation}
+\label{NewEqn1}	
+y = 1 - p_m(1-1/{\cal R}).	
+\end{equation}
+
+We can derive extinction probabilities for tsetse populations at the individual counting points by making simple substitutions for the probabilities of recruitment  between stages in $p_m$ and ${\cal R}$ in equation (\ref{NewEqn1}), as appropriate. \\
+
+
+Tsetse may be reared for experimental purposes both in the laboratory, as well as in the field. Therefore,  flies at different levels of development may be used to initiate tsetse populations. For instance, in 1979, Vale et al [ref] introduced two species of tsetse (pupae) to the Antelope island, Lake Kariba, Zimbabwe, for a mark-recapture experiment. In instances as the aforementioned, this modelling framework can be used to estimate the establishment probability, and the reproduction number, for  tsetse populations, starting with either pupae, newly emerged  or larvipositing adults.\\
+ In the following three sections, we obtain extinction probabilities and the reproduction number for the three possible counting points in the lifecycle of a female tsetse.
+  
+\section{Counting larvae}
+
+We start from a single, newly deposited female larva, and ask for the extinction probability for tsetse population starting with a single new deposited larva.
+
+\begin{itemize}
+\item the larva reaches the larvaposition loop (emerges and then matures) with probability $p_m = p_e p_{\nu}$
+\item completes a larviposing loop with \textit{odds} $\sigma_\ell$
+\item produces surviving female larvae with probability $p_c = p_d$
 \end{itemize} 
 
-Thus, the probability of producing exactly $k$ surviving female larvae before it dies is:
+Substituting for $p_r= p_cp_m$ in  ${\cal R}$,  the expected number of larvae produced, by a newly deposited female larva, in her lifetime is:   ${\cal R}_l = p_dp_ep_{\nu} \sigma_{\ell}.$ Similarly, when we make apprioprate substitutions in $y$, the extiction probability for a population of tsetse with a newly deposited larva in the intial population is:
 
-\jd{I don't like $p_{k}^{d}$ for two reasons: we're using $p$ for too many things, and the $d$ looks like an exponent. What about $f_k$?}
+$$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}, p_{\ell}p_{d} \neq 0.$$
 
-\begin{equation}
-\label{larvadistribution}
-p_{k}^{d} = p_{e}p_{o}(\frac{p_\ell p_d}{1-p_\ell + p_\ell p_d})^{k}\frac{1-p_\ell}{1-p_\ell + p_\ell p_d}, k =0,1,2,...
-\end{equation} 
-
-\jd{Not sure what is the purpose of this s.: the equation seems to follow directly from the argument.} Equation (\ref{larvadistribution}) can be obtained either by following the proceedure presented in \cite{Kajunguri2019} or by induction.
-
-\medskip
-
-
-The generating function for  $p_{k}^{d}$ is:
+This can be written more compactly in terms of ${\cal R}_l$ as:
 
 \begin{equation}
-\label{GenFunction}
- G(s) = \sum_{k=0}^{\infty} p_{k}^{d}s^{k},  
-\end{equation}
-where $ 0\leq s \leq 1.$ \\
-
-Equation (\ref{GenFunction}) can be used to obtain the reproduction number and extinction probabilities for tsetse populations. 
-
-\jd{The point of the generating function is that we can sum over it, right? So why not do that immediately. And now that I've said that, I'm less clear why we're doing anything three times. Why not start by saying that we can recalculate $p$s for our chosen census time. Then we do the whole argument once, and treat the different count points as corollaries. I hope the idea is clear enough and that you can respond to it. }
-
-\subsubsection{Reproduction number $R_{d}$}
-
-The reproduction number $R_{d}$ is the expected number of larvae that a newly deposited female larva is expected to produce in her lifetime. $R_{d}$ is defined as $G'(1)$ (the first derivative of $G(s)$ w.r.t $s$), and is given by:
-
-\begin{equation}
-\label{larvareproductiveNum}
-R_{d} = G'(1) = \frac{p_{d}p_{e}p_{o}p_\ell}{1-p_\ell}.
-\end{equation}  
-
-
-
-\subsubsection{Extinction probability  $q_{d}$}
-
-To calculate the extinction probability for a tsetse population starting with a single newly deposited larva, we rewrite $p_{k}^{d}$ in the form $bc^{k-1}$ with $k =1,2,...$ and $b,c > 0$ (this is to allow us to follow the proceedure used by Harris \cite{Harris1965} to calculate the extinction probability). It follows from  \cite{Harris1965}, that the generating function is a fractional linear type. The extinction probability is the smaller root of $G(s)=s$, given by: 
-
-\begin{equation}
-\label{harrisresult}
-q = \frac{1 - b -c}{c(1-c)},
-\end{equation}
-if we set $q = s$ and  $b, c < 1$.\\
-
-The proof of equation (\ref{harrisresult}) follows from the fractional linear generating function associated with $bc^{k-1}$ \cite{Harris1965}. \\
-
-After rewriting $p_{k}^{d}$ in the form $bc^{k-1}$, we have  $$b = \frac{p_{d}p_{e}p_{o}p_\ell(1-p_\ell)}{(1-p_\ell + p_\ell p_d)^2}$$ and $$c = \frac{p_\ell p_d}{1-p_\ell + p_\ell p_d}$$ 
-
-The probability of extinction for a population starting with a newly deposited  female larva is obtained by substituting the values of $b$ and $c$ into equation (\ref{harrisresult}). After some algebraic simplifications we have:
-
-\begin{equation}
-\label{extictionLarva}
-q_{d} = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{o}))}{p_{\ell}p_{d}}, p_{\ell}p_{d} \neq 0.
-\end{equation}
-
-\subsection{Counting newly emerged adults}
-
-In similar fashion to the development of model 1, we obtain a distribution function for the probability that a newly emerged female adult tsetse reaches the larviposition loop and produces exactly $k$ surviving young female adults.
-A newly emerged adult fly survives to the larvipositing stage  with probability $p_{o}$  and  completes one successful larviposition cycle with probability $p_{\ell}$. Our interest is in the number of deposited larvae that emerge as young adults. The probability that a newly emerged female tsetse produces exactly $k$ surviving newly emerged female adults, before dying, is: 
-
-\begin{equation}
-\label{distributionYoungadult}
-p_{k}^{e} = p_{o}(\frac{p_{d}p_{e}p_{\ell}}{p_{d}p_{e}p_{\ell} + 1 - p_{\ell}} )^{k}\frac{1-p_{\ell}}{p_{d}p_{e}p_{\ell} + 1 - p_{\ell}}, k =0,1,2,...
-\end{equation}      
-
-\subsubsection{Reproduction number $R_{e}$}
-
-The number of young adults a young adult female is expected to produce in her life time is obtained by following the same procedure used for equation (\ref{larvareproductiveNum}).
-
-\begin{equation}
-\label{YoungAdulreproductiveNum}
-R_{e} = G'(1) = \frac{p_{d}p_{e}p_{o}p_\ell}{1-p_\ell},
-\end{equation}  
-where $G(s) = \sum_{k=0}^{\infty} p_{k}^{e}s^{k}  $, $0\leq s \leq 1$, is the generating function for $p_{k}^{e}$.
-
-\subsubsection{Extinction probability  $q_{e}$}
-
-The probability of extinction for a population of tsetse starting with a single newly emerged female fly is obtained by rewriting equation (\ref{distributionYoungadult}) in the form $bc^{k-1}$, where,
-
-$$ b = \frac{p_{o}p_{d}p_{e}p_{\ell}(1-p_{\ell})}{(p_{d}p_{e}p_{\ell} + 1 - p_{\ell})^{2}} $$ and
-
-$$ c = \frac{p_{d}p_{e}p_{\ell}}{p_{d}p_{e}p_{\ell} + 1 - p_{\ell}} , $$ 
-Inserting $b$ and $c$ into equation (\ref{harrisresult}) gives:
-
-\begin{equation}
-\label{extinctionYoungadult}
-q_{e} = \frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{o}))}{p_{d}p_{e}p_{\ell}},  p_{d}p_{e}p_{\ell} \neq 0
-\end{equation}
-
-\subsection{Counting larvipositing adults}
-
-The distribution function for the probability that a larvipositing  adult produces exactly $k$ surviving larvipositing adults is obtained as follows: a larvipositing female adult completes  a successful  larviposition loop with probability $p_{\ell}$ and each larva she deposits develops to emerge as a female adult with probability $p_{e}$, and reaches the larviposition stage with probability $p_{o}$.  The probability that a larvipositing tsetse produces exactly $k$ surviving larvipositing female, before it dies, is thus:
-
-\begin{equation}
-\label{OvulatingAdultdistribution}
-p_{k}^{o} = (\frac{p_{d}p_{e}p_{o}p_{\ell}}{p_{d}p_{e}p_{o}p_{\ell} + 1 - p_{\ell}})^{k}\frac{1 - p_{\ell}}{p_{d}p_{e}p_{o}p_{\ell} + 1 - p_{\ell}}, k =0,1,2,...
+\label{NewEqn2}
+y_l = 1 - p_ep_{\nu}(1-1/{\cal R}_l)	
 \end{equation}
 
 
+\section{Counting newly emerged adults}
 
+In similar fashion to the foregoing, where newly deposited larvae are counted, we obtain the reproduction number and the extinction probability for tsetse populations starting with a single newly emerged female adult as follows.  A newly emerged adult fly survives to the larvipositing stage  with probability $p_{\nu}$  and  completes one successful larviposition cycle with \textit{odds} $\sigma_{\ell}$. Our interest is in the number of deposited female larvae that survives and emerge as young adults with probability $p_dp_e$. Hence, $p_m = p_{\nu}$, and  $p_c = p_dp_{e}$. Therefore the reproduction number ${\cal R}_e$ is: ${\cal R}_e = p_dp_ep_{\nu} \sigma_{\ell}.$\\
 
-\subsubsection{Reproduction number $R_{o}$}
-The reproduction number for tsetse population, starting with a single larvipositing female, is obtained by following the procedure decribed earlier. 
-\begin{equation}
-\label{OvulatingadultreproductiveNum}
-R_{o} = G'(1) = \frac{p_{d}p_{e}p_{o}p_{\ell}}{1-p_{\ell}},
-\end{equation}  
-where $G(s) = \sum_{k=0}^{\infty} p_{k}^{o}s^{k}  $, $0\leq s \leq 1$, is the generating function for $p_{k}^{o}$.
+Moreover, we can derive the extiction probability $y_e$ for a tsetse population starting with a single newly emerged adult fly, by substituting for $p_m = p_{\nu}$ and   $p_c = p_dp_{e}$  in $y$ above.\\
 
-\subsubsection{Extinction probability  $q_{o}$}
+Therefore:
 
-The reproduction number for a tsetse population, starting with a single larviposting female in the initail population, is obtained by writing  (\ref{OvulatingAdultdistribution}) in terms of  $R_{o}$. This yields:
+$$ y_e=\frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{\nu}))}{p_{d}p_{e}p_{\ell}},  p_{d}p_{e}p_{\ell} \neq 0. $$ This can be rewritten in terms of ${\cal R}_e$ as:
 
 \begin{equation}
-\label{OvulatingAdultExtinct}
-p_{k}^{o} = (\frac{R_{o}}{R_{o} + 1})^k\frac{1}{R_{o} + 1}, k =0,1,2,...
+\label{NewEqn2}
+y_e = 1 - p_{\nu}(1-1/{\cal R}_e).	
 \end{equation}
-Notice that equation (\ref{OvulatingAdultExtinct}) forms a geometric distribution, with generating function  $$G(s) = \frac{p}{1-s(1-p)}, $$ where $0\leq s \leq 1$. Writing this in terms of $R_o$, and setting $G(s)=s$, gives a quadratic :
+
+
+   
+\section{Counting larvipositing adults}
+
+ A larvipositing adult female completes  a successful  larviposition loop with \textit{odds} $\sigma_{\ell}$ and each live female larva she deposits, develops to emerge as a female adult with probability $p_dp_{e}$, and goes ahead to reach the larviposition stage with probability $p_{\nu}$.\\
+ These implies that $p_m = 1$ and $p_c = p_d p_ep_{\nu}$, substituting these into ${\cal R}$, yields  ${\cal R}_o = p_dp_ep_{\nu} \sigma_{\ell}$, the number of larvipositing female adults a larvipositing female is expected to produce in her lifetime. Furthemore, the extinction probability $y_o$ for a population of tsetse starting with a single larviposting female tseste is:
+ 
+ $$y_o = \frac{1-p_{\ell}}{p_{d}p_{e}p_{\nu}p_{\ell}}.$$
+
+This can be expressed in terms of ${\cal R}_o$ as:
 
 \begin{equation}
-\label{QuardAdultExtinct}
-s =s^2\frac{R_{o}}{R_{o} + 1} + \frac{1}{R_{o} + 1} ,
-\end{equation} 
-
-Factoring equation (\ref{QuardAdultExtinct}), yields:
- $$(R_os-1)(s-1) = 0$$ $\implies s=1/R_o$ or $s=1$. Setting $s=q_o$,  the probabalilty of extinction for a population of tsetse, starting with a single larvipositing adult, gives: 
-
-
-\begin{equation}
-\label{extinctionYoungadult}
-q_{o} = \frac{1-p_{\ell}}{p_{d}p_{e}p_{o}p_{\ell}} = \frac{1}{R_{o}},
+\label{NewEqn3}
+y_o = 1/{\cal R}_{o}	
 \end{equation}
-where $R_o > 1$.
 
-\section{Relationship between $q_{o}$, $q_{e}$ and $q_{d}$}
+Notice that the reproduction number for the three counting points are the same, i.e., ${\cal R}_l$ = ${\cal R}_e$ = ${\cal R}_o$. This implies that regardless of the life stage we decide to count the flies, the expected number of offspring produced by an individual in that stage, which will be counted at the same stage, is the same for all counting points. In other words, all individulas in the different life stages are expected to replace themselves with the same number of individuals of the same life stage as itself when it was counted.\\
+ In what follows, we showed mathematically, the relationship between the extiction probabilities realized for the three counting points. 
 
-In this section, we establish a relationship between extinction probabilities for tsetse populations, starting with different life stages in the initial population. 
+\section{Relationship between $y_{l}$, $y_{e}$ and $y_{o}$}
 
-\subsubsection*{Theorem I}
-Suppose $q_{d}$, $q_{e}$ and $q_{o}$ are as defined earlier. Then,  given that $R_{o}>1$ the following inequality holds:
+In this section, we establish a relationship between extinction probabilities for tsetse populations, starting with different life stages in the initial population. We hypothesize that 
+whenever ${\cal R}_{o}>1$ the following inequality holds:
 \begin{equation}
 \label{Aretsetsetheorem}
-q_{o}\leq q_{e} \leq q_{d}
+y_{o}\leq y_{e} \leq y_{l}
 \end{equation}
 
-\subsubsection{Proof of Theorem I}
-\subsubsection{Part A}
-If  $q_{e} < q_{o}$, %and that $R_{o} > 1$ (Supercritical case) \\
-$$ \frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{o}))}{p_{d}p_{e}p_{\ell}} < \frac{1-p_{\ell}}{p_{d}p_{e}p_{o}p_{\ell}} = \frac{1}{R_{o}}, $$
+To test this hypothesis, first,  we assume that $y_{e} < y_{o}$, this implies that  
+$$ 1 - p_{\nu}(1-1/{\cal R}_l) < 1/{\cal R}_{o}, $$
+yielding $p_{\nu} > 1$ (recall that ${\cal R}_{o}= {\cal R}_{l}$). This cannot be true, since we know that $p_{\nu}$ is a probability and therefore it lies strictly within the interval $[0,1]$. So, it must be true that $y_{o}\leq y_{e}$, which proves the first part of our hypothesis. 
 
-\begin{equation}
-\label{contradiction1}
-\implies      p_{o}(\frac{1}{R_{o}} - 1) < (\frac{1}{R_{o}}-1). 
-\end{equation}
+Similarly, suppose $y_{l} < y_{e}$, this means that
 
-Whenever $R_{o} > 1$, it implies $(\frac{1}{R_{o}}-1) < 0$, and inequality (\ref{contradiction1}) yields a contradiction that $p_{o}<0$. Hence, $q_{o} \leq q_{e}$. 
-\subsubsection{Part B}
-If $q_{d} < q_{e}$,
-
-$$  \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{o}))}{p_{\ell}p_{d}}  <  \frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{o}))}{p_{d}p_{e}p_{\ell}},  $$
-
-\begin{equation}
-\label{contradiction2}
-\implies  p_{e}(\frac{1}{R_{o}} - 1) <     (\frac{1}{R_{o}} - 1).
-\end{equation}
-Using the same assumption as in Part A, inequality (\ref{contradiction2}) yields a contradiction. Hence, $q_{e} \leq q_{d}$. Since $"\leq"$ is transitive on ${\Bbb R}$, the proof is complete.
+$$   1 - p_{\nu}p_{e}(1-1/{\cal R}_l) < 1 - p_{\nu}(1-1/{\cal R}_l).$$
+After simplifying the inequality, we have $p_e > 1$. Since $p_e$ is a probability it cannot be greater than 1. Therefore, it must be true that $y_{e} \leq y_{l}$, thereby proving the second part of the hypothesis. Since  $y_e \leq y_l$ and $y_o \leq y_e$, it must be that $y_o \leq y_l$. This proves the hypothesis that $y_{o}\leq y_{e} \leq y_{l}$ . We showed numerically that this hypothesis is true  in section (\ref{section8}). 
 
 \subsubsection*{\bf Remark I}
-We obtained the same reproduction number explicitly for different counting points. This is clear from  $R_{d} = R_{e}=R_{o}$ (see equations (\ref{larvareproductiveNum}), (\ref{YoungAdulreproductiveNum}) and (\ref{OvulatingadultreproductiveNum})), without any extra assumption. However, to recover the same extinction probabilities for the three different counting points, extra assumptions are required. The extinction probability for {\bf Model 2} is the same as the extinction probability for {\bf Model 3} ($q_{e} =q_{o}$), if $p_{e} = 1$, (corresponding to not counting flies until they are in the ovulation cycle). Moreover, the extinction probability for the three models are the same if we add an extra assumption that $p_{e} =p_{o} = 1$, corresponding to not counting larvae and young adults until they reach the ovulation cycle. \\
+
+In our analysis so far,we have fucused on populations starting with a single individul in the initial population. In real suitations, however, we may have $N$ number of individuals in the poineeer population. Furthermore, when the inital population consists of $N$ larvae, or $N$ newly emerged adults or $N$ larvipositing adults, respectively, assuming that for these populations, the reproduction and survival processes are independent, extinction probabilites for each counting stage will be raised to power $N$. That is, the extinction probability will be $y_l^N$, $y_e^N$ and $y_o^N$, repectively, for the three counting points.  
 
 
-\section{\bf A unifying approach to estimating extinction probabilities for tsetse population}
+\section{Extinction probability for  populations starting with individuals at different life stages}
 
-We present here, a general model that works for estimating extinction probabilities, reproduction number e.t.c.   for all counting points. Although tsetse populations are used as an illustrative example, the results are valid for other insect populations, given that their life cycle exists in distinct stages. 
-
-
-\subsection{\bf Model 4}
-Suppose $\hat{p_e}$ is the probability of reaching the "count point" from birth, and $\hat{p_o}$ the
-probability of reaching larviposition loop from the "count point". The general offspring distribution function is: 
-
-%Suppose  $A_{x}$ and $A_{y}$ are arbitrary starting and  counting points, respectively. Let $p_{x}$ be the probability of reaching %the ovulation loop from the starting point $A_{x}$; and $p_{y}$ the probability a deposited larva reaches the counting point %$A_{y}$. The probability distribution function is derived to be: 
-
-\begin{equation}
-\label{Unifydistfunction} 
-p(k) = \hat{p_o}(\frac{p_{\ell}\hat{p_e}}{p_{\ell}\hat{p_e}+1-p_{\ell}})^{k}\frac{1-p_{\ell}}{p_{\ell}\hat{p_e}+1-p_{\ell}},  k =0,1,2,...
-\end{equation} 
-where $p_{\ell}$ retains its initial definition. 
-
-\subsubsection{\bf Reproduction number $R_{co}$}
-The expected number of offspring produced by an individual for any counting point is obtained as:  
-\begin{equation}
-\label{UnifyingReproductionNumber}
-R_{co} = G'(1) = \frac{\hat{p_e}\hat{p_o}p_{\ell}}{1-p_{\ell}},
-\end{equation}  
-
-where $G(s)$ is the probability generating function of (\ref{Unifydistfunction}).
-
-\subsubsection{\bf Extinction probability $q_{co}$}
-Here we obtain a general expression for extinction probability for tsetse population, for any counting point/stage.  First,  we write equation (\ref{UnifyingReproductionNumber}) in the form $bc^{k-1}$, we then have:
-$$ b = \frac{\hat{p_e}\hat{p_o}p_{\ell}(1-p_{\ell})}{(\hat{p_e}p_{\ell} + 1 - p_{\ell})^2}, $$
-and 
-$$ c = \frac{\hat{p_e}p_{\ell}}{(\hat{p_e}p_{\ell} + 1 - p_{\ell})}. $$
+A real population consists of several individuals in the three different life stages. Therefore, the  extinction probability for a population consisting of individuals at different life stages, in the pioneer population, can be estimated  from the results we obatined above for  counting at the different life stages.  If we assume that extinction probabilities for each counting point are independent, then the probability that a tsetse population, which starts with $N_1$ larvae, $N_2$ newly emerged adult females and $N_3$ larvipositing adult females, goes extinct, is; 
 
 
-By substituting for the values of  $b$ and $c$ in equation (\ref{harrisresult}), and simplifying, we obtained the extinction probability for a tsetse population, given any counting point, as:
+$$\tilde{y_c} = y_{l}^{N_1}y_{e}^{N_2}y_{o}^{N_3}.$$ 
 
-\begin{equation}
-\label{UnifyingextinctionProb}	
-q_{eo} = \frac{1-p_{\ell}(1-\hat{p_e}(1-\hat{p_o}))}{\hat{p_e}p_{\ell}} 
-\end{equation}  
-
-\subsubsection{\bf Proposition I}
-
-It is easily verifiable that models 1, 2 and 3 are special cases of model 4. 
-
-\subsubsection*{Proof}
-
-\subsubsection*{Case I}
-For model 1, suppose the inital population consists of a single larva, and  set the larval stage as the "count point", the probability that the larva reaches the counting point from birth is $\hat{p_e}=p_{d}$ and the probability of reaching the larviposition loop from the "count point" is $\hat{p_o} = p_{e}p_{o}$. Substituting for $\hat{p_e}$ and $\hat{p_o}$ in equation (\ref{Unifydistfunction}) and equation (\ref{UnifyingextinctionProb}), yields Model 1 (equation (\ref{larvadistribution})), with extinction probability:
-
- $$q_{\hat{p_d}= p_{o}p_{e},\hat{p_e}=p_{d}} =  \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{o}))}{p_{\ell}p_{d}}.$$
-Where $p_{d}$, $p_e$ and $p_o$ retain their definition. Notice that $q_{\hat{p_o}}$ is identical to $q_{d}$.  \\
-
-
-\subsubsection*{Case II}
-Secondly, for model 2, suppose the counting point is the newly emmerged adult female tsetse, the probability that it reaches the larviposition stage is $\hat{p_o} = p_{o}$, the probability of reaching the counting point from birth is $\hat{p_e}=p_{d} p_{e}$. Substituting for $\hat{p_o}$ and $\hat{p_e}$ in equations (\ref{Unifydistfunction}) and (\ref{UnifyingextinctionProb}) gives Model 2 (see equation (\ref{distributionYoungadult})), with extinction probability: 
-
-$$q_{\hat{p_e}=p_{d}p_{e},\hat{p_o}=p_{o}} = \frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{o}))}{p_{d}p_{e}p_{\ell}}. $$
-This is the same as $q_{e}$
-
-\subsubsection*{Case III}
-Model 3 can be derived from equation (\ref{Unifydistfunction}). Suppose the counting point is females that are already in the larviposition loop, $\hat{p_o}=1$, and $\hat{p_e}=p_{d}p_{o}p_{e}$. Substituting these in equations (\ref{Unifydistfunction}) and (\ref{UnifyingextinctionProb}), yields Model 3, with extinction probability:  
-
-$$q_{\hat{p_o}=1,\hat{p_e}=p_{d}p_{e}p_{o}} = \frac{1-p_{\ell}}{p_{d}p_{e}p_{o}p_{\ell}},$$ 
-which is identical to $q_{o}.$
-\subsubsection*{\bf Remark II}
-When the inital population consists of $N$ larvae, or $N$ newly emerged adults or $N$ larviposing adults, repectively, assuming that for each population, the reproduction and survival processes are independent, extinction probabilites for each each counting stage will be raised to power $N$. That is, the extinction probability will be $q_d^N$, $q_e^N$ and $q_o^N$, repectively.  
-
-
-\subsection{Extinction probability for  populations starting with individuals at different life stages}
- Extinction probability for a population consisting of individuals at different life stages in the pioneer population, can be estimated  from equations (\ref{extictionLarva}), (\ref{extinctionYoungadult}) and (\ref{OvulatingAdultExtinct}). If we assume that extinction probabilities for each counting point are independent, then the probability that a tsetse population which starts with $N_1$ larvae, $N_2$ newly emerged adult females and $N_3$ larvipositing adult females, goes extinct, is; 
-
-
-$$\tilde{q} = q_{d}^{N_1}q_{e}^{N_2}q_{o}^{N_3}.$$ When $N_1 = N_2 =N_3=1$, then
-
-\begin{equation}
-\label{jointextinction}
-\tilde{q} = \frac{(1-p_{\ell})(1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{o})))(1- p_{\ell}(1 -p_{d}p_{e}(1- p_{o})))}{p_{\ell}^{3}p_{d}^{3}p_{e}^{2}p_{o}},
-\end{equation} 
-where $\tilde{q}$ is the probability of extinction for a tsetse population starting with a larva, a newly emerged adult female and a larvipositng female.  
 
 \subsection{Example 1}
 
-We provide an example to show that previous estimates for extinction probabilities for tsetse populations are special cases of model 4. It can be shown easily that the models presented in \cite{Hargrove2005a,Kajunguri2019,Are2019} correspond to case II of model 4. 
-
-\subsubsection*{Proof}
-
-In (3), the following parameters and desciptions were used to derive a probability distribution function for female tsetse population: 
+We provide an example to show that previous estimates for extinction probabilities for tsetse populations are special cases of the current framework. It can be shown easily that the models presented in \cite{Hargrove2005a,Kajunguri2019,Are2019} corresponds to the scenario presented above - counting newly emerged adults. In \cite{Are2019}, the following parameters and desciptions were used to derive a probability distribution function for female tsetse population: 
 \begin{itemize}
 	\item $\epsilon$, the probability that a female is inseminated by a fertile male 
 	\item $\Omega^{\nu}$,  the probability that a newly imerged adult survives until first larviposition
@@ -425,11 +319,12 @@ The probability that a female tsetse produces exactly $k$ surviving daughters in
 p_{k}= \frac{\epsilon \Omega^{\nu}\lambda^{k\tau}(1-\lambda^{\tau})\beta^{k}\phi^{k\sigma}}{(1-\beta \lambda^\tau(\frac{1}{\beta} -\phi^{\sigma}))^{k+1}},   k>0   
 \end{equation}
 
-Setting  $ p_{o}= \epsilon \Omega^{\nu}$ , $p_{\ell} =\lambda^{\tau} $, $p_{d}=\beta$  and $p_{e} = \phi^{\sigma} $ in case II of model 4 shows that the models used in the works cited above, are special cases of model 4. 
+Setting  $ p_{\nu}= \epsilon \Omega^{\nu}$ , $p_{\ell} =\lambda^{\tau} $, $p_{d}=\beta$  and $p_{e} = \phi^{\sigma} $ in  $G(s)$ above,   shows that the models used in the works cited above, are special cases of the current model. 
 
 
 
 \section{Numerical Results}
+\label{section8}
 
 We adopt the parameter descriptions presented in example 1, and simulate the model results using R studio (version 1.1.463) \cite{RStudioTeam2016}. We assume that key parameters are all temperature dependent and their relationship with temperature follows from \cite{Lord2018,PhelpsR.J.&Burrows,Hargrove2004a,Hargrove2019a}.\\
 

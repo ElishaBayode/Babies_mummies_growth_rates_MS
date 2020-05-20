@@ -1,6 +1,4 @@
 ## This is Mummies, a screens project directory
-## https://github.com/ElishaBayode/Babies_mummies_growth_rates_MS.git
-## makestuff/project.Makefile
 
 current: target
 -include target.mk

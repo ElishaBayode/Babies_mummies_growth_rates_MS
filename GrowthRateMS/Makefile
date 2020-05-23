@@ -10,11 +10,13 @@ vim_session:
 
 ######################################################################
 
-up.time: amsync
+commit.time: amsync
 
 Sources += AveragingGrowthRate.tex
 
 AveragingGrowthRate.pdf: AveragingGrowthRate.tex
+
+Ignore += $(wildcard *.pdf)
 
 ######################################################################
 

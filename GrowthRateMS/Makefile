@@ -10,6 +10,8 @@ vim_session:
 
 ######################################################################
 
+up.time: amsync
+
 Sources += AveragingGrowthRate.tex
 
 AveragingGrowthRate.pdf: AveragingGrowthRate.tex

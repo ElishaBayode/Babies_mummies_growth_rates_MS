@@ -10,7 +10,7 @@ vim_session:
 
 ######################################################################
 
-commit.time: amsync
+## commit.time: amsync
 
 Sources += AveragingGrowthRate.tex
 

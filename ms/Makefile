@@ -24,7 +24,6 @@ Sources += mybibloInsectdemo.bib
 Sources += .gitignore
 
 Sources += $(wildcard *.md)
-## https://ElishaBayode.github.io//Babies_mummies_growth_rates_MS/
 ## mummies.pdf: mummies.tex
 ## math.html: math.md
 ## math.jax.html: math.md

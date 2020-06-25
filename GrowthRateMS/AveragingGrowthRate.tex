@@ -126,6 +126,8 @@ where $ T $ is the integer number of time steps. \\
 
 Using equations  (\ref{equation6}) and  (\ref{equation7}), we can calculate $r_0$ directly from equation (\ref{equation1008}).
 
+\jd{I don't see the advantage of the expansions after the first. This can be written in summation notation and just one line, I think.}
+
 $$\sum (e^{r_0c})^{-T}l_{T}m_{T} = p_op_lp_c(e^{r_0c})^{-1} + p_op_l^2p_c(e^{r_0c})^{-2} + p_op_l^3p_c(e^{r_0c})^{-3} + ...=1,$$
 
 $$p_op_cp_le^{-r_0c} (1 + p_le^{-r_0c} + p_l^2e^{-2r_0c} + p_l^3e^{-3r_0c}+ ...) =1,$$
@@ -145,26 +147,23 @@ If  $p_o$ or $p_c \rightarrow{0}$, then  $r_0 \rightarrow{\frac{\ln[p_l]}{c}}$. 
 
 \subsection*{Intrinsic growth rate as a function of temperature}
 
-We assume that key parameters are temperature dependent. The relationship between these parameters and temperature are given in detail in \cite{Are2019}. We estimated the rate of increase on each day as a function of daily mean temperature, and we obtained the long-time (annual) average ($\hat{r_0}$)  of $r_0$, using: 
-
-\begin{equation}
-\label{equation1010} 
-\hat{r_0} = \frac{1}{N} \sum_{t=1}^{N} r_t
-\end{equation}
+We assume that key parameters are temperature dependent. The relationship between these parameters and temperature are given in detail in \cite{Are2019}. We estimated the rate of increase on each day as a function of daily mean temperature, and we obtained the long-time (annual) average ($\hat{r_0}$)  of $r_0$, by simple averaging.
 
 \subsection*{Model validation}
-We compare growth rate estimates from the current model with the growth rate obtained from fitting an exponential function to tsetse population data. We use mark-recapture estimates of the numbers of female \textit{Glossina morsitans morsitans} Westwood on Antelope Island, Lake Kariba, Zimbabwe \cite{hargrove1998optimized} to calculate weekly growth rates for the population between January and December 1981. During this period the population was not subjected to any trapping pressures and was allowed to grow naturally, subject only to temperature and other meteorological effects.
+We compare growth rate estimates from the current model with the growth rate obtained from fitting an exponential function to tsetse population data. We use mark-recapture estimates of the numbers of female \textit{Glossina morsitans morsitans} Westwood on Antelope Island, Lake Kariba, Zimbabwe \cite{hargrove1998optimized} to calculate weekly growth rates for the population between January and December 1981. During this period the population was not subjected to any trapping pressures and was allowed to grow naturally, subject only to temperature and other meteorological effects. \jd{need to talk about density effects, and also to say what you think about the dropoff at the end. How did you choose the ending time for the fit?}
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Feb_06_fitGrouwthRate}
-	\caption{The vertical axis is the estimated \textit{G. m. morsitans} female population on Antelope Island, Lake Kariba, Zimbabwe, from January 14th to December 30th, 1981. The time is measured in weeks, the blue line shows the model fit, and the red dots are the population estimates used in the fitting procedure.}
+	\caption{The \jd{Use informative axis labels in the graph.} vertical axis is the estimated \textit{G. m. morsitans} female population on Antelope Island, Lake Kariba, Zimbabwe, from January 14th to December 30th, 1981. The time is measured in weeks \jd{Can you show the real dates? If not, can you change the label to “time (weeks)” and set 1 to be the first week in 1981?}, the blue line shows the model fit, and the red dots are the population estimates used in the fitting procedure.}
 	\label{fig:antelopeEst}
 \end{figure}
 
+%% \newpage Why?
+We fitted an exponential function to the population estimates using the function \texttt{fit\_easylinear()} from the R package “growthrate” (Figure \ref{fig:antelopeEst}). The weekly growth rate $r_m$ from the model fit is 0.03879 per week (\jd{Why would there be an sd? Are you sure it's not standard error? The best thing to present would be just CIs (R not needed either).} sd: 0.002631 and $R^2$ = 0.837). i
 
-\newpage
-We fitted an exponential function to the population estimates using the function \textit{fit\_easylinear()} from the R package "growthrate" (Figure \ref{fig:antelopeEst}). The weekly growth rate $r_m$ from the model fit is 0.03879 per week (sd: 0.002631 and $R^2$ = 0.837). We then used the $r_t$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_t$ for the year, by summing the weekly growth rate during this period and dividing by the total number of weeks (Equation \ref{equation1010}). The average growth rate during this period is 0.03851 per-week, with standard deviation 0.01461. The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
+\jd{This is the first mention of an $r_t$ estimate. Please clarify.}
+We then used the $r_t$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_t$ for the year, by summing the weekly growth rate during this period and dividing by the total number of weeks (Equation \ref{equation1010}). The average growth rate during this period is 0.03851 per-week, with standard deviation \jd{Here I think you do mean sd, but you need to be more clear about which sd. Also, make sure it's the right comparison with the _easylinear, or else don't use it.} 0.01461. The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
 
 
 \subsection*{Sensitivity Analysis}

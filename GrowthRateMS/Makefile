@@ -22,7 +22,7 @@ Ignore += $(wildcard *.pdf)
 
 ### Makestuff
 
-Sources += Makefile
+Sources += Makefile .gitignore
 
 ## Sources += content.mk
 ## include content.mk

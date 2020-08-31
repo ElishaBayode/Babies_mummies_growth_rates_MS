@@ -38,7 +38,7 @@
 
 \begin{document}
 
-\title{Insect Demography: ***%\thanks{Grants or other notes
+\title{Insect Demography: does it matter whether we count babies or mummies?%\thanks{Grants or other notes
 %about the article that should go on the front page should be
 %placed here. General acknowledgments should be placed at the end of the article.}
 }
@@ -67,10 +67,7 @@
 % The correct dates will be entered by the editor
 
 \maketitle
-%\eb{Please note that I have moved some of your comments to where I addressed them}
 
-%\jd{It would be good to remove all of the crude linebreaks (double backslashes. Once again, we could fix all the problems with Tex commands, but probably still better to leave it for Springer.}
-%\eb{Thank you, Jonathan, I have removed them}
 
 \begin{abstract}
 	\vskip 0.2cm
@@ -117,8 +114,6 @@ Female tsetse typically mate once in their life-time: the sperm transferred by a
 % For one-column wide figures use
 
 \section{Mathematical Model}
-%\jd{I really don't get the point of this \P. We should have better reasons for counting at different stages than we might want to establish an experimental population. Also, that reason should probably be explained further up, not in the middle of the math. This math is cool, but the reason we did it is we were trying to simplify Elisha's earlier work and make sure things we correct and as simple as possible. It might be best to tie to the way or ways that tsetse are actually counted. It might also be worth showing explicitly how to calculate the extinction probability for a population of mixed stages (just by multiplying different $y$s together, I think).}
-%\eb{I tried to address the issue of tsetse counting methods in the field, see below. If you agree that this is the right place to talk about it, I will update the openning paragraph of  S2 when John provides further information on tsetse counting practices. Secondly,  I have included S4 to address real suituations where you have individuals in different life stages. See S4}
 Our model of tsetse demography is based on two flow diagrams (Figures \ref{fig:bioflowchart} and \ref{fig:compflowchart}). The first flow diagram illustrates the biological processes associated with tsetse life cycle. The state variables and the parameters are described below.   
 
 \begin{figure}[hbt!]
@@ -158,8 +153,6 @@ The list below shows variables and parameters description.
 \end{itemize}
 
 \subsubsection{Model formulaton}
-%\jd{I think we need to explain our general practice of associate probabilities $p$ with odds $\sigma$ before we suddenly start doing it.}
-%\eb{Thanks for your comment. I have addressed this issue, see below.}
 To make our mathematical derivations simple and compact, we use the \textit{odds} associated with the probability that a female completes a larviposition loop and the probability  that it produces a female offspring before dying, to derive the offspring distribution function for tsetse populations.  
 
 An individual at the census point: 
@@ -183,12 +176,10 @@ The associated generating function  is:
 
 $$G(s) = 1-p_m + p_m (1-p_b) \sum_k p_b^k s^k = 1-p_m + \frac{p_m (1-p_b)}{1-p_b s}.$$
 
-%\jd{It would be nice to have a suitably old citation here -- Bartlett or Bailey I guess.}
 We get ${\cal R}$, the reproduction number, by calculating $G'(1)$ \cite{bartlett1949some}, where $$G'(s) = \frac{p_m p_b (1-p_b)}{(1-p_b s)^2}.$$  Hence, \\
 
 $ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
-%\jd{If we do it right, I feel like we shouldn't need or want a separate section for each starting point. I'm particularly against doing \Rx\ over and over again: we should be able to make the point that when we move the dashed box around, $p_m$ and $p_c$ can change, but their product should remain the same (for a biological reason) and therefore \Rx\ should also remain the same. We should do that above, and then the model has a single \Rx.}
-%\eb{I have effected changes as suggested. Please see below}
+
 Depending on the counting point, $p_m$ and $p_c$ will vary, but their product will remain the same for all counting  points. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. This implies that regardless of the life stage we count the flies, the expected number of offspring produced by an individual in that stage, which will be counted at the same stage, is the same for all counting points.
 
 
@@ -219,8 +210,6 @@ The larva reaches the larvaposition loop (emerges and then matures) with probabi
 When we make appropriate substitutions in $y$, the extiction probability for a population of tsetse with a newly deposited larva in the intial population is:
 
 $$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}, p_{\ell}p_{d} \neq 0$$
-
-%\jd{I don't think we need to worry about the trivial case where some necessary link in the chain has probability zero.}
 
 This can be written more compactly in terms of ${\cal R}$ as:
 
@@ -254,8 +243,6 @@ It is easily varifiable that whenever ${\cal R}>1$ the following inequality hold
 	y_{o}\leq y_{e} \leq y_{l}
 \end{equation} 
 
-%\jd{We need to make sure we're careful about saying female consistently when we mean it. The new S3 could be a good place to talk carefully about where sex ratios fit in.} 
-%\eb{I have included a paragraph to address this concern. See item 2 below}
 
 \subsection*{\bf Remarks}
 \begin{itemize}
@@ -265,14 +252,6 @@ It is easily varifiable that whenever ${\cal R}>1$ the following inequality hold
 
 	\item[•] The current analysis focuses strictly on female tsetse populations. We can account for this  by expressing  $p_d$ (probability of depositing a live female larva) as:  $p_d =\delta \beta$, where $\delta$ is the probability that a deposited larva is alive, and $\beta$ the probability that a deposited larva is female.  These two parameters ($\delta$ and $\beta$) will allow us to capture both male:female sex ratio in the population, and  the abortion rates in tsetse population.  If we set $\beta = 0.5$ and $\delta = 1$, the current model corresponds to the model presented in \cite{Hargrove2005a}. 
 \end{itemize}
-%\section{Extinction probability for  populations starting with individuals at different life stages}
-
-%\jd{This is good, and addresses some of the problems I flagged above. The stuff between here and S2 is mostly going to lose biologists, who want want to figure it out, \emph{and} mathematicians, who will figure it out and realize that it's boring. I would add a little bit to S2 (or you could make a new, short S3) to discuss what happens when we move the counting box around (the product stays the same; $p_m$ gets larger as the counted individuals get bigger, with obvious implications for $y$) and then jump straight to here.}
-%\eb{Thank you, Jonathan, I have done as you suggested.  See S3 above}
-
-%\jd{See above. I think you can just merge this into the above where I suggest $N_l$.}
-
-%A real population consists of several individuals in the three different life stages. Therefore, the  extinction probability for a population consisting of individuals at different life stages, in the pioneer population, can be estimated  from the results we obtained above for  counting at the different life stages.  If we assume that extinction probabilities for each counting point are independent, then the probability that a tsetse population, which starts with $N_1$ larvae, $N_2$ newly emerged adult females and $N_3$ larvipositing adult females, goes extinct, is; $$\tilde{y_c} = y_{l}^{N_1}y_{e}^{N_2}y_{o}^{N_3}.$$ 
 
 \subsection{Example 1}
 
@@ -301,11 +280,11 @@ Previous estimates for extinction probabilities for tsetse populations rely on t
 
 \begin{figure*}[h]
 	\includegraphics[width=0.75\textwidth]{Extinction15individuals.png}
-	\caption{{\bf Extinction probability as a function of daily mortality rate for larvipositing adults for different counting systems.}  Pioneer populations consist of 15 larvipositing or 15 newly emerged adults or 15 larvae or realistic populations consisting of 5 individuals in each of the three life stages. \jd{Change legend to `realistic'}}
+	\caption{{\bf Extinction probability as a function of daily mortality rate for larvipositing adults for different counting systems.}  Pioneer populations consist of 15 larvipositing or 15 newly emerged adults or 15 larvae or realistic populations consisting of 5 individuals in each of the three life stages.}
 	\label{ExtLarviposMort15indiv}
 \end{figure*}
 
-While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is $ \Rx \leq 1$, extinction is certain for all the counting systems. For $\Rx>1$, extinction probabilities approach zero when the population size is large; thus the extinction probability as a function of parameters approaches a step function when population size is large. This is easily verifiable by setting ${\cal R} =1$ in $y_i$ above.  As \Rx\ appoaches 1 from above, a larger population size is needed for the extinction probability to become small. (Fig  \ref{ExtLarviposMort15indiv}).
+While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. For ${\cal R} > 1 $, extinction probabilities approach zero when the population size is large; thus the extinction probability as a function of parameters approaches a step function when population size is large. This is easily verifiable by setting ${\cal R} =1$ in $y_i$ above.  As \Rx\ appoaches 1 from above, a larger population size is needed for the extinction probability to become small (Fig  \ref{ExtLarviposMort15indiv}).
 
 Our modelling framework unifies existing methods for estimating extinction probabilities for tsetse populations. The model only requires a good estimate of the probabilities of recruitment between tsetse life stages to estimate extinction probabilities. Our model presents an opportunity to compare previous estimates for extinction probabilities within a simple unified framework.
 

@@ -180,8 +180,8 @@ We get ${\cal R}$, the reproduction number, by calculating $G'(1)$ \cite{bartlet
 
 $ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
 
-Depending on the counting point, $p_m$ and $p_c$ will vary, but their product will remain the same for all counting  points. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. This implies that, regardless of the life stage we count, the expected number of offspring produced by an individual in that stage, which will be counted at the same stage, is the same for all counting points.
-
+The recruitment probabilities $p_m$ and $p_c$ depend on the counting point, but their product will remain the same. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. In other words, the reproductive number is independent of the counting point: the expected number of larvae produced by a larva is equal to the number of the expected number of emergent adults produced by an emergent adult, and so forth.
+\jd{This must be a known fact; it would be fun to get a citation for it.}
 
 We get the probability $y$ that a tsetse population, starting with a single individual at a given count point, goes extinct, by solving $G(y) = y$ \cite{bartlett1949some}. We can simplify things by solving   $G(1-z) = 1-z$, where $z$ is the probability of not going extinct, and then factoring out a $z$. This gives:
 
@@ -287,7 +287,7 @@ Previous estimates of extinction probabilities for tsetse populations rely on th
 	\label{ExtLarviposMort15indiv}
 \end{figure*}
 
-While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. For ${\cal R} > 1 $, extinction probabilities approach zero when the population size is large; thus the extinction probability as a function of parameters approaches a step function when population size is large. This is easily verifiable by setting ${\cal R} =1$ in $y_i$ above.  As \Rx\ approaches 1 from above, a larger population size is needed for the extinction probability to become small (Fig  \ref{ExtLarviposMort15indiv}).
+While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is $\Rx \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases. This drop-off gets faster for larger populations; when the population is very large, the population size is large; thus the extinction probability as a function of parameters approaches a step function. This effect can be seen in Fig \ref{ExtLarviposMort15indiv}), where 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function.
 
 Our modelling framework unifies existing methods for estimating extinction probabilities for tsetse populations. The model only requires a good estimate of the probabilities of recruitment between tsetse life stages to estimate extinction probabilities. Our model presents an opportunity to compare previous estimates for extinction probabilities within a simple unified framework.
 

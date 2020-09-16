@@ -11,6 +11,7 @@
 \usepackage{gensymb}
 \usepackage{float}
 \usepackage[section]{placeins}
+\newcommand{\Rx}{\ensuremath{\cal R}}
 %% \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 % % % % % % % % % % % % %Converts tiff to eps % % % % % % % % %
 
@@ -39,110 +40,100 @@ Climate change may already have altered the distribution in Africa of tsetse fli
 Tsetse (\textit{Glossina} spp) are vectors of human and animal trypanosomiases, neglected tropical diseases endemic in many sub-Saharan African countries. Sustained control efforts have reduced disease burden in the last 10 years \cite{WorldHealthOrganizationWHO2018}, but a recent study showed that climate warming may alter tsetse distribution in Africa. Increasing temperatures could lead to local extinction of tsetse population in some regions, but could also lead to emergence of tsetse and trypanosomiasis in regions that were formerly too cold for the flies \cite{Lord2018}. There is a need for an improved understanding of tsetse population growth as a function of field temperatures that fluctuate with season. 
 
 %\jd{We should clearly stake out the intrinsic rate and the realized rate. Could we call the value that doesn't consider density dependence $r_0$ and the general one $r_e$? Just saying natural rate of increase, without intrinsic, will imply $r_e$ to many people, but we mean $r_0$.}
-The intrinsic rate of natural increase $r_0$ is an important metric in insect population dynamics as it can be used to determine whether or not a set of environmental condition is suitable for an insect population \cite{Birch1948}. Several attempts have been made to estimate the natural rate of increase for tsetse population from age distributions of samples of field caught flies, but these efforts largely dissipated following Van Sickle’s \cite{VanSickle1988a} demonstration that they were invalid - and that valid estimations using age data were highly sensitive to sampling error. More recently, Williams et al. \cite{williams1990tsetse} have used the Euler-Lotka equation to relate age-specific mortality and fecundity to overall growth rates of tsetse populations. Hargrove \cite{Hargrove2004a}  used this model to calculate tsetse growth rates as a function of (constant) environmental temperature. \jd{We need to be clear how we are interpreting VanSickle1988a. Are we saying that they are invalid, or that they point to others who are invalid? Is it good that we are talking about invalid work that is $>30$ years old?} \eb{point well taken. Have rewritten this section to put things in the appropriate context}. However, whereas it is a relatively simple matter to estimate the growth of tsetse populations at constant temperatures, nobody has estimated the intrinsic rate of increase for tsetse population as a function of fluctuating field temperatures.
+The intrinsic rate of natural increase $r_0$ is an important metric in insect population dynamics as it can be used to determine whether or not a set of environmental condition is suitable for an insect population \cite{Birch1948}. Several attempts have been made to estimate the natural rate of increase for tsetse population from age distributions of samples of field caught flies, but these efforts largely dissipated following Van Sickle’s \cite{VanSickle1988a} demonstration that they were invalid - and that valid estimations using age data were highly sensitive to sampling error. More recently, Williams et al. \cite{williams1990tsetse} have used the Euler-Lotka equation to relate age-specific mortality and fecundity to overall growth rates of tsetse populations. Hargrove \cite{Hargrove2004a}  used this model to calculate tsetse growth rates as a function of (constant) environmental temperature. However, whereas it is a relatively simple matter to estimate the growth of tsetse populations at constant temperatures, nobody has estimated the intrinsic rate of increase for tsetse population as a function of fluctuating field temperatures.
 
 At every instant in time, in environments that are unlimited by space or  resources, the intrinsic rate of increase gives a good picture of the rate of increase per-head  attainable in a population -- given the combination of  the mortality and fecundity rates as functions of various environmental factors, such as temperature, moisture etc. Since the intrinsic rate of increase explicitly excludes density-dependent effects, actual growth rates are generally expected to lie below the intrinsic rate \cite{Birch1948}. A positive (negative) $r_0$ value implies that current the combination of survival, reproduction and  mortality rates in the population is favourable (unfavorable) for positive persistence. If the averaged $r_0$ is negative for a sustained period, the population is expected to go extinct go extinct.
 
 The natural rate of increase can be estimated from demographic measurements using the Euler-Lotka (E-L) equation \cite{Birch1948,Zidon2015}, given in discrete form as:
 
 \begin{equation}
-\label{equation3}
-r_0 \sum \lambda^{-x}l_{x}m_{x} = 1.
+\label{eulerLotkaEq}
+\sum \lambda^{-x}l_{x}m_{x} = 1.
 \end{equation}
 
 where  $l_{x}$ is the probability at birth, that a female individual is alive at age $x$ and $m_{x}$ the expected number of female offspring produced in a unit time by a female aged $x$ -- all estimated in the absence of density-dependent pressure.
 The basic reproduction number $R_{o}$ is:
 
 \begin{equation}
-\label{equation4}
-R_{o}= \sum l_{x}m_{x}. 
+\label{eulerRepNumber}
+{\cal R}= \sum l_{x}m_{x}. 
 \end{equation}
 
-Tsetse have a relatively simple life history; they produce a single larva at regular intervals, which vary with temperature \cite{hargrove2003tsetse}. The mortality rate is higher in newly emerged adult flies than in mature adults, and mortality rates increase in females $>$ 60 days old \cite{hargrove2020model}. In most populations in the field, however, more than 80\% of the female populations would have died before the first 60 days of adult life. \jd{This s. seems entirely repetitive; combine with previous s:} Moreover, with daily mortality rate of about 0.028, the probability that a female fly will still be alive at age 60, is less than 0.2.  \jd{Nothing is really added by this sentence, either:} Hence, flies older than 60 days do not play a major role in the population dynamics.  \jd{Unclear: say that we're going to assume that the loop variables remain constant.} The very basic life history of tsetse allows us to obtain a closed form solution of the E-L equation to derive an expression for the intrinsic rate of natural increase for tsetse population living at constant temperature. We estimated the instantaneous, per-capita rate of increase $r$ as a function of daily average temperature recorded at Rekomitjie Research Station, Zambezi Valley, Zimbabwe from 1960 to 2018. We then estimated the average annual growth rate over the next 50 years for each of three climate-warming scenarios (0.04\textdegree C, 0.06\textdegree C and 0.08\textdegree C annual increase), using measured daily temperatures for 2018 as a baseline. 
-\jd{Is there a citation for this range of increase rates?}
+Tsetse have a relatively simple life history; they produce a single larva at regular intervals, which vary with temperature \cite{hargrove2003tsetse}. The mortality rate is higher in newly emerged adult flies than in mature adults, and mortality rates increase in females $>$ 60 days old \cite{hargrove2020model}. In most populations in the field, however, more than 80\% of the female populations would have died before the first 60 days of adult life. Hence, flies older than 60 days do not play a major role in the population dynamics. We assumed that once flies enter the reproductive cycle, they produce new offspring with constant probability throughout their lives. The very basic life history of tsetse allows us to obtain a closed form solution of the E-L equation to derive an expression for the intrinsic rate of natural increase for tsetse population living at constant temperature. We estimated the instantaneous, per-capita rate of increase $r$ as a function of daily average temperature recorded at Rekomitjie Research Station, Zambezi Valley, Zimbabwe from 1960 to 2018. We then estimated the average annual growth rate over the next 50 years for each of three climate-warming scenarios (0.04\textdegree C, 0.06\textdegree C and 0.08\textdegree C annual increase), using measured daily temperatures for 2018 as a baseline. These climate change scenarios are informed, partly, by the warming rate recorded at Rekomitjie during the hot-dry season over the past 27 years \cite{Lord2018}.    
+
 
 where c is the time interval between births and $r_0$ is the intrinsic rate of increase.
 	
 \section*{Materials and Methods}
-We model the growth of populations of female tsetse: we ignore the male population, except to assume that there are always sufficient numbers of males present to ensure that virtually all females are inseminated within about the first 7-10 days of their adult lives. We sub-divide the life-cycle of female tsetse into three distinct stages – larval/pupal, pre-ovulation adult and larvipositing adult stages \jd{I wonder if it would be better to make definitions here and then just use ``immature'' and ``mature'' going forward.} . Tsetse biology has been intensively studied for more than a century and rates of birth, development, and mortality rates have been measured both  in  the laboratory and  in the field \cite{Rogers2011,Hargrove2004a,Jarry2007,Hargrove2011,Hargrove2019a}. Using this knowledge, and taking advantage of the relatively simple life cycle, we develop a framework that allows us to solve the Euler-Lotka equation analytically for the intrinsic rate of increase of tsetse populations. We proceed by making the following simplifying assumptions.
+We model the growth of populations of female tsetse: we ignore the male population, except to assume that there are always sufficient numbers of males present to ensure that virtually all females are inseminated within about the first 7-10 days of their adult lives. We sub-divide the life-cycle of female tsetse into three distinct stages – larval, pre-ovulation (here termed ''immature'') adult,  and larvipositing (``mature'') adult stages. Tsetse biology has been intensively studied for more than a century and rates of birth, development, and mortality rates have been measured both  in  the laboratory and  in the field \cite{Rogers2011,Hargrove2004a,Jarry2007,Hargrove2011,Hargrove2019a}. Using this knowledge, and taking advantage of the relatively simple life cycle, we develop a framework that allows us to solve the Euler-Lotka equation analytically for the intrinsic rate of increase of tsetse populations. We proceed by making the following simplifying assumptions.
 \section*{Model assumptions} 
 \begin{itemize} 
 	\item  Once the fly attains the age of first ovulation, she retains constant fecundity rate throughout her life.   
-	\item The life-cycle of the fly is divided into three stages: pupa, pre-ovulation adults and larvipositing adults. 
-	\item  $p_o$ is the probability of reaching the larviposition loop from birth \jd{Shouldn't this be from the counting point? And shouldn't it therefore come after the previous item? If you want deposition to be the counting point, just say so.}
+	\item  $p_o$ is the probability of reaching the larviposition loop from the point of larviposition (birth)
 	\item   $p_c$ is the probability of reaching the point where offspring are counted, from the point of larviposition.
 	\item   $c$ is the time interval (assumed constant) between successive births. 
 	\item   $p_l$ is the probability of surviving a larviposition loop.
 \end{itemize}
-\jd{With this definition, we can just use birth and get rid of counting points. That seems simpler:} Here birth refers to the point which a larva/pupae is deposited. \jd{The thing that is deposited is a larva. Do we need to mention pupae at all in the Methods?: you're born when deposited as a larva, then we want to know your probability of surviving to join the loop. We also need a probability that a female who survives the loop also successfully deposits a female offspring.}
+ Here birth refers to the point which a larva is deposited. 
 
 \section*{Model} 
 
-Suppose  $l_{x}$ is the probability of a female surviving from birth to age $x$, and that $m_{x}$ is the mean number of female offspring produced in a unit time by a female aged $x$.  
-
-\jd{You need to define here what you mean by age.}
+Suppose  $l_{x}$ is the probability of a female surviving from birth to age $x$, and that $m_{x}$ is the mean number of female offspring produced in a unit time by a female aged $x$. Here age refers to the number of times a female completes a larviposition loop, incremented by the time interval between successive successive births. 
 
 \subsection*{Basic reproduction number}
 
-The basic reproduction number $(R_o)$
-\jd{Use a macro to define a consistent style for Ro.}
-can be calculated directly from equation (\ref{equation4}): 
-\jd{Never give things vacuous names (like equation4).}
-
-\jd{This whole x/c thing seems a bit crazy. How did we do it in the Mummies paper?}
-$$R_{0 }=\sum l_{x}m_{x},$$
-$$x=c,2c,3c,... \implies \frac{x}{c}=y = 1,2,3,...$$ 
+The basic reproduction number ${\cal R}$ is given as:
+$${\cal R}=\sum l_{x}m_{x},$$
+$$x=c,2c,3c,... $$
 where
 \begin{equation}
-\label{equation6} 
+\label{survProb} 
 l_{1}=p_op_l, l_{2}= p_op_l^2, l_{3}=p_op_l^3, . . .
 \end{equation}
 and
 \begin{equation}
-\label{equation7} 
+\label{birthProb} 
 m_{1}=p_c, m_{2}=p_c, m_{3}=p_c, . . .
 \end{equation}
-Therefore, from equations (\ref{equation4}),  (\ref{equation6}), and  (\ref{equation7}),
+Therefore, from equations (\ref{eulerRepNumber}),  (\ref{survProb}), and  (\ref{birthProb}),
 
-$$R_{0 }=\sum l_{y}m_{y} = p_op_lp_c + p_op_l^2 p_c + p_op_l^3p_c + ...$$
+$${\cal R}=\sum l_{y}m_{y} = p_op_lp_c + p_op_l^2 p_c + p_op_l^3p_c + ...$$
 
 $$=p_op_cp_l (1 + p_l + p_l^2 + p_l^3 + ...),$$
 \begin{equation}
-\label{equation8} 
+\label{finalRepNumb} 
 =\frac{p_op_cp_l}{(1-p_l)},
 \end{equation}
-where $0 < p_l < 1$. Notice that $R_o$ does not depend on $c$, moreover, if $p_o$ or $p_c \rightarrow{0}$, then $R_o \rightarrow{0}$. This implies that whenever any of the parameters approach $0$, the population goes extinct.
+where $0 < p_l < 1$. Notice that ${\cal R}$ does not depend on $c$, moreover, if $p_o$ or $p_c \rightarrow{0}$, then ${\cal R} \rightarrow{0}$. This implies that whenever any of the parameters approach $0$, the population goes extinct.
 
-Equation  (\ref{equation8}) corresponds to the net reproduction number for tsetse population, in the general model presented in \cite{Are2019a}.
+Equation  (\ref{finalRepNumb}) corresponds to the net reproduction number for tsetse population, in the general model presented in \cite{Are2019a}.
 
 \subsection*{The intrinsic rate of natural increase}
-\jd{I kind of feel like it's easier to do everything by steps instead of time (and use $\lambda$) and then just convert to $r$ at the end.}
-We can calculate the intrinsic rate of natural increase $r_0$ from the  Euler-Lotka equation.  Suppose all parameter descriptions remain as above, we can rewrite equation (\ref{equation3}) by letting $\lambda= e^{cr_0}$. Equation (\ref{equation3}) then becomes:
+We can calculate the intrinsic rate of natural increase $r_0$ from the  Euler-Lotka equation.  Suppose all parameter descriptions remain as above, we can rewrite equation (\ref{eulerLotkaEq}) by letting $\lambda= e^{cr_0}$. Equation (\ref{eulerLotkaEq}) then becomes:
 \begin{equation}
-\label{equation1008} 
+\label{derivRateIncr2} 
 \sum (e^{r_0c})^{-T}l_{T}m_{T}.
 \end{equation}
 where $ T $ is the integer number of time steps. \\
 
-Using equations  (\ref{equation6}) and  (\ref{equation7}), we can calculate $r_0$ directly from equation (\ref{equation1008}).
+Using equations  (\ref{survProb}) and  (\ref{birthProb}), we can calculate $r_0$ directly from equation (\ref{derivRateIncr2}).
 
-\jd{I don't see the advantage of the expansions after the first. This can be written in summation notation and just one line, I think.}
 
-$$\sum (e^{r_0c})^{-T}l_{T}m_{T} = p_op_lp_c(e^{r_0c})^{-1} + p_op_l^2p_c(e^{r_0c})^{-2} + p_op_l^3p_c(e^{r_0c})^{-3} + ...=1,$$
+$$\sum (e^{r_0c})^{-T}(p_cp_d)_{T}(p_op_l)_{T} =1,$$
 
-$$p_op_cp_le^{-r_0c} (1 + p_le^{-r_0c} + p_l^2e^{-2r_0c} + p_l^3e^{-3r_0c}+ ...) =1,$$
+solving for $r_0$ yields, 
 
 \begin{equation}
-\label{equation9} 
+\label{derivRateIncr} 
 \frac{p_op_cp_le^{-r_0c}}{1-p_le^{-r_0c}} =1.
 \end{equation}
-Solving for $r_0$ in equation (\ref{equation9}) , yields, 
+Solving for $r_0$ in equation (\ref{derivRateIncr}) , yields, 
 
 \begin{equation}
-\label{equation13} 
+\label{finalRateIncrs} 
 r_0 = (\frac{\ln[p_l(p_cp_o+1)]}{c}).
 \end{equation}
-If  $p_o$ or $p_c \rightarrow{0}$, then  $r_0 \rightarrow{\frac{\ln[p_l]}{c}}$. Since $0 < p_l < 1$, whenever any of the parameters approaches $0$, $r_0$ becomes negative, which implies  population extinction. Moreover, $r_0 = 0, \implies R_o = 1$.  
+If  $p_o$ or $p_c \rightarrow{0}$, then  $r_0 \rightarrow{\frac{\ln[p_l]}{c}}$. Since $0 < p_l < 1$, whenever any of the parameters approaches $0$, $r_0$ becomes negative, which implies  population extinction. Moreover, $r_0 = 0, \implies {\cal R} = 1$.  
 
 
 \subsection*{Intrinsic growth rate as a function of temperature}
@@ -163,7 +154,7 @@ We compare growth rate estimates from the current model with the growth rate obt
 We fitted an exponential function to the population estimates using the function \texttt{fit\_easylinear()} from the R package “growthrate” (Figure \ref{fig:antelopeEst}). The weekly growth rate $r_m$ from the model fit is 0.03879 per week (\jd{Why would there be an sd? Are you sure it's not standard error? The best thing to present would be just CIs (R not needed either).} sd: 0.002631 and $R^2$ = 0.837). i
 
 \jd{This is the first mention of an $r_t$ estimate. Please clarify.}
-We then used the $r_t$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_t$ for the year, by summing the weekly growth rate during this period and dividing by the total number of weeks (Equation \ref{equation1010}). The average growth rate during this period is 0.03851 per-week, with standard deviation \jd{Here I think you do mean sd, but you need to be more clear about which sd. Also, make sure it's the right comparison with the easylinear, or else don't use it.} 0.01461. The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
+We then used the $r_t$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_t$ for the year, by summing the weekly growth rate during this period and dividing by the total number of weeks. The average growth rate during this period is 0.03851 per-week, with standard deviation \jd{Here I think you do mean sd, but you need to be more clear about which sd. Also, make sure it's the right comparison with the easylinear, or else don't use it.} 0.01461. The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
 
 \subsection*{Sensitivity Analysis}
 \jd{We should discuss why we define probabilities as exponentials. It's assuming that death rates are constant over a time period, and also kind of assuming that the length of the time period and the death rate are better considered separately. The exception is the probability of a larva being female, which seems more clear(although I don't like the name).}
@@ -209,14 +200,14 @@ In Fig ref{fig:combineTem}, we break down these patterns across the seasons. Bot
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=1.1\linewidth]{21April20CombineTemPlot}
-	\caption{{\bf Monthly mean temperature in Rekomitjie for different seasons (1960 - 2018) }. Monthly average temperatures for months in A. the hot-wet season (January - April)  B.cool-dry (May-August) and C. hot-dry (September-December). The line through 25\degree C indicates the optimal temperature for tsetse population survival and reproduction}
+	\caption{{\bf Monthly mean temperature at Rekomitjie for different seasons (1960 - 2018) }. Monthly average temperatures for months in A. the hot-wet season (January - April)  B.cool-dry (May-August) and C. hot-dry (September-December). The line through 25\degree C indicates the optimal temperature for tsetse population survival and reproduction}
 	\label{fig:combineTem}
 \end{figure}
 
 
 \newpage
-\subsection*{Changes in age distributions with month of the year in Rekomitjie}
-High temperatures in Rekomitjie have serious implications for tsetse population dynamics. Studies have suggested that tsetse population age structure will be altered during the hot-dry seasons in Rekomitjie due to heat-induced mortality in pupae and newly emerged adults \cite{Hargrove2013b,hargrove2015mortality,Ackley2017}. An earlier study \cite{VanSickle1988} suggested that the Rekomitjie population will seldom, if ever, achieve a stable age distribution because once disproportionate mortalities affect pupae and young adults during the hot-dry season, the age distribution will not stabilise before the next hot-dry season sets in. In this study, we investigate this matter further by analysing the data collected on the ovarian age distribution for \textit{G. pallidipes} caught in traps at Rekomitjie from September 1988 – December 1999. We calculate chi-squared statistic for tsetse age distribution for consecutive months throughout the study period. A small chi-squared statistic will indicate similar age distribution structure between two consecutive months, while a large chi-squared statistic will imply a shift in the age distribution.  Our results show that the chi-squared statistic   is relatively small for the difference in ovarian age distribution from February to August. However, from September to January the chi-squared statistic increases rapidly, indicating a large shift in the age distribution during the hot-dry season (Fig \ref{fig:ChiSqrSttistic}). \jd{This is the statistical fallacy of using evidence strength as a proxy for effect size. We can't do it.}
+\subsection*{Changes in age distributions with month of the year at Rekomitjie}
+High temperatures at Rekomitjie have serious implications for tsetse population dynamics. Studies have suggested that tsetse population age structure will be altered during the hot-dry seasons at Rekomitjie due to heat-induced mortality in pupae and newly emerged adults \cite{Hargrove2013b,hargrove2015mortality,Ackley2017}. An earlier study \cite{VanSickle1988} suggested that the Rekomitjie population will seldom, if ever, achieve a stable age distribution because once disproportionate mortalities affect pupae and young adults during the hot-dry season, the age distribution will not stabilise before the next hot-dry season sets in. In this study, we investigate this matter further by analysing the data collected on the ovarian age distribution for \textit{G. pallidipes} caught in traps at Rekomitjie from September 1988 – December 1999. We calculate chi-squared statistic for tsetse age distribution for consecutive months throughout the study period. A small chi-squared statistic will indicate similar age distribution structure between two consecutive months, while a large chi-squared statistic will imply a shift in the age distribution.  Our results show that the chi-squared statistic   is relatively small for the difference in ovarian age distribution from February to August. However, from September to January the chi-squared statistic increases rapidly, indicating a large shift in the age distribution during the hot-dry season (Fig \ref{fig:ChiSqrSttistic}). \jd{This is the statistical fallacy of using evidence strength as a proxy for effect size. We can't do it.}
 
 \begin{figure}[hbt!]
 	\centering
@@ -242,7 +233,7 @@ We compare the difference between age distribution for the two consecutive month
 Over the past 27 years at Rekomitjie, average daily temperatures have increased by 2\textdegree C in the month of November, and by 0.9\textdegree C for the rest of the year \cite{Lord2018}.  Here we investigate the impact on the annual growth rates of tsetse population assuming that average temperatures continue to increase over the next 50 years at rates of either 0.04, 0.06 or 0.08 \textdegree C per-year. We are particularly interested to know what level of temperature increase would cause tsetse population growth rates to become consistently negative.
 
 \section*{Results}
-We used the daily average temperature data and equation (\ref{equation13}) to predict the intrinsic rate of natural increase of tsetse population in the neighbourhood of Rekomitjie, for each day between January 1960 and December 2018. We then used equation (\ref{equation1010}) to obtain annual averages for $r_0$. Notice that all references below to growth rates are values predicted from temperature profiles.   
+We used the daily average temperature data and equation (\ref{finalRateIncrs}) to predict the intrinsic rate of natural increase of tsetse population in the neighbourhood of Rekomitjie, for each day between January 1960 and December 2018. We then used equation to obtain annual averages for $r_0$. Notice that all references below to growth rates are values predicted from temperature profiles.   
 
 From 1960 to 1986, the annual average growth rate was relatively stable \jd{This is not the actual growth rate of course; it's the estimated value of the growth potential, or density-independent growth rate, or something like that. Need to think carefully about clear language here.}, varying between 0.0031 and 0.00389 \jd{This value presumably has units? per day?}.  Between 1987 and 1995, however, the growth rate dropped below the previous minimum of 0.0031 in four of the nine years, with a low of 0.00287 in 1992, during which year catches of tsetse at Rekomitjie also fell to their lowest recorded levels up to that time \cite{hargrove2015mortality}. There followed a slow recovery with increased growth rates until 2009. Thereafter, rates fell consistently, hitting an all-time low of 0.0023 in 2016 (Fig \ref{fig:tsetseflowchat0}), at which time catches were also at an all-time low \cite{Lord2018}. \jd{Would growth rates be more readable if converted to annual scale? \emph{Show} units in any case. Also, be consistent about significant figures.}
 
@@ -303,7 +294,7 @@ We have shown that tsetse populations have very low growth rates. For instance, 
 We acknowledge that the E-L equation was premised on the assumption that the population attains a stable age distribution, and where the environment is not limited by resources or space. Our results agree in-part with findings from the previous studies on tsetse age distribution \cite{VanSickle1988,Hargrove2013b,hargrove2015mortality,Ackley2017},  and also provides a clearer insight on what happens to tsetse age distribution within a year. We show that, although it is true that tsetse age distribution cannot be stable throughout each of the months in a year, however as soon as the hot-dry season passes, tsetse age distribution essentially stabilises from February of the preceding year up until August before the high temperatures again perturb the age structure significantly from September - January of the preceding   year. Moreover, Amarasekare et al \cite{Amarasekare2013} provided strong evidence that populations can still attain stationary age distributions as long as the fluctuation in environmental temperature is within a threshold that will allow reproduction and development processes to continue. We have shown that for most months of the year, at Rekomitjie, apart from the hot dry seasons, temperature variations have been minimal. The instability in the age distribution is often introduced during the hot-dry seasons \cite{Hargrove2013b} of the very hot years. Therefore, barring any density dependent effects, we would expect the actual growth rates to be close to the intrinsic rate of increase during seasons when population growth is optimal. Our estimates provide a very insightful first step towards more accurate estimates of tsetse population growth rate under varying temperatures.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
-The current study did not consider density dependent effects, which are very important for tsetse populations \cite{Rogers1975}. However, the E-L equation has been shown to yield comparable estimates of $r_0$ to other methods that do incorporate density dependent effects \cite{Cortes2016}. Moreover, as tsetse populations continue to decline in Rekomitjie, due to high temperatures, density-dependent effects may fall off, since the population may lie far below its carrying capacity. . 
+The current study did not consider density dependent effects, which are very important for tsetse populations \cite{Rogers1975}. However, the E-L equation has been shown to yield comparable estimates of $r_0$ to other methods that do incorporate density dependent effects \cite{Cortes2016}. Moreover, as tsetse populations continue to decline at Rekomitjie, due to high temperatures, density-dependent effects may fall off, since the population may lie far below its carrying capacity. . 
 
 % A study \cite{Cortes2016} did an extensive comparison of five different methods for estimating $r_0$ for a fish population and they reported that the density independent assumption on which E-L equation is derived does not limit it validity of the $r_0$ estimates derived from it.        
 

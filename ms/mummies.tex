@@ -278,14 +278,15 @@ Setting  $ p_{\nu}= \epsilon \Omega^{\nu}$ , $p_{\ell} =\lambda^{\tau} $, $p_{d}
 
 Previous estimates of extinction probabilities for tsetse populations rely on the assumption that the pioneer population is initiated with a number of newly emerged adult female flies, and the probability that such populations go extinct is estimated as a function of different vital rates in tsetse life cycle. The life cycle of holometabolous insects, such as tsetse, can be divided into five distinct stages, egg, larva, pupa, immature adult, mature (larvipositing) adult - each with distinct physiological features, and with differing responses to various environmental factors. In tsetse, for example, the most vulnerable stage is the newly emerged adult, which also appears to be particularly susceptible to high temperatures \cite{Ackley2017a}. Tsetse are unusual in that survival probability is high in the egg and larval stages, which are retained in the mother's uterus \cite{Hargrove1999a}. Here, we have developed a simple, unified model to analyse extinction probabilities when starting from different life stages. 
 
-\begin{figure*}[h]
-	\includegraphics[width=0.75\textwidth]{Extinction15individuals.png}
-	\caption{{\bf Extinction probability as a function of daily mortality rate for larvipositing adults for different counting systems.}  Pioneer populations consist of 15 larvipositing or 15 newly emerged adults or 15 larvae or, more realistically, 5 individuals in each of the three life stages.}
 
-	\label{ExtLarviposMort15indiv}
+\begin{figure*}[h]
+	\includegraphics[width=0.75\textwidth]{ExtinctionRepNumberPoineerPop.png}
+	\caption{{\bf: Extinction probability as a function of the size of the pioneer population, for different values of basic reproduction number.} When ${\cal R}=1$, extinction probability is always at 1 for all sizes of the initial population.}
+	\label{ExtPoineerSize}
 \end{figure*}
 
-While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is $\Rx \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases. This drop-off gets faster for larger populations; when the population is very large, the population size is large; thus the extinction probability as a function of parameters approaches a step function. This effect can be seen in Fig \ref{ExtLarviposMort15indiv}), where 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function.
+
+While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases (Fig. \ref{ExtPoineerSize}). This drop-off gets faster for larger populations; when the population is very large, the population size is large; thus the extinction probability as a function of parameters approaches a step function. This effect can be seen in Figure \ref{ExtLarviposMort15indiv}, where 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function.
 
 Our modelling framework unifies existing methods for estimating extinction probabilities for tsetse populations. The model only requires a good estimate of the probabilities of recruitment between tsetse life stages to estimate extinction probabilities. Our model presents an opportunity to compare previous estimates for extinction probabilities within a simple unified framework.
 
@@ -293,13 +294,15 @@ When populations are large, extinction probability is either 0 or 1 for all the 
 
 We considered field situations where the population consists of individuals in the three different life stages, and we made a simplifying assumption that the probability of survival and reproduction, in populations starting with any of the life stages, is independent of the individuals in the other life stages. We then obtained the probability that a population which has individuals in all the three life stages goes extinct as the product of the probabilities of extinction for populations starting with only larvae, newly emerged adult or larvipositing adults respectively. 
 
-Figure \ref{ExtPoineerSize} shows extinction probabilities as a function of the daily mortality rates for larvipositing adults, for situations where the initial population has either only larvae, newly emerged adults, larvipositing females or individuals of all of the life stages. Current results suggest that regardless of what we assume about the life stages of individuals in the pioneer population, a closed population of tsetse will go extinct, if subjected to sustained daily mortality rates of about 3.5\% (Fig \ref{ExtLarviposMort15indiv}). This is in good agreement with earlier studies that have suggested the same level of mortality for ensuring eradication of tsetse populations \cite{Hargrove2005a,Kajunguri2019}.
+Figure \ref{ExtLarviposMort15indiv} shows extinction probabilities as a function of the daily mortality rates for larvipositing adults, for situations where the initial population has either only larvae, newly emerged adults, larvipositing females or individuals of all of the life stages. Current results suggest that regardless of what we assume about the life stages of individuals in the pioneer population, a closed population of tsetse will go extinct, if subjected to sustained daily mortality rates of about 3.5\% (Fig \ref{ExtLarviposMort15indiv}). This is in good agreement with earlier studies that have suggested the same level of mortality for ensuring eradication of tsetse populations \cite{Hargrove2005a,Kajunguri2019}.
 
 \begin{figure*}[h]
-	\includegraphics[width=0.75\textwidth]{ExtinctionRepNumberPoineerPop.png}
-	\caption{{\bf: Extinction probability as a function of the size of the pioneer population, for different values of basic reproduction number.} When ${\cal R}=1$, extinction probability is always at 1 for all sizes of the initial population.}
-	\label{ExtPoineerSize}
+	\includegraphics[width=0.7\textwidth]{Extinction15individuals.png}
+	\caption{{\bf Extinction probability as a function of daily mortality rate for larvipositing adults for different counting systems.}  Pioneer populations consist of 15 larvipositing or 15 newly emerged adults or 15 larvae or, more realistically, 5 individuals in each of the three life stages.}
+	
+	\label{ExtLarviposMort15indiv}
 \end{figure*}
+
 
 The theoretical framework developed previously for estimating extinction probabilities for tsetse populations, assumed that the population starts with a finite number of newly emerged adults. We have shown here that the results from those studies are quite similar to what we got when we make more realistic assumption that the population is initiated with finite number of individuals in each of the three life stages. Moreover, as long as the population size is large, regardless of the assumption around the developmental stage of the pioneer population, we obtained the same result. 
 

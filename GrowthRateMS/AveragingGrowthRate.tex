@@ -112,7 +112,7 @@ Equation  (\ref{finalRepNumb}) corresponds to the net reproduction number for ts
 We can calculate the intrinsic rate of natural increase $r_0$ from the  Euler-Lotka equation.  Suppose all parameter descriptions remain as above, we can rewrite equation (\ref{eulerLotkaEq}) by letting $\lambda= e^{cr_0}$. Equation (\ref{eulerLotkaEq}) then becomes:
 \begin{equation}
 \label{derivRateIncr2} 
-\sum (e^{r_0c})^{-T}l_{T}m_{T}.
+\sum (e^{r_0c})^{-T}l_{T}m_{T} =1.
 \end{equation}
 where $ T $ is the integer number of time steps. \\
 
@@ -146,16 +146,13 @@ We compare growth rate estimates from the current model with the growth rate obt
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Feb_06_fitGrouwthRate}
-	\caption{The \jd{Use informative axis labels in the graph.} vertical axis is the estimated \textit{G. m. morsitans} female population on Antelope Island, Lake Kariba, Zimbabwe, from January 14th to December 30th, 1981. The time is measured in weeks \jd{Can you show the real dates? If not, can you change the label to “time (weeks)” and set 1 to be the first week in 1981?}, the blue line shows the model fit, and the red dots are the population estimates used in the fitting procedure.}
+	\caption{The vertical axis is the estimated \textit{G. m. morsitans} female population on Antelope Island, Lake Kariba, Zimbabwe, from January 14th to December 30th, 1981. The time is measured in weeks, the smooth line shows the model fit, and the dots are the population estimates used in the fitting procedure.}
 	\label{fig:antelopeEst}
 \end{figure}
 
+We fitted an exponential function to the population estimates using the function \textit{fit\_easylinear()} from the R package "growthrate" (Figure \ref{fig:antelopeEst}). The weekly growth rate from the model fit is 0.0388 per week (95\% CI [0.0336, 0.0439]). We then used the $r_0$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_0$ for the year. The $\hat{r_0}$ estimate from the model during this period is 0.0385 (95\% CI [0.0345, 0.0425]). The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
+
 %% \newpage Why?
-We fitted an exponential function to the population estimates using the function \texttt{fit\_easylinear()} from the R package “growthrate” (Figure \ref{fig:antelopeEst}). The weekly growth rate $r_m$ from the model fit is 0.03879 per week (\jd{Why would there be an sd? Are you sure it's not standard error? The best thing to present would be just CIs (R not needed either).} sd: 0.002631 and $R^2$ = 0.837). i
-
-\jd{This is the first mention of an $r_t$ estimate. Please clarify.}
-We then used the $r_t$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_t$ for the year, by summing the weekly growth rate during this period and dividing by the total number of weeks. The average growth rate during this period is 0.03851 per-week, with standard deviation \jd{Here I think you do mean sd, but you need to be more clear about which sd. Also, make sure it's the right comparison with the easylinear, or else don't use it.} 0.01461. The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
-
 \subsection*{Sensitivity Analysis}
 \jd{We should discuss why we define probabilities as exponentials. It's assuming that death rates are constant over a time period, and also kind of assuming that the length of the time period and the death rate are better considered separately. The exception is the probability of a larva being female, which seems more clear(although I don't like the name).}
 In a recent study \cite{are2019weakest}, an extensive sensitivity and uncertainty analysis was done on the extinction probabilities for populations of tsetse. The study derived an expression for the extinction probabilities for the flies' population and assessed the impact of each input parameter on the extinction probability. Here, in  a similar fashion to \cite{are2019weakest}, we aim to determine the parameters that have the strongest impact on the magnitude of the intrinsic rate of natural increase $r_0$. Hence, we define probabilities $p_l$, $p_c$ and $p_o$ respectively as: $p_l=e^{-\Psi \tau} $, $p_o =\epsilon e^{-\Omega \nu}$ , and $p_c =\beta e^{-\chi g}$.  Where: 
@@ -182,7 +179,7 @@ We use the Latin Hypercube Sampling (LHS) method and obtain the Partial Rank Cor
 \end{figure}
 
 \subsection*{Temperature Data}
-Between November 1959 and December 2018, daily maximum and minimum temperatures have been recorded at Rekomitjie using a mercury thermometer placed in a Stevenson screen.  Mean temperatures over 24-hour, and longer periods were approximated using the average of the daily maximum and minimum temperatures. We present the annual mean temperature at Rekomitjie, from 1960 - 2018 (Fig \ref{fig:AnnualAveTem}). Annual mean temperatures fluctuate widely between years at Rekomitjie, but have remained consistently above 25 \degree C since 1987. It is clear that Rekomitjie is getting hotter, and the departure from the optimal temperature for tsetse population growth (25 \degree C) \cite{Are2019} \jd{Is this really a good citation for this claim? Did you do significant synthesis and review, or are you just citing one or two other people?} has continued to increase.  
+Between November 1959 and December 2018, daily maximum and minimum temperatures have been recorded at Rekomitjie using a mercury thermometer placed in a Stevenson screen.  Mean temperatures over 24-hour, and longer periods were approximated using the average of the daily maximum and minimum temperatures. We present the annual mean temperature at Rekomitjie, from 1960 - 2018 (Fig \ref{fig:AnnualAveTem}). Annual mean temperatures fluctuate widely between years at Rekomitjie, but have remained consistently above 25 \degree C since 1987. It is clear that Rekomitjie is getting hotter, and the departure from the optimal temperature for tsetse population growth (25 \degree C) \cite{Are2019} has continued to increase (Fig \ref{fig:AnnualAveTem}).  
 
 
 
@@ -207,14 +204,16 @@ In Fig ref{fig:combineTem}, we break down these patterns across the seasons. Bot
 
 \newpage
 \subsection*{Changes in age distributions with month of the year at Rekomitjie}
-High temperatures at Rekomitjie have serious implications for tsetse population dynamics. Studies have suggested that tsetse population age structure will be altered during the hot-dry seasons at Rekomitjie due to heat-induced mortality in pupae and newly emerged adults \cite{Hargrove2013b,hargrove2015mortality,Ackley2017}. An earlier study \cite{VanSickle1988} suggested that the Rekomitjie population will seldom, if ever, achieve a stable age distribution because once disproportionate mortalities affect pupae and young adults during the hot-dry season, the age distribution will not stabilise before the next hot-dry season sets in. In this study, we investigate this matter further by analysing the data collected on the ovarian age distribution for \textit{G. pallidipes} caught in traps at Rekomitjie from September 1988 – December 1999. We calculate chi-squared statistic for tsetse age distribution for consecutive months throughout the study period. A small chi-squared statistic will indicate similar age distribution structure between two consecutive months, while a large chi-squared statistic will imply a shift in the age distribution.  Our results show that the chi-squared statistic   is relatively small for the difference in ovarian age distribution from February to August. However, from September to January the chi-squared statistic increases rapidly, indicating a large shift in the age distribution during the hot-dry season (Fig \ref{fig:ChiSqrSttistic}). \jd{This is the statistical fallacy of using evidence strength as a proxy for effect size. We can't do it.}
+High temperatures at Rekomitjie have serious implications for tsetse population dynamics. Studies have suggested that tsetse population age structure will be altered during the hot-dry seasons at Rekomitjie due to heat-induced mortality in pupae and newly emerged adults \cite{Hargrove2013b,hargrove2015mortality,Ackley2017}. An earlier study \cite{VanSickle1988} suggested that the Rekomitjie population will seldom, if ever, achieve a stable age distribution because once disproportionate mortalities affect pupae and young adults during the hot-dry season, the age distribution will not stabilise before the next hot-dry season sets in. In this study, we investigate this matter further by analysing the data collected on the ovarian age distribution for \textit{G. pallidipes} caught in traps at Rekomitjie from September 1988 – December 1999. We calculate the mean age of the population for consecutive months throughout the study period. Our results show that the mean age of the population   is similar for months starting from February to August. However, from September to January, the mean age increases rapidly, indicating a large shift in the age distribution during the hot-dry season (Fig \ref{fig:ChiSqrSttistic}).
 
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{ChiSqrSttistic}
-	\caption{{\bf Chi-squared statistic for the difference between ovarian age distributions of tsetse caught in month $i$ vs month $i+1$.} \textit{G. pallidipes} captured in traps at Rekomitjie Research Station, September 1988 – December 1999. Total sample size 96,111. }
+	\includegraphics[width=0.7\linewidth]{meanAgebymonth}
+	\caption{{\bf Changes in the mean ovarian category of adult female \textit{G. pallidipes} captured using an electric net mounted on the back of an open pick-up.} Error bars indicate the 95\% confidence intervals for the mean. Flies captured at Rekomitjie Research Station, Zambezi Valley, Zimbabwe 1989-1993}
 	\label{fig:ChiSqrSttistic}
 \end{figure}
+
+
 
 We compare the difference between age distribution for the two consecutive months with the smallest (May - June), and largest (December - January) chi-squared statistic, respectively. Essentially the age distributions in June and July have the same shape, whereas in December, the shape of the age distribution differs clearly from that of January. 
 \begin{figure}[hbt!]

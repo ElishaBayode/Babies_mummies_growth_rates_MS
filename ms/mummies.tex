@@ -180,28 +180,28 @@ We get ${\cal R}$, the reproduction number, by calculating $G'(1)$ \cite{bartlet
 
 $ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
 
-The recruitment probabilities $p_m$ and $p_c$ depend on the counting point, but their product will remain the same. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. In other words, the reproductive number is independent of the counting point: the expected number of larvae produced by a larva is equal to the number of the expected number of emergent adults produced by an emergent adult, and so forth.
+The recruitment probabilities $p_m$ and $p_c$ depend on the counting point, but their product $p_r$ will remain the same. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. In other words, the reproductive number is independent of the counting point: the expected number of larvae produced by a larva is equal to the number of the expected number of emergent adults produced by an emergent adult, and so forth.
 \jd{This must be a known fact; it would be fun to get a citation for it.}
 
-We get the probability $y$ that a tsetse population, starting with a single individual at a given count point, goes extinct, by solving $G(y) = y$ \cite{bartlett1949some}. We can simplify things by solving   $G(1-z) = 1-z$, where $z$ is the probability of not going extinct, and then factoring out a $z$. This gives:
+We get the probability $y$ that a tsetse population, starting with a single individual at a given count point, goes extinct, by solving $G(y) = y$ \cite{bartlett1949some}. We can simplify the calculation by solving   $G(1-z) = 1-z$, where $z$ is the probability of not going extinct, and then factoring out a $z$. This gives:
 
 $$ z = p_m(1-1/{\cal R}).$$  
-Here we assume that the process is supercritical, that is ${\cal R} > 1$. Whenever ${\cal R} \leq 1$, the population will go extinct with probability 1. 
+By factoring out the $z$, we are assuming that the process is supercritical, that is ${\cal R} > 1$. When ${\cal R} \leq 1$, the population will eventually go extinct with probability 1. 
 
-Furthermore, the probability of extinction for tsetse populations at any counting point is:
+Thus, the probability of extinction for tsetse populations at any counting point is:
 
 \begin{equation}
-	\label{NewEqn1}	
+	\label{countExtinction}	
 	y = 1 - p_m(1-1/{\cal R}).	
 \end{equation}
 
-When there is more than one individual in the pioneer population, the extinction probability is:
+When there is more than one individual in the pioneer population, we calculate the extinction probability by assuming that density dependence in negligible, and that overall extinction would therefore result from the independent extinction of the line starting from each individual. Thus, the extinction probability is:
 
 $$y_j = (1 - p_m(1-1/{\cal R}))^j,$$
 
-where $j$ is the number of individuals of the given stage. We can derive extinction probabilities for tsetse populations at the individual counting points by making simple substitutions for the probabilities of recruitment  between stages in $p_m$  in equation (\ref{NewEqn1}), as appropriate. 
+where $j$ is the number of individuals of the given stage. We can derive extinction probabilities for tsetse populations at the individual counting points by making simple substitutions for the probabilities of recruitment  between stages in $p_m$  in equation (\ref{countExtinction}), as appropriate. 
 
-In the following section, we obtain extinction probabilities  for the three possible counting points in the life cycle of a female tsetse.
+In the following section, we obtain extinction probabilities  for the three possible counting points in the life cycle of a female tsetse. \jd{Can we delete this \P? It just makes it sound like we don't understand this step is straightforward.}
 
 \section{Counting tsetse at different life stages}
 
@@ -211,10 +211,12 @@ When we make appropriate substitutions in $y$, the extinction probability for a 
 
 $$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}, p_{\ell}p_{d} \neq 0$$
 
+\jd{Does this equation really need a second clause? It should be obvious that we're assuming none of the steps on our loop have probability 0, or else we wouldn't have a loop.}
+
 This can be written more compactly in terms of ${\cal R}$ as:
 
 \begin{equation}
-	\label{NewEqn2}
+	\label{larvExtinction}
 	y_l = 1 - p_ep_{\nu}(1-1/{\cal R})	
 \end{equation}
 
@@ -223,7 +225,7 @@ We find:
 $$ y_e=\frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{\nu}))}{p_{d}p_{e}p_{\ell}},  p_{d}p_{e}p_{\ell} \neq 0. $$ This can be rewritten in terms of ${\cal R}$ as:
 
 \begin{equation}
-	\label{NewEqn3}
+	\label{emergeExtinction}
 	y_e = 1 - p_{\nu}(1-1/{\cal R}).	
 \end{equation}
 Furthermore, when  larvipositing females are counted, $p_m$ will be equal to 1. The extinction probability $y_o$ for a population of tsetse starting with a single larvipositing female tsetse in the initial population is, therefore:
@@ -233,7 +235,7 @@ $$y_o = \frac{1-p_{\ell}}{p_{d}p_{e}p_{\nu}p_{\ell}}.$$
 This can be expressed in terms of ${\cal R}$ as:
 
 \begin{equation}
-	\label{NewEqn4}
+	\label{matureExtinction}
 	y_o = 1/{\cal R}	
 \end{equation}
 
@@ -246,7 +248,7 @@ It is easily verifiable that whenever ${\cal R}>1$ the following inequality hold
 
 \subsection*{\bf Remarks}
 \begin{itemize}
-	\item[•] In our analysis so far, we have focused on populations starting with a single individual in the initial population. In the general case, assuming extinction probabilities for the population starting from each individual for each counting points are independent, the extinction probability for a population starting with $N^l$ larvae, $N^e$ newly emerged adult females and $N^o$ larvipositing adult females, is just the product of the individual extinction probabilities.
+	\item[•] In our analysis so far, we have focused on populations starting with a single individual in the initial population. In the general case, assuming extinction probabilities for the population starting from each individual for each counting points are independent, the extinction probability for a population starting with $N^l$ larvae, $N^e$ newly emerged adult females and $N^o$ larvipositing adult females, is just the product of the individual extinction probabilities. \jd{The use of superscripts for these indices is weird. Can they be subscripts?}
 	
 	$$\tilde{y_c}=y_l^{N^l} y_e^{N^e} y_o^{N^o}.$$
 

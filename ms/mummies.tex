@@ -55,7 +55,8 @@
 %\authorrunning{Short form of author list} % if too long for running head
 
 \institute{Elisha B. Are \at
-              Centre of Excellence in Epidemiological Modelling and Analysis (SACEMA), University of Stellenbosch, Stellenbosch, South Africa. \\
+              Centre of Excellence in Epidemiological Modelling and Analysis (SACEMA), University of Stellenbosch, Stellenbosch, South Africa.\\
+              Department of Mathematics, Simon Fraser University, Burnaby, BC, Canada\\
               Tel.: +27653249688\
               \email{elishaare@sun.ac.za}           %  \\
 %             \emph{Present address:} of F. Author  %  if needed
@@ -94,7 +95,7 @@ The life history of insects occurs in well-defined stages. The question thus ari
 
 Several workers have developed mathematical models to explore different phenomena in insect population dynamics, but are generally not clear about which developmental stage(s) are being counted \cite{Ylioja1999,Artzrouni2003,Hargrove2005a,Adams2005,Barclay2011d,Peck2012a,Lin2015,Kajunguri2019}.  As far as we are aware, no published work has explicitly considered the implication of counting insects at different stages for the estimation of extinction probabilities for insect populations. Hargrove \cite{Hargrove2005a} developed and analysed a branching process model to derive expressions for extinction probabilities, times to extinction, reproduction number and variance for closed populations of tsetse. The results reported were consistent with earlier work \cite{hargrove1988tsetse} on tsetse vital rates, and showed that small increases in adult female mortality rates could drive any closed population of tsetse to extinction. Kajunguri et al \cite{Kajunguri2019} added proofs and improved on some of the assumptions in \cite{Hargrove2005a}. Are and Hargrove \cite{Are2019} extended this work to provide estimates of extinction probabilities, growth rates, reproduction number and times to extinction as a function of ambient temperature. 
 
-In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing the pioneer population to be composed  either juveniles, emergent females or mature females. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population starts at any of these different life stages. We discuss the implications of these results for tsetse population persistence, particularly in the context of tsetse control/eradication exercises. 
+In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing the pioneer population to be composed of  either juveniles, emergent females or mature females. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population starts at any of these different life stages. We discuss the implications of these results for tsetse population persistence, particularly in the context of tsetse control/eradication exercises. 
 
 \subsection{Brief description of tsetse life cycle}
 Female tsetse typically mate once in their life-time: the sperm transferred by a male during mating is sufficient for the female to fertilize all subsequent eggs throughout her life. A female fly produces, typically every 9-11 days, a single larva, which may weigh as much or even more than she does herself.  The larva burrows into the soil and pupates within minutes. The pupal period lasts 30 - 50 days \cite{PhelpsR.J.&Burrows}, depending on soil temperature. After the pupal period, an immature adult emerges. It takes 7-9 days, depending on temperature, for the newly emerged adults to attain full maturation. During this period, females are typically inseminated by a male tsetse, and virtually all will have ovulated by the age of 10 days \cite{Hargrove2012c}. The fully developed adult typically larviposits every 9-11 days afterwards, again depending on temperature \cite{Hargrove2019}. 
@@ -159,7 +160,7 @@ An individual at the census point:
 
 \begin{itemize}
 	\item [•] reaches the loop with probability $p_m$
-	\item [•] either goes around the loop producing offspring that will counted, or else dies in the process.
+	\item [•] either goes around the loop producing offspring that will be counted, or else dies in the process.
 \end{itemize}
 
 The probability $p_b$ of producing before dying  has odds of: 
@@ -181,7 +182,6 @@ We get ${\cal R}$, the reproduction number, by calculating $G'(1)$ \cite{bartlet
 $ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
 
 The recruitment probabilities $p_m$ and $p_c$ depend on the counting point, but their product $p_r$ will remain the same. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. In other words, the reproductive number is independent of the counting point: the expected number of larvae produced by a larva is equal to the number of the expected number of emergent adults produced by an emergent adult, and so forth.
-\jd{This must be a known fact; it would be fun to get a citation for it.}
 
 We get the probability $y$ that a tsetse population, starting with a single individual at a given count point, goes extinct, by solving $G(y) = y$ \cite{bartlett1949some}. We can simplify the calculation by solving   $G(1-z) = 1-z$, where $z$ is the probability of not going extinct, and then factoring out a $z$. This gives:
 
@@ -201,28 +201,24 @@ $$y_j = (1 - p_m(1-1/{\cal R}))^j,$$
 
 where $j$ is the number of individuals of the given stage. We can derive extinction probabilities for tsetse populations at the individual counting points by making simple substitutions for the probabilities of recruitment  between stages in $p_m$  in equation (\ref{countExtinction}), as appropriate. 
 
-In the following section, we obtain extinction probabilities  for the three possible counting points in the life cycle of a female tsetse. \jd{Can we delete this \P? It just makes it sound like we don't understand this step is straightforward.}
-
 \section{Counting tsetse at different life stages}
 
 When we change the counting stages by moving the dashed box (Figure \ref{fig:compflowchart}) closer to the ovulation loop, ${\cal R}$ stays the same but $p_m$ gets larger until it reaches 1 when the dashed box gets to the ovulation loop. We can thus calculate extinction probabilities for each of  the three counting points. We first ask what happens if we start from a single newly deposited female larva.
 The larva reaches the larviposition loop (emerges and then matures) with probability $p_m = p_e p_{\nu}$, completes a larvipositing loop with \textit{odds} $\sigma_\ell$, and produces a surviving female larva with probability $p_c = p_d$. 
 When we make appropriate substitutions in $y$, the extinction probability for a population of tsetse with a newly deposited larva in the initial population is:
 
-$$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}, p_{\ell}p_{d} \neq 0$$
-
-\jd{Does this equation really need a second clause? It should be obvious that we're assuming none of the steps on our loop have probability 0, or else we wouldn't have a loop.}
+$$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}.$$
 
 This can be written more compactly in terms of ${\cal R}$ as:
 
 \begin{equation}
 	\label{larvExtinction}
-	y_l = 1 - p_ep_{\nu}(1-1/{\cal R})	
+	y_l = 1 - p_ep_{\nu}(1-1/{\cal R}).
 \end{equation}
 
 In similar fashion, we can obtain the extinction probability $y_e$ for a tsetse population starting with a single newly emerged adult fly, by substituting  $p_m = p_{\nu}$ in $y$ above.
 We find:
-$$ y_e=\frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{\nu}))}{p_{d}p_{e}p_{\ell}},  p_{d}p_{e}p_{\ell} \neq 0. $$ This can be rewritten in terms of ${\cal R}$ as:
+$$ y_e=\frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{\nu}))}{p_{d}p_{e}p_{\ell}}. $$ This can be rewritten in terms of ${\cal R}$ as:
 
 \begin{equation}
 	\label{emergeExtinction}
@@ -248,9 +244,9 @@ It is easily verifiable that whenever ${\cal R}>1$ the following inequality hold
 
 \subsection*{\bf Remarks}
 \begin{itemize}
-	\item[•] In our analysis so far, we have focused on populations starting with a single individual in the initial population. In the general case, assuming extinction probabilities for the population starting from each individual for each counting points are independent, the extinction probability for a population starting with $N^l$ larvae, $N^e$ newly emerged adult females and $N^o$ larvipositing adult females, is just the product of the individual extinction probabilities. \jd{The use of superscripts for these indices is weird. Can they be subscripts?}
+	\item[•] In our analysis so far, we have focused on populations starting with a single individual in the initial population. In the general case, assuming extinction probabilities for the population starting from each individual for each counting points are independent, the extinction probability for a population starting with $N_l$ larvae, $N_e$ newly emerged adult females and $N_o$ larvipositing adult females, is just the product of the individual extinction probabilities. 
 	
-	$$\tilde{y_c}=y_l^{N^l} y_e^{N^e} y_o^{N^o}.$$
+	$$\tilde{y_c}=y_l^{N_l} y_e^{N_e} y_o^{N_o}.$$
 
 	\item[•] The current analysis focuses strictly on female tsetse populations. We can account for this  by expressing  $p_d$ (probability of depositing a live female larva) as:  $p_d =\delta \beta$, where $\delta$ is the probability that a deposited larva is alive, and $\beta$ the probability that a deposited larva is female.  These two parameters ($\delta$ and $\beta$) will allow us to capture both male:female sex ratio in the population, and  the abortion rates in tsetse population.  If we set $\beta = 0.5$ and $\delta = 1$, the current model corresponds to the model presented in \cite{Hargrove2005a}. 
 \end{itemize}
@@ -281,15 +277,16 @@ Setting  $ p_{\nu}= \epsilon \Omega^{\nu}$ , $p_{\ell} =\lambda^{\tau} $, $p_{d}
 Previous estimates of extinction probabilities for tsetse populations rely on the assumption that the pioneer population is initiated with a number of newly emerged adult female flies, and the probability that such populations go extinct is estimated as a function of different vital rates in tsetse life cycle. The life cycle of holometabolous insects, such as tsetse, can be divided into five distinct stages, egg, larva, pupa, immature adult, mature (larvipositing) adult - each with distinct physiological features, and with differing responses to various environmental factors. In tsetse, for example, the most vulnerable stage is the newly emerged adult, which also appears to be particularly susceptible to high temperatures \cite{Ackley2017a}. Tsetse are unusual in that survival probability is high in the egg and larval stages, which are retained in the mother's uterus \cite{Hargrove1999a}. Here, we have developed a simple, unified model to analyse extinction probabilities when starting from different life stages. 
 
 
+While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases (Fig. \ref{ExtPoineerSize}). This drop-off gets faster for larger populations; when the population is very large, the population size is large; thus the extinction probability as a function of parameters approaches a step function. This effect can be seen in Figure \ref{ExtLarviposMort15indiv}, where 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function.
+
+
 \begin{figure*}[h]
 	\includegraphics[width=0.75\textwidth]{ExtinctionRepNumberPoineerPop.png}
 	\caption{{\bf: Extinction probability as a function of the size of the pioneer population, for different values of basic reproduction number.} When ${\cal R}=1$, extinction probability is always at 1 for all sizes of the initial population.}
 	\label{ExtPoineerSize}
 \end{figure*}
 
-
-While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases (Fig. \ref{ExtPoineerSize}). This drop-off gets faster for larger populations; when the population is very large, the population size is large; thus the extinction probability as a function of parameters approaches a step function. This effect can be seen in Figure \ref{ExtLarviposMort15indiv}, where 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function.
-
+\newpage
 Our modelling framework unifies existing methods for estimating extinction probabilities for tsetse populations. The model only requires a good estimate of the probabilities of recruitment between tsetse life stages to estimate extinction probabilities. Our model presents an opportunity to compare previous estimates for extinction probabilities within a simple unified framework.
 
 When populations are large, extinction probability is either 0 or 1 for all the counting stages. In such situations any life stage can be used as a proxy to estimate extinction probabilities for tsetse populations, as has been done previously \cite{Hargrove2005a,Kajunguri2019}. At low populations, however, counting points become extremely important. For small populations, previous estimates for extinction probabilities underestimated tsetse population persistence when ${\cal R} > 1$. But their conclusions are valid for large populations, as well as for the point where extinction becomes certain.

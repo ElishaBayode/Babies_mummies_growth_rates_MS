@@ -42,7 +42,7 @@ Tsetse (\textit{Glossina} spp) are vectors of human and animal trypanosomiases, 
 %\jd{We should clearly stake out the intrinsic rate and the realized rate. Could we call the value that doesn't consider density dependence $r_0$ and the general one $r_e$? Just saying natural rate of increase, without intrinsic, will imply $r_e$ to many people, but we mean $r_0$.}
 The intrinsic rate of natural increase $r_0$ is an important metric in insect population dynamics as it can be used to determine whether or not a set of environmental condition is suitable for an insect population \cite{Birch1948}. Several attempts have been made to estimate the natural rate of increase for tsetse population from age distributions of samples of field caught flies, but these efforts largely dissipated following Van Sickle’s \cite{VanSickle1988a} demonstration that they were invalid - and that valid estimations using age data were highly sensitive to sampling error. More recently, Williams et al. \cite{williams1990tsetse} have used the Euler-Lotka equation to relate age-specific mortality and fecundity to overall growth rates of tsetse populations. Hargrove \cite{Hargrove2004a}  used this model to calculate tsetse growth rates as a function of (constant) environmental temperature. However, whereas it is a relatively simple matter to estimate the growth of tsetse populations at constant temperatures, nobody has estimated the intrinsic rate of increase for tsetse population as a function of fluctuating field temperatures.
 
-At every instant in time, in environments that are unlimited by space or  resources, the intrinsic rate of increase gives a good picture of the rate of increase per-head  attainable in a population -- given the combination of  the mortality and fecundity rates as functions of various environmental factors, such as temperature, moisture etc. Since the intrinsic rate of increase explicitly excludes density-dependent effects, actual growth rates are generally expected to lie below the intrinsic rate \cite{Birch1948}. A positive (negative) $r_0$ value implies that current the combination of survival, reproduction and  mortality rates in the population is favourable (unfavorable) for positive persistence. If the averaged $r_0$ is negative for a sustained period, the population is expected to go extinct go extinct.
+At every instant in time, in environments that are unlimited by space or  resources, the intrinsic rate of increase gives a good picture of the rate of increase per-head  attainable in a population -- given the combination of  the mortality and fecundity rates as functions of various environmental factors, such as temperature, moisture etc. Since the intrinsic rate of increase explicitly excludes density-dependent effects, actual growth rates are generally expected to lie below the intrinsic rate \cite{Birch1948}. A positive (negative) $r_0$ value implies that current combination of survival, reproduction and  mortality rates in the population is favourable (unfavorable) for positive persistence. If the averaged $r_0$ is negative for a sustained period, the population is expected to go extinct.
 
 The natural rate of increase can be estimated from demographic measurements using the Euler-Lotka (E-L) equation \cite{Birch1948,Zidon2015}, given in discrete form as:
 
@@ -60,9 +60,6 @@ The basic reproduction number $R_{o}$ is:
 \end{equation}
 
 Tsetse have a relatively simple life history; they produce a single larva at regular intervals, which vary with temperature \cite{hargrove2003tsetse}. The mortality rate is higher in newly emerged adult flies than in mature adults, and mortality rates increase in females $>$ 60 days old \cite{hargrove2020model}. In most populations in the field, however, more than 80\% of the female populations would have died before the first 60 days of adult life. Hence, flies older than 60 days do not play a major role in the population dynamics. We assumed that once flies enter the reproductive cycle, they produce new offspring with constant probability throughout their lives. The very basic life history of tsetse allows us to obtain a closed form solution of the E-L equation to derive an expression for the intrinsic rate of natural increase for tsetse population living at constant temperature. We estimated the instantaneous, per-capita rate of increase $r$ as a function of daily average temperature recorded at Rekomitjie Research Station, Zambezi Valley, Zimbabwe from 1960 to 2018. We then estimated the average annual growth rate over the next 50 years for each of three climate-warming scenarios (0.04\textdegree C, 0.06\textdegree C and 0.08\textdegree C annual increase), using measured daily temperatures for 2018 as a baseline. These climate change scenarios are informed, partly, by the warming rate recorded at Rekomitjie during the hot-dry season over the past 27 years \cite{Lord2018}.    
-
-
-where c is the time interval between births and $r_0$ is the intrinsic rate of increase.
 	
 \section*{Materials and Methods}
 We model the growth of populations of female tsetse: we ignore the male population, except to assume that there are always sufficient numbers of males present to ensure that virtually all females are inseminated within about the first 7-10 days of their adult lives. We sub-divide the life-cycle of female tsetse into three distinct stages – larval, pre-ovulation (here termed ''immature'') adult,  and larvipositing (``mature'') adult stages. Tsetse biology has been intensively studied for more than a century and rates of birth, development, and mortality rates have been measured both  in  the laboratory and  in the field \cite{Rogers2011,Hargrove2004a,Jarry2007,Hargrove2011,Hargrove2019a}. Using this knowledge, and taking advantage of the relatively simple life cycle, we develop a framework that allows us to solve the Euler-Lotka equation analytically for the intrinsic rate of increase of tsetse populations. We proceed by making the following simplifying assumptions.
@@ -78,7 +75,7 @@ We model the growth of populations of female tsetse: we ignore the male populati
 
 \section*{Model} 
 
-Suppose  $l_{x}$ is the probability of a female surviving from birth to age $x$, and that $m_{x}$ is the mean number of female offspring produced in a unit time by a female aged $x$. Here age refers to the number of times a female completes a larviposition loop, incremented by the time interval between successive successive births. 
+Suppose  $l_{x}$ is the probability of a female surviving from birth to age $x$, and that $m_{x}$ is the mean number of female offspring produced in a unit time by a female aged $x$. Here age refers to the number of times a female completes a larviposition loop, incremented by the time interval between successive births. 
 
 \subsection*{Basic reproduction number}
 
@@ -121,13 +118,13 @@ Using equations  (\ref{survProb}) and  (\ref{birthProb}), we can calculate $r_0$
 
 $$\sum (e^{r_0c})^{-T}(p_cp_d)_{T}(p_op_l)_{T} =1,$$
 
-solving for $r_0$ yields, 
+which gives, 
 
 \begin{equation}
 \label{derivRateIncr} 
 \frac{p_op_cp_le^{-r_0c}}{1-p_le^{-r_0c}} =1.
 \end{equation}
-Solving for $r_0$ in equation (\ref{derivRateIncr}) , yields, 
+Solving for $r_0$ in equation (\ref{derivRateIncr}), yields, 
 
 \begin{equation}
 \label{finalRateIncrs} 
@@ -141,8 +138,7 @@ If  $p_o$ or $p_c \rightarrow{0}$, then  $r_0 \rightarrow{\frac{\ln[p_l]}{c}}$. 
 We assume that key parameters are temperature dependent. The relationship between these parameters and temperature are given in detail in \cite{Are2019}. We estimated the rate of increase on each day as a function of daily mean temperature, and we obtained the long-time (annual) average ($\hat{r_0}$)  of $r_0$, by simple averaging.
 
 \subsection*{Model validation}
-We compare growth rate estimates from the current model with the growth rate obtained from fitting an exponential function to tsetse population data. We use mark-recapture estimates of the numbers of female \textit{Glossina morsitans morsitans} Westwood on Antelope Island, Lake Kariba, Zimbabwe \cite{hargrove1998optimized} to calculate weekly growth rates for the population between January and December 1981. During this period the population was not subjected to any trapping pressures and was allowed to grow naturally, subject only to temperature and other meteorological effects. \jd{need to talk about density effects, and also to say what you think about the dropoff at the end. How did you choose the ending time for the fit?}
-
+We compare growth rate estimates from the current model with the growth rate obtained from fitting an exponential function to tsetse population data. We use mark-recapture estimates of the numbers of female \textit{G. m. morsitans} on Antelope Island, Lake Kariba, Zimbabwe \cite{hargrove1998optimized} to calculate weekly growth rates for the population between January and December 1981. During this period the population was not subjected to any trapping pressures and was allowed to grow naturally, subject only to temperature and other meteorological effects. The population grew from a low base number, free from density dependent effects.  As expected, the population grew exponentially, until various trapping techniques were gradually introduced into the Island, leading to the observed decline in the population size (Fig. \ref{fig:antelopeEst}). We selected the ending time of the model fit to coincide with the time just before the start of the deployment of the traps. 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{Feb_06_fitGrouwthRate}
@@ -150,7 +146,7 @@ We compare growth rate estimates from the current model with the growth rate obt
 	\label{fig:antelopeEst}
 \end{figure}
 
-We fitted an exponential function to the population estimates using the function \textit{fit\_easylinear()} from the R package "growthrate" (Figure \ref{fig:antelopeEst}). The weekly growth rate from the model fit is 0.0388 per week (95\% CI [0.0336, 0.0439]). We then used the $r_0$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_0$ for the year. The $\hat{r_0}$ estimate from the model during this period is 0.0385 (95\% CI [0.0345, 0.0425]). The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
+We fitted an exponential function to the population estimates using the function \textit{fit\_easylinear()} from the R package "growthrate". The weekly rate of increase from the model fit is 0.0388 per week (95\% CI [0.0336, 0.0439]). We then used the $r_0$ estimate to calculate the weekly growth rate as a function of the weekly average temperatures from January 14th to December 30th, 1981, and then calculated $\hat{r_0}$, the long-time average value of $r_0$ for the year. The $\hat{r_0}$ estimate from the model during this period is 0.0385 (95\% CI [0.0345, 0.0425]). The two estimates, arrived at by two entirely independent methods, using quite different approaches, thus gave very similar estimates – indicating that the $E-L$ method provides a reasonable way of estimating mean  growth rates over extended periods.
 
 %% \newpage Why?
 \subsection*{Sensitivity Analysis}
@@ -186,18 +182,18 @@ Between November 1959 and December 2018, daily maximum and minimum temperatures 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{20April20AnnualAverageTemp1960to2018}
-	\caption{{\bf Annual mean temperature for Rekomitjie Research Station (1960 - 2018) .} The line through 25\degree C indicates the optimal temperature for tsetse population survival and reproduction.}
+	\caption{{\bf Annual mean temperature for Rekomitjie Research Station (1960 - 2018).} The line through 25\degree C indicates the optimal temperature for tsetse population survival and reproduction.}
 	\label{fig:AnnualAveTem}
 \end{figure}
 
 
 \newpage
-In Fig ref{fig:combineTem}, we break down these patterns across the seasons. Both fluctuations and changes through time are relatively smaller in the hot-wet season (January-April, panel A), and larger in the hot-dry season (September - December panel C), where extreme temperature events have increased both in intensity and in frequency. Further details about the temperature data are provided elsewhere \cite{Lord2018}.     
+In Figure \ref{fig:combineTem}, we break down these patterns across the seasons. Both fluctuations and changes through time are relatively smaller in the hot-wet season (January-April, panel A), and larger in the hot-dry season (September - December panel C), where extreme temperature events have increased both in intensity and in frequency. Further details about the temperature data are provided elsewhere \cite{Lord2018}.     
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=1.1\linewidth]{21April20CombineTemPlot}
-	\caption{{\bf Monthly mean temperature at Rekomitjie for different seasons (1960 - 2018) }. Monthly average temperatures for months in A. the hot-wet season (January - April)  B.cool-dry (May-August) and C. hot-dry (September-December). The line through 25\degree C indicates the optimal temperature for tsetse population survival and reproduction}
+	\caption{{\bf Monthly mean temperature at Rekomitjie for different seasons (1960 - 2018) }. Monthly average temperatures for months in A. the hot-wet season (January - April)  B. cool-dry (May-August) and C. hot-dry (September-December). The line through 25\degree C indicates the optimal temperature for tsetse population survival and reproduction}
 	\label{fig:combineTem}
 \end{figure}
 
@@ -215,7 +211,7 @@ High temperatures at Rekomitjie have serious implications for tsetse population 
 
 
 
-We compare the difference between age distribution for the two consecutive months with the smallest (May - June), and largest (December - January) chi-squared statistic, respectively. Essentially the age distributions in June and July have the same shape, whereas in December, the shape of the age distribution differs clearly from that of January. 
+We compare the difference between the mean age of the population for the two consecutive months with one of the smallest (May - June), and largest (December - January) change in the mean age of the population, respectively. Essentially the age distributions in June and July have the same shape, whereas in December, the shape of the age distribution differs clearly from that of January. 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{AgeDistJUNJULDECJAN}
@@ -229,12 +225,12 @@ We compare the difference between age distribution for the two consecutive month
 \newpage
 \subsection*{Climate change scenarios}
 
-Over the past 27 years at Rekomitjie, average daily temperatures have increased by 2\textdegree C in the month of November, and by 0.9\textdegree C for the rest of the year \cite{Lord2018}.  Here we investigate the impact on the annual growth rates of tsetse population assuming that average temperatures continue to increase over the next 50 years at rates of either 0.04, 0.06 or 0.08 \textdegree C per-year. We are particularly interested to know what level of temperature increase would cause tsetse population growth rates to become consistently negative.
+Over the past 27 years at Rekomitjie, average daily temperatures have increased by 2\textdegree C in the month of November, and by 0.9\textdegree C for the rest of the year \cite{Lord2018}.  Here we investigate the impact on the annual rate of increase of tsetse population assuming that average temperatures continue to increase over the next 50 years at rates of either 0.04, 0.06 or 0.08 \textdegree C per-year. We are particularly interested to know what level of temperature increase would cause tsetse population rate of increase to become consistently negative.
 
 \section*{Results}
 We used the daily average temperature data and equation (\ref{finalRateIncrs}) to predict the intrinsic rate of natural increase of tsetse population in the neighbourhood of Rekomitjie, for each day between January 1960 and December 2018. We then used equation to obtain annual averages for $r_0$. Notice that all references below to growth rates are values predicted from temperature profiles.   
 
-From 1960 to 1986, the annual average growth rate was relatively stable \jd{This is not the actual growth rate of course; it's the estimated value of the growth potential, or density-independent growth rate, or something like that. Need to think carefully about clear language here.}, varying between 0.0031 and 0.00389 \jd{This value presumably has units? per day?}.  Between 1987 and 1995, however, the growth rate dropped below the previous minimum of 0.0031 in four of the nine years, with a low of 0.00287 in 1992, during which year catches of tsetse at Rekomitjie also fell to their lowest recorded levels up to that time \cite{hargrove2015mortality}. There followed a slow recovery with increased growth rates until 2009. Thereafter, rates fell consistently, hitting an all-time low of 0.0023 in 2016 (Fig \ref{fig:tsetseflowchat0}), at which time catches were also at an all-time low \cite{Lord2018}. \jd{Would growth rates be more readable if converted to annual scale? \emph{Show} units in any case. Also, be consistent about significant figures.}
+From 1960 to 1986, the rate of increase was relatively stable, varying between 0.0031 and 0.00389 per day.  Between 1987 and 1995, however, the growth rate dropped below the previous minimum of 0.0031 in four of the nine years, with a low of 0.00287 per day in 1992, during which year catches of tsetse at Rekomitjie also fell to their lowest recorded levels up to that time \cite{hargrove2015mortality}. There followed a slow recovery with increased growth rates until 2009. Thereafter, rates fell consistently, hitting an all-time low of 0.0023 in 2016 (Fig \ref{fig:tsetseflowchat0}), at which time catches were also at an all-time low \cite{Lord2018}. \jd{Would growth rates be more readable if converted to annual scale? \emph{Show} units in any case. Also, be consistent about significant figures.}
 
 
 \begin{figure}[hbt!]

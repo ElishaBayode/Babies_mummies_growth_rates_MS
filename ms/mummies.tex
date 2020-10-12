@@ -37,320 +37,303 @@
 % \journalname{myjournal}
 
 \begin{document}
-
-\title{Insect demography: does it matter whether we count babies or mummies?%\thanks{Grants or other notes
-%about the article that should go on the front page should be
-%placed here. General acknowledgments should be placed at the end of the article.}
-}
-%\subtitle{Do you have a subtitle?\\ If so, write it here}
-
-%\titlerunning{Short form of title}        % if too long for running head
-
-\author{Elisha B. Are \and John W. Hargrove \and Jonathan Dushoff}
-
-
-
-
-
-%\authorrunning{Short form of author list} % if too long for running head
-
-\institute{Elisha B. Are \at
-              Centre of Excellence in Epidemiological Modelling and Analysis (SACEMA), University of Stellenbosch, Stellenbosch, South Africa.\\
-              Department of Mathematics, Simon Fraser University, Burnaby, BC, Canada\\
-              Tel.: +27653249688\
-              \email{elishaare@sun.ac.za}           %  \\
-%             \emph{Present address:} of F. Author  %  if needed
-           \and
-           Jonathan Dushoff \at
-            Department of Biology, McMaster University, Hamilton, Ontario, Canada
-             \and
-             John W. Hargrove \at
-            Centre of Excellence in Epidemiological Modelling and Analysis (SACEMA), University of Stellenbosch, Stellenbosch, South Africa. 
-             }
-
-\date{Received: date / Accepted: date}
-% The correct dates will be entered by the editor
-
-\maketitle
-
-
-\begin{abstract}
-	\vskip 0.2cm
-As insect populations decline, due to climate change and other environmental disruptions, there has been an increased interest in understanding extinction probabilities. Generally, the life cycle of insects occurs in well-defined stages: when counting insects, questions naturally arise about which stage to count and the appropriate point to start counting.	Using tsetse flies (vectors of the trypanosomiasis) as a case study, we develop a model that works for different counting points in the life cycle of a fly. We analyse reproductive numbers and extinction probabilities, and show that several previous models used for estimating extinction probabilities for tsetse populations are special cases of the current model. We establish that the reproduction number is the same for different counting points, but that the extinction probability is different for each counting point. We demonstrate, and provide a biological explanation for, a simple relationship between extinction probabilities for the different counting points, based on the probability of recruitment between stages. These results offer insights into insect population dynamics and provide tools that will help with more detailed models of insect populations. Demographic studies of insects should be clear about life stages and counting points. 
-\keywords{Extinction probability \and Insect demography \and Tsetse ({\it Glossina} spp) \and Geometric distribution}
-	% \PACS{PACS code1 \and PACS code2 \and more}
-	\subclass{60D05  \and 92B05 \and 60G50 }
-\end{abstract}
-
-\section{Introduction}
-\label{intro}
-
-Insects play key ecological roles, both positive and negative, for the health of plants and animals, including humans, and for the environment in general \cite{Ollerton2011,Ockinger2007}. Many are important vectors of plant and animal diseases, often of public health importance \cite{Tobias2016,Wamwiri2016,Beier1998}, others are beneficial in, for example, pollination, and some serve as a source of protein for massive numbers of species of animals including humans \cite{Ramos-Elorduy1997}. Biologists are accordingly interested in insect population persistence for various reasons. Conservationists are concerned about the ecological implications of extinction of insect populations, while vector biologists are interested in controlling or eliminating insect vectors of disease \cite{Burt2015,Shaw2013,Hocking1963}.  
-
-There is evidence of steep declines in insect populations in different parts of the world \cite{Conrad2002,Potts2010,Ilyinykh2011,VanSwaay2013,Lister2018}. Hallmann et al \cite{Hallmann2017} reported a decline of 75\% in the biomass of flying insects over a 27-year period in 63 protected areas of Germany. Similar findings of major decline have been reported across the globe \cite{Habel2015,Pelton2019}. For instance, there was a decline of 50\% in the population abundance of European grassland butterflies between 1990 and 2011 \cite{VanSwaay2013}, and it has been reported that tsetse populations have been declining in the Zambezi Valley of Zimbabwe \cite{Lord2018}. If the magnitude of the declines is as serious as reported, the earth may soon witness extinction of large numbers of insect species. 
-
-Insects have limited thermo-regulatory capacity, making them particularly vulnerable to changing temperature regimes – in particular, to the effects of global climate change. There is therefore a growing interest in how increases in global temperature will impact insect populations. Questions about extinction of insect populations are now being asked more frequently \cite{Nilsson2017}. Accordingly, there is a need to continue to improve the accuracy of our prediction of the probability of extinction events in insects – and indeed other animals and plants. 
-
-The life history of insects occurs in well-defined stages. The question thus arises as to how the developmental stage of counted individuals affects demographic conclusions – for example, the probability that a population will go extinct.  We investigate this problem, using populations of tsetse (\textit{Glossina} spp.) as an example. Tsetse are vectors of trypanosomiasis \cite{Wamwiri2016,Kioy2004}, a deadly disease called African sleeping sickness in humans and \textit{nagana} in livestock \cite{Kioy2004}. The life cycle of the fly involves five distinct stages, namely; egg, larva, pupa, newly emerged adult, and mature adult \cite{Ackley2017a}. We ask: how would counting different insect life stages affect our calculation of the probability that an insect population will persist under various circumstances? 
-
-Several workers have developed mathematical models to explore different phenomena in insect population dynamics, but are generally not clear about which developmental stage(s) are being counted \cite{Ylioja1999,Artzrouni2003,Hargrove2005a,Adams2005,Barclay2011d,Peck2012a,Lin2015,Kajunguri2019}.  As far as we are aware, no published work has explicitly considered the implication of counting insects at different stages for the estimation of extinction probabilities for insect populations. Hargrove \cite{Hargrove2005a} developed and analysed a branching process model to derive expressions for extinction probabilities, times to extinction, reproduction number and variance for closed populations of tsetse. The results reported were consistent with earlier work \cite{hargrove1988tsetse} on tsetse vital rates, and showed that small increases in adult female mortality rates could drive any closed population of tsetse to extinction. Kajunguri et al \cite{Kajunguri2019} added proofs and improved on some of the assumptions in \cite{Hargrove2005a}. Are and Hargrove \cite{Are2019} extended this work to provide estimates of extinction probabilities, growth rates, reproduction number and times to extinction as a function of ambient temperature. 
-
-In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing the pioneer population to be composed of  either juveniles, emergent females or mature females. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population starts at any of these different life stages. We discuss the implications of these results for tsetse population persistence, particularly in the context of tsetse control/eradication exercises. 
-
-\subsection{Brief description of tsetse life cycle}
-Female tsetse typically mate once in their life-time: the sperm transferred by a male during mating is sufficient for the female to fertilize all subsequent eggs throughout her life. A female fly produces, typically every 9-11 days, a single larva, which may weigh as much or even more than she does herself.  The larva burrows into the soil and pupates within minutes. The pupal period lasts 30 - 50 days \cite{PhelpsR.J.&Burrows}, depending on soil temperature. After the pupal period, an immature adult emerges. It takes 7-9 days, depending on temperature, for the newly emerged adults to attain full maturation. During this period, females are typically inseminated by a male tsetse, and virtually all will have ovulated by the age of 10 days \cite{Hargrove2012c}. The fully developed adult typically larviposits every 9-11 days afterwards, again depending on temperature \cite{Hargrove2019}. 
-
-%\section{Section title}
-%\label{sec:1}
-%Text with citations \cite{RefB} and \cite{RefJ}.
-%\subsection{Subsection title}
-%\label{sec:2}
-%as required. Don't forget to give each section
-%and subsection a unique label (see Sect.~\ref{sec:1}).
-%\paragraph{Paragraph headings} Use paragraph headings as needed.
-%\begin{equation}
-%a^2+b^2=c^2
-%\end{equation}
-
-% For one-column wide figures use
-
-\section{Mathematical Model}
-Our model of tsetse demography is based on two flow diagrams (Figures \ref{fig:bioflowchart} and \ref{fig:compflowchart}). The first flow diagram illustrates the biological processes associated with tsetse life cycle. The state variables and the parameters are described below.   
-
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Bioflowchart.png}
-	\caption{\textbf{Schematic diagram for tsetse life cycle}. The directed arrows pointing to, and away from, the boxes indicate various biological processes in the life cycle of a female tsetse. These include larviposition, emergence as young adult, and development from young adult to mature adult. The arrows pointing downward show losses at various life stages.}
-	\label{fig:bioflowchart}
-\end{figure}
-
-\begin{itemize}
-	\item[•] $L$: Newly deposited larvae
-	\item[•] $A_{e}$: Emergent adults
-	\item[•] $A_{o}$: Adults in the larviposition loop
-	\item[•] $p_{\ell}$: Probability of completing a larviposition loop 
-	\item[•] $p_d$: Probability of depositing a live female larva 
-	\item[•] $p_e$: Probability a deposited female larva emerges as an adult 
-	\item[•] $p_{\nu}$: Probability a newly emerged adult reaches the larviposition loop 
-\end{itemize}
-
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Compflowchart.png}
-	\caption{\textbf{Schematic diagram for counting tsetse}. The dashed box indicates that the stage at which the individuals are counted can vary. The dashed line from $A_{o}$ to $C$, shows the process of producing offspring that are counted, while the solid line from $C$ to $A_{o}$ indicates the process of being counted, and developing to maturity (reaching larviposition loop).}
-	\label{fig:compflowchart}
-\end{figure}
-
-The second flow diagram presents the counting system. The $C$ inside the dashed box indicates the point where tsetse are counted, while $A_{o}$ is as described above. The counting point can vary: one may choose to count tsetse at the juvenile stages, or at the mature stages i.e. larvipositing females. The framework we present here allows us to calculate the extinction probability and the basic reproduction number for tsetse population, for all possible counting stages. 
-
-The list below defines the various variables and parameters.
-
-\begin{itemize}
-	\item[•] $A_{o}$: Adults entering larviposition loop
-	\item[•] $C$: The census point
-	\item[•]$p_m$: Probability of surviving from being counted to becoming “mature” (entering the loop)
-	\item[•]$p_c$: Probability of surviving from loop completion to producing something that is counted
-	\item[•]$p_r$: Probability of recruitment into the larviposition loop ($p_r = p_mp_c$)
-\end{itemize}
-
-\subsubsection{Model formulation}
-To make our mathematical derivations simple and compact, we use the \textit{odds} associated with the probability that a female completes a larviposition loop and the probability  that it produces a female offspring before dying, to derive the offspring distribution function for tsetse populations.  
-
-An individual at the census point: 
-
-\begin{itemize}
-	\item [•] reaches the loop with probability $p_m$
-	\item [•] either goes around the loop producing offspring that will be counted, or else dies in the process.
-\end{itemize}
-
-The probability $p_b$ of producing before dying  has odds of: 
-$$\sigma_b = \frac{p_b}{1-p_b} = \frac{p_\ell p_c}{1-p_\ell} = \sigma_\ell p_c$$.\\
-
-The total number of censused individuals produced by a censused individual is: 
-
-\begin{itemize}
-	\item [•] 0, if it does not reach the loop (probability $1-p_m$) and
-	\item [•] $k$, which could also be 0, if it reaches the loop and then fails after $k$ successes, with probability $p_m p_b^k (1-p_b)$.\\
-\end{itemize}  
-
-The associated generating function  is:
-
-$$G(s) = 1-p_m + p_m (1-p_b) \sum_k p_b^k s^k = 1-p_m + \frac{p_m (1-p_b)}{1-p_b s}.$$
-
-We get ${\cal R}$, the reproduction number, by calculating $G'(1)$ \cite{bartlett1949some}, where $$G'(s) = \frac{p_m p_b (1-p_b)}{(1-p_b s)^2}.$$  Hence, \\
-
-$ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
-
-The recruitment probabilities $p_m$ and $p_c$ depend on the counting point, but their product $p_r$ will remain the same. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. In other words, the reproductive number is independent of the counting point: the expected number of larvae produced by a larva is equal to the number of the expected number of emergent adults produced by an emergent adult, and so forth.
-
-We get the probability $y$ that a tsetse population, starting with a single individual at a given count point, goes extinct, by solving $G(y) = y$ \cite{bartlett1949some}. We can simplify the calculation by solving   $G(1-z) = 1-z$, where $z$ is the probability of not going extinct, and then factoring out a $z$. This gives:
-
-$$ z = p_m(1-1/{\cal R}).$$  
-By factoring out the $z$, we are assuming that the process is supercritical, that is ${\cal R} > 1$. When ${\cal R} \leq 1$, the population will eventually go extinct with probability 1. 
-
-Thus, the probability of extinction for tsetse populations at any counting point is:
-
-\begin{equation}
-	\label{countExtinction}	
-	y = 1 - p_m(1-1/{\cal R}).	
-\end{equation}
-
-When there is more than one individual in the pioneer population, we calculate the extinction probability by assuming that density dependence in negligible, and that overall extinction would therefore result from the independent extinction of the line starting from each individual. Thus, the extinction probability is:
-
-$$y_j = (1 - p_m(1-1/{\cal R}))^j,$$
-
-where $j$ is the number of individuals of the given stage. We can derive extinction probabilities for tsetse populations at the individual counting points by making simple substitutions for the probabilities of recruitment  between stages in $p_m$  in equation (\ref{countExtinction}), as appropriate. 
-
-\section{Counting tsetse at different life stages}
-
-When we change the counting stages by moving the dashed box (Figure \ref{fig:compflowchart}) closer to the ovulation loop, ${\cal R}$ stays the same but $p_m$ gets larger until it reaches 1 when the dashed box gets to the ovulation loop. We can thus calculate extinction probabilities for each of  the three counting points. We first ask what happens if we start from a single newly deposited female larva.
-The larva reaches the larviposition loop (emerges and then matures) with probability $p_m = p_e p_{\nu}$, completes a larvipositing loop with \textit{odds} $\sigma_\ell$, and produces a surviving female larva with probability $p_c = p_d$. 
-When we make appropriate substitutions in $y$, the extinction probability for a population of tsetse with a newly deposited larva in the initial population is:
-
-$$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}.$$
-
-This can be written more compactly in terms of ${\cal R}$ as:
-
-\begin{equation}
-	\label{larvExtinction}
-	y_l = 1 - p_ep_{\nu}(1-1/{\cal R}).
-\end{equation}
-
-In similar fashion, we can obtain the extinction probability $y_e$ for a tsetse population starting with a single newly emerged adult fly, by substituting  $p_m = p_{\nu}$ in $y$ above.
-We find:
-$$ y_e=\frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{\nu}))}{p_{d}p_{e}p_{\ell}}. $$ This can be rewritten in terms of ${\cal R}$ as:
-
-\begin{equation}
-	\label{emergeExtinction}
-	y_e = 1 - p_{\nu}(1-1/{\cal R}).	
-\end{equation}
-Furthermore, when  larvipositing females are counted, $p_m$ will be equal to 1. The extinction probability $y_o$ for a population of tsetse starting with a single larvipositing female tsetse in the initial population is, therefore:
-
-$$y_o = \frac{1-p_{\ell}}{p_{d}p_{e}p_{\nu}p_{\ell}}.$$
-
-This can be expressed in terms of ${\cal R}$ as:
-
-\begin{equation}
-	\label{matureExtinction}
-	y_o = 1/{\cal R}	
-\end{equation}
-
-It is easily verifiable that whenever ${\cal R}>1$ the following inequality holds:
-\begin{equation}
-	\label{Aretsetsetheorem}
-	y_{o}\leq y_{e} \leq y_{l}
-\end{equation} 
-
-
-\subsection*{\bf Remarks}
-\begin{itemize}
-	\item[•] In our analysis so far, we have focused on populations starting with a single individual in the initial population. In the general case, assuming extinction probabilities for the population starting from each individual for each counting points are independent, the extinction probability for a population starting with $N_l$ larvae, $N_e$ newly emerged adult females and $N_o$ larvipositing adult females, is just the product of the individual extinction probabilities. 
 	
-	$$\tilde{y_c}=y_l^{N_l} y_e^{N_e} y_o^{N_o}.$$
-
-	\item[•] The current analysis focuses strictly on female tsetse populations. We can account for this  by expressing  $p_d$ (probability of depositing a live female larva) as:  $p_d =\delta \beta$, where $\delta$ is the probability that a deposited larva is alive, and $\beta$ the probability that a deposited larva is female.  These two parameters ($\delta$ and $\beta$) will allow us to capture both male:female sex ratio in the population, and  the abortion rates in tsetse population.  If we set $\beta = 0.5$ and $\delta = 1$, the current model corresponds to the model presented in \cite{Hargrove2005a}. 
-\end{itemize}
-
-\subsection{Example 1}
-
-We provide an example to show that previous estimates for extinction probabilities for tsetse populations are special cases of the current framework. It can be shown easily that previous models \cite{Hargrove2005a,Kajunguri2019,Are2019} correspond to the scenario presented above - counting newly emerged adults. In \cite{Are2019}, the following parameters and descriptions were used to derive a probability distribution function for female tsetse populations: 
-\begin{itemize}
-	\item $\epsilon$, the probability that a female is inseminated by a fertile male 
-	\item $\Omega^{\nu}$,  the probability that a newly emerged adult survives until first larviposition
-	\item $ \lambda^{\tau}$, the probability that an adult survives until it deposits a pupa (completes a cycle)
-	\item $\beta$,  the probability that a deposited pupa is female 
-	\item $\phi^{\sigma}$  the probability that a deposited pupa emerges
-\end{itemize}
-
-The probability that a female tsetse produces exactly $k$ surviving daughters in her lifetime is $p_{k}$, given as:
-
-\begin{equation}
-	\label{Johnframework}
-	p_{k}= \frac{\epsilon \Omega^{\nu}\lambda^{k\tau}(1-\lambda^{\tau})\beta^{k}\phi^{k\sigma}}{(1-\beta \lambda^\tau(\frac{1}{\beta} -\phi^{\sigma}))^{k+1}},   k>0   
-\end{equation}
-
-Setting  $ p_{\nu}= \epsilon \Omega^{\nu}$ , $p_{\ell} =\lambda^{\tau} $, $p_{d}=\beta$  and $p_{e} = \phi^{\sigma} $ in  $G(s)$ above,   shows that the models used in the works cited above, are special cases of the current model. 
-
-\section{Results and Discussion}
-\label{section8}
-
-Previous estimates of extinction probabilities for tsetse populations rely on the assumption that the pioneer population is initiated with a number of newly emerged adult female flies, and the probability that such populations go extinct is estimated as a function of different vital rates in tsetse life cycle. The life cycle of holometabolous insects, such as tsetse, can be divided into five distinct stages, egg, larva, pupa, immature adult, mature (larvipositing) adult - each with distinct physiological features, and with differing responses to various environmental factors. In tsetse, for example, the most vulnerable stage is the newly emerged adult, which also appears to be particularly susceptible to high temperatures \cite{Ackley2017a}. Tsetse are unusual in that survival probability is high in the egg and larval stages, which are retained in the mother's uterus \cite{Hargrove1999a}. Here, we have developed a simple, unified model to analyse extinction probabilities when starting from different life stages. 
-
-
-While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases (Fig. \ref{ExtPoineerSize}). This drop-off gets faster for larger populations; when the population is very large, the population size is large; thus the extinction probability as a function of parameters approaches a step function. This effect can be seen in Figure \ref{ExtLarviposMort15indiv}, where 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function.
-
-
-\begin{figure*}[h]
-	\includegraphics[width=0.75\textwidth]{ExtinctionRepNumberPoineerPop.png}
-	\caption{{\bf: Extinction probability as a function of the size of the pioneer population, for different values of basic reproduction number.} When ${\cal R}=1$, extinction probability is always at 1 for all sizes of the initial population.}
-	\label{ExtPoineerSize}
-\end{figure*}
-
-\newpage
-Our modelling framework unifies existing methods for estimating extinction probabilities for tsetse populations. The model only requires a good estimate of the probabilities of recruitment between tsetse life stages to estimate extinction probabilities. Our model presents an opportunity to compare previous estimates for extinction probabilities within a simple unified framework.
-
-When populations are large, extinction probability is either 0 or 1 for all the counting stages. In such situations any life stage can be used as a proxy to estimate extinction probabilities for tsetse populations, as has been done previously \cite{Hargrove2005a,Kajunguri2019}. At low populations, however, counting points become extremely important. For small populations, previous estimates for extinction probabilities underestimated tsetse population persistence when ${\cal R} > 1$. But their conclusions are valid for large populations, as well as for the point where extinction becomes certain.
-
-We considered field situations where the population consists of individuals in the three different life stages, and we made a simplifying assumption that the probability of survival and reproduction, in populations starting with any of the life stages, is independent of the individuals in the other life stages. We then obtained the probability that a population which has individuals in all the three life stages goes extinct as the product of the probabilities of extinction for populations starting with only larvae, newly emerged adult or larvipositing adults respectively. 
-
-Figure \ref{ExtLarviposMort15indiv} shows extinction probabilities as a function of the daily mortality rates for larvipositing adults, for situations where the initial population has either only larvae, newly emerged adults, larvipositing females or individuals of all of the life stages. Current results suggest that regardless of what we assume about the life stages of individuals in the pioneer population, a closed population of tsetse will go extinct, if subjected to sustained daily mortality rates of about 3.5\% (Fig \ref{ExtLarviposMort15indiv}). This is in good agreement with earlier studies that have suggested the same level of mortality for ensuring eradication of tsetse populations \cite{Hargrove2005a,Kajunguri2019}.
-
-\begin{figure*}[h]
-	\includegraphics[width=0.7\textwidth]{Extinction15individuals.png}
-	\caption{{\bf Extinction probability as a function of daily mortality rate for larvipositing adults for different counting systems.}  Pioneer populations consist of 15 larvipositing or 15 newly emerged adults or 15 larvae or, more realistically, 5 individuals in each of the three life stages.}
+	\title{Insect demography: does it matter whether we count babies or mummies?%\thanks{Grants or other notes
+		%about the article that should go on the front page should be
+		%placed here. General acknowledgments should be placed at the end of the article.}
+	}
+	%\subtitle{Do you have a subtitle?\\ If so, write it here}
 	
-	\label{ExtLarviposMort15indiv}
-\end{figure*}
-
-
-The theoretical framework developed previously for estimating extinction probabilities for tsetse populations, assumed that the population starts with a finite number of newly emerged adults. We have shown here that the results from those studies are quite similar to what we got when we make more realistic assumption that the population is initiated with finite number of individuals in each of the three life stages. Moreover, as long as the population size is large, regardless of the assumption around the developmental stage of the pioneer population, we obtained the same result. 
-
-  
-
-\section{Conclusion}
-\label{section9}
-The general model works for all counting points, for different decompositions of the recruitment rates between the life stages. We showed that extinction probabilities calculated using different stages for counting depend on the probability of recruitment between these stages. We found that previous models used to estimate extinction probability for tsetse populations are special cases of the general model. Our results suggest that previous methods which used newly emerged adults as a proxy for estimating extinction probabilities give  results consistent with the estimates obtained when we considered all life stages. And this is true for both large and small population sizes.
-
-We can predict insect population persistence only if we count and calculate carefully, taking account of different stages. We caution that the basic reproduction number is not sufficient to accurately determine insect population persistence. Our results offer insights into population dynamics and provide tools that will help with more detailed models of insect populations. Finally, we advise that demographic studies of insects should be clear about life stages and counting points.
-
-
-%\begin{acknowledgements}
-%If you'd like to thank anyone, place your comments here
-%and remove the percent signs.
-%\end{acknowledgements}
-
-% Authors must disclose all relationships or interests that 
-% could have direct or potential influence or impart bias on 
-% the work: 
-%
- \section*{Conflict of interest}
-%
- The authors declare that they have no conflict of interest.
-
-% BibTeX users please use one of
-%\bibliographystyle{spbasic}      % basic style, author-year citations
-%\bibliographystyle{spmpsci}      % mathematics and physical sciences
-%\bibliographystyle{spphys}       % APS-like style for physics
-\bibliographystyle{ieeetr} %ieeetr spmpsci
-\nocite{*}
-\bibliography{mybibloInsectdemo}   % name your BibTeX data base
-%\printbibliography
-% Non-BibTeX users please use
-%\begin{thebibliography}{}
-%
-% and use \bibitem to create references. Consult the Instructions
-% for authors for reference list style.
-%
-%\bibitem{RefJ}
-%% Format for Journal Reference
-%Author, Article title, Journal, Volume, page numbers (year)
-% Format for books
-%\bibitem{RefB}
-%Author, Book title, page numbers. Publisher, place (year)
-% etc
-%\end{thebibliography}
-
+	%\titlerunning{Short form of title}        % if too long for running head
+	
+	\author{Elisha B. Are \and John W. Hargrove \and Jonathan Dushoff}
+	
+	
+	
+	
+	
+	%\authorrunning{Short form of author list} % if too long for running head
+	
+	\institute{Elisha B. Are \at
+		Centre of Excellence in Epidemiological Modelling and Analysis (SACEMA), University of Stellenbosch, Stellenbosch, South Africa.\\
+		Department of Mathematics, Simon Fraser University, Burnaby, BC, Canada\\
+		Tel.: +27653249688\
+		\email{elishaare@sun.ac.za}           %  \\
+		%             \emph{Present address:} of F. Author  %  if needed
+		\and
+		Jonathan Dushoff \at
+		Department of Biology, McMaster University, Hamilton, Ontario, Canada
+		\and
+		John W. Hargrove \at
+		Centre of Excellence in Epidemiological Modelling and Analysis (SACEMA), University of Stellenbosch, Stellenbosch, South Africa. 
+	}
+	
+	\date{Received: date / Accepted: date}
+	% The correct dates will be entered by the editor
+	
+	\maketitle
+	
+	
+	\begin{abstract}
+		\vskip 0.2cm
+		As insect populations decline, due to climate change and other environmental disruptions, there has been an increased interest in understanding extinction probabilities. Generally, the life cycle of insects occurs in well-defined stages: when counting insects, questions naturally arise about which stage to count and the appropriate point to start counting.	Using tsetse flies (vectors of the trypanosomiasis) as a case study, we develop a model that works for different counting points in the life cycle of a fly. We analyse reproduction numbers and extinction probabilities, and show that several previous models used for estimating extinction probabilities for tsetse populations are special cases of the current model. We establish that the reproduction number is the same for different counting points, but that the extinction probability is different for each counting point. We demonstrate, and provide a biological explanation for, a simple relationship between extinction probabilities for the different counting points, based on the probability of recruitment between stages. These results offer insights into insect population dynamics and provide tools that will help with more detailed models of insect populations. Demographic studies of insects should be clear about life stages and counting points. 
+		\keywords{Extinction probability \and Insect demography \and Tsetse ({\it Glossina} spp) \and Geometric distribution}
+		% \PACS{PACS code1 \and PACS code2 \and more}
+		\subclass{60D05  \and 92B05 \and 60G50 }
+	\end{abstract}
+	
+	\section{Introduction}
+	\label{intro}
+	
+	Insects play key ecological roles, both positive and negative, for the health of plants and animals, including humans, and for the environment in general \cite{Ollerton2011,Ockinger2007}. Many are important vectors of plant and animal diseases, often of public health importance \cite{Tobias2016,Wamwiri2016,Beier1998}, others are beneficial in, for example, pollination, and some serve as a source of protein for massive numbers of species of animals including humans \cite{Ramos-Elorduy1997}. Biologists are accordingly interested in insect population persistence for various reasons. Conservationists are concerned about the ecological implications of extinction of insect populations, while vector biologists are interested in controlling or eliminating insect vectors of disease \cite{Burt2015,Shaw2013,Hocking1963}.  
+	
+	There is evidence of steep declines in insect populations in different parts of the world \cite{Conrad2002,Potts2010,Ilyinykh2011,VanSwaay2013,Lister2018}. Hallmann et al \cite{Hallmann2017} reported a decline of 75\% in the biomass of flying insects over a 27-year period in 63 protected areas of Germany. Similar findings of major decline have been reported across the globe \cite{Habel2015,Pelton2019}. For instance, there was a decline of 50\% in the population abundance of European grassland butterflies between 1990 and 2011 \cite{VanSwaay2013}, and it has been reported that tsetse populations have been declining in the Zambezi Valley of Zimbabwe \cite{Lord2018}. If the magnitude of the declines is as serious as reported, the earth may soon witness extinction of large numbers of insect species. 
+	
+	Insects have limited thermo-regulatory capacity, making them particularly vulnerable to changing temperature regimes – in particular, to the effects of global climate change. There is therefore a growing interest in how increases in global temperature will impact insect populations. Questions about extinction of insect populations are now being asked more frequently \cite{Nilsson2017}. Accordingly, there is a need to continue to improve the accuracy of our prediction of the probability of extinction events in insects – and indeed other animals and plants. 
+	
+	The life history of insects occurs in well-defined stages. The question thus arises as to how the developmental stage of counted individuals affects demographic conclusions – for example, the probability that a population will go extinct.  We investigate this problem, using populations of tsetse (\textit{Glossina} spp.) as an example. Tsetse are vectors of trypanosomiasis \cite{Wamwiri2016,Kioy2004}, a deadly disease called African sleeping sickness in humans and \textit{nagana} in livestock \cite{Kioy2004}. The life cycle of the fly involves five distinct stages, namely; egg, larva, pupa, newly emerged adult, and mature adult \cite{Ackley2017a}. We ask: how would counting different insect life stages affect our calculation of the probability that an insect population will persist under various circumstances? 
+	
+	Several workers have developed mathematical models to explore different phenomena in insect population dynamics, but are generally not clear about which developmental stage(s) are being counted \cite{Ylioja1999,Artzrouni2003,Hargrove2005a,Adams2005,Barclay2011d,Peck2012a,Lin2015,Kajunguri2019}.  As far as we are aware, no published work has explicitly considered the implication of counting insects at different stages for the estimation of extinction probabilities for insect populations. Hargrove \cite{Hargrove2005a} developed and analysed a branching process model to derive expressions for extinction probabilities, times to extinction, reproduction number and variance for closed populations of tsetse. The results reported were consistent with earlier work \cite{hargrove1988tsetse} on tsetse vital rates, and showed that small increases in adult female mortality rates could drive any closed population of tsetse to extinction. Kajunguri et al \cite{Kajunguri2019} added proofs and improved on some of the assumptions in \cite{Hargrove2005a}. Are and Hargrove \cite{Are2019} extended this work to provide estimates of extinction probabilities, growth rates, reproduction number and times to extinction as a function of ambient temperature. 
+	
+	In the above studies, the modelling framework was built on the assumption that the pioneer population starts with one or more newly emerged adult female tsetse. In the current study, by contrast, we  generalise the approach – allowing the pioneer population to be composed of  either juveniles, emergent females or mature females. We establish a relationship between the extinction probabilities for tsetse populations where the pioneer population starts at any of these different life stages. We discuss the implications of these results for tsetse population persistence, particularly in the context of tsetse control/eradication exercises. 
+	
+	\subsection{Brief description of tsetse life cycle}
+	Female tsetse typically mate once in their life-time: the sperm transferred by a male during mating is sufficient for the female to fertilize all subsequent eggs throughout her life. A female fly produces, typically every 9-11 days, a single larva, which may weigh as much or even more than she does herself.  The larva burrows into the soil and pupates within minutes. The pupal period lasts 30 - 50 days \cite{PhelpsR.J.&Burrows}, depending on soil temperature. After the pupal period, an immature adult emerges. It takes 7-9 days, depending on temperature, for the newly emerged adults to attain full maturation. During this period, females are typically inseminated by a male tsetse, and virtually all will have ovulated by the age of 10 days \cite{Hargrove2012c}. The fully developed adult typically larviposits every 9-11 days afterwards, again depending on temperature \cite{Hargrove2019}. 
+	
+	\section{Mathematical Model}
+	\label{model}
+	Our model of tsetse demography is based on two flow diagrams (Figures \ref{fig:bioflowchart} and \ref{fig:compflowchart}). The first flow diagram illustrates the biological processes associated with the tsetse life cycle. The state variables and the parameters are described below.   
+	
+	\begin{figure}[hbt!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Bioflowchart.png}
+		\caption{\textbf{Schematic diagram for tsetse life cycle}. The directed arrows pointing to, and away from, the boxes indicate various biological processes in the life cycle of a female tsetse. These include larviposition, emergence as young adult, and development from young adult to mature adult. The arrows pointing downward show losses at various life stages.}
+		\label{fig:bioflowchart}
+	\end{figure}
+	
+	\begin{itemize}
+		\item[•] $L$: Newly deposited larvae
+		\item[•] $A_{e}$: Emergent adults
+		\item[•] $A_{o}$: Adults in the larviposition loop
+		\item[•] $p_{\ell}$: Probability of completing a larviposition loop 
+		\item[•] $p_d$: Probability of depositing a live female larva 
+		\item[•] $p_e$: Probability a newly deposited female larva emerges as an adult 
+		\item[•] $p_{\nu}$: Probability a newly emerged adult reaches the larviposition loop 
+	\end{itemize}
+	
+	\begin{figure}[hbt!]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Compflowchart.png}
+		\caption{\textbf{Schematic diagram for counting tsetse}. The dashed box indicates that the stage at which the individuals are counted can vary. The dashed line from $A_{o}$ to $C$, shows the process of producing offspring that are counted, while the solid line from $C$ to $A_{o}$ indicates the process of being counted, and developing to maturity (reaching larviposition loop).}
+		\label{fig:compflowchart}
+	\end{figure}
+	
+	The second flow diagram presents the counting system. The $C$ inside the dashed box indicates the point where tsetse are counted, while $A_{o}$ is as described above. The counting point can vary: one may choose to count tsetse at the juvenile stages, or at the mature stages i.e. larvipositing females. The framework we present here allows us to calculate the extinction probability and the basic reproduction number for tsetse population, for all possible counting stages. 
+	
+	The list below defines the various variables and parameters.
+	
+	\begin{itemize}
+		\item[•] $A_{o}$: Adults entering larviposition loop
+		\item[•] $C$: The census point
+		\item[•]$p_m$: Probability of surviving from being counted to becoming “mature” (entering the loop)
+		\item[•]$p_c$: Probability of surviving from loop completion to producing something that is counted
+		\item[•]$p_r$: Probability of recruitment into the larviposition loop ($p_r = p_mp_c$)
+	\end{itemize}
+	
+	\subsubsection{Model formulation}
+	To make our mathematical derivations simple and compact, we use the \textit{odds} associated with the probability that a female completes a larviposition loop and the probability  that it produces a female offspring before dying, to derive the offspring distribution function for tsetse populations.  
+	
+	An individual at the census point: 
+	
+	\begin{itemize}
+		\item [•] reaches the loop with probability $p_m$
+		\item [•] either goes around the loop producing offspring that will be counted, or else dies in the process.
+	\end{itemize}
+	
+	The probability $p_b$ of producing before dying  has odds of: 
+	$$\sigma_b = \frac{p_b}{1-p_b} = \frac{p_\ell p_c}{1-p_\ell} = \sigma_\ell p_c$$.\\
+	
+	The total number of censused individuals produced by a censused individual is: 
+	
+	\begin{itemize}
+		\item [•] 0, if it does not reach the loop (probability $1-p_m$) and
+		\item [•] $k$, which could also be 0, if it reaches the loop and then fails after $k$ successes, with probability $p_m p_b^k (1-p_b)$.\\
+	\end{itemize}  
+	
+	The associated generating function  is:
+	
+	$$G(s) = 1-p_m + p_m (1-p_b) \sum_k p_b^k s^k = 1-p_m + \frac{p_m (1-p_b)}{1-p_b s}.$$
+	
+	We get ${\cal R}$, the reproduction number, by calculating $G'(1)$ \cite{bartlett1949some}, where $$G'(s) = \frac{p_m p_b (1-p_b)}{(1-p_b s)^2}.$$  Hence, \\
+	
+	$ {\cal R}= G'(1) = \frac{p_m p_b}{(1-p_b)} = p_m \sigma_b = p_mp_c \sigma_\ell =  p_r\sigma_\ell$ \\
+	
+	The recruitment probabilities $p_m$ and $p_c$ depend on the counting point, but their product $p_r$ will remain the same. Therefore, ${\cal R} =p_dp_ep_{\nu} \sigma_{\ell}$. In other words, the reproduction number is independent of the counting point: the expected number of larvae produced by a larva is equal to the number of the expected number of emergent adults produced by an emergent adult, and so forth.
+	
+	We get the probability $y$ that a tsetse population, starting with a single individual at a given count point, goes extinct, by solving $G(y) = y$ \cite{bartlett1949some}. We can simplify the calculation by solving   $G(1-z) = 1-z$, where $z$ is the probability of not going extinct, and then factoring out a $z$. This gives:
+	
+	$$ z = p_m(1-1/{\cal R}).$$  
+	By factoring out the $z$, we are assuming that the process is supercritical, that is ${\cal R} > 1$. When ${\cal R} \leq 1$, the population will eventually go extinct with probability 1. 
+	
+	Thus, the probability of extinction for tsetse populations at any counting point is:
+	
+	\begin{equation}
+		\label{countExtinction}	
+		y = 1 - p_m(1-1/{\cal R}).	
+	\end{equation}
+	
+	When there is more than one individual in the pioneer population, we calculate the extinction probability by assuming that density dependence in negligible, and that overall extinction would therefore result from the independent extinction of the line starting from each individual. Thus, the extinction probability is:
+	
+	$$y_j = (1 - p_m(1-1/{\cal R}))^j,$$
+	
+	where $j$ is the number of individuals in the given stage. We can derive extinction probabilities for tsetse populations at the individual counting points by making simple substitutions for the probabilities of recruitment  between stages in $p_m$  in equation (\ref{countExtinction}), as appropriate. 
+	
+	\section{Counting tsetse at different life stages}
+	
+	When we change the counting stages by moving the dashed box (Figure \ref{fig:compflowchart}) closer to the ovulation loop, ${\cal R}$ stays the same but $p_m$ gets larger until it reaches 1 when the dashed box gets to the ovulation loop. We can thus calculate extinction probabilities for each of  the three counting points. We first ask what happens if we start with a single newly deposited female larva.
+	The larva reaches the larviposition loop (emerges and then matures) with probability $p_m = p_e p_{\nu}$, completes a larvipositing loop with \textit{odds} $\sigma_\ell$, and produces a surviving female larva with probability $p_c = p_d$. 
+	When we make appropriate substitutions in $y$, the extinction probability for a population of tsetse with a newly deposited larva in the initial population is:
+	
+	$$y_l = \frac{1-p_{\ell}(1 - p_{d}(1 - p_{e}p_{\nu}))}{p_{\ell}p_{d}}.$$
+	
+	This can be written more compactly in terms of ${\cal R}$ as:
+	
+	\begin{equation}
+		\label{larvExtinction}
+		y_l = 1 - p_ep_{\nu}(1-1/{\cal R}).
+	\end{equation}
+	
+	In similar fashion, we can obtain the extinction probability $y_e$ for a tsetse population starting with a single newly emerged adult fly, by substituting  $p_m = p_{\nu}$ in $y$ above.
+	We find:
+	$$ y_e=\frac{1- p_{\ell}(1 -p_{d}p_{e}(1- p_{\nu}))}{p_{d}p_{e}p_{\ell}}. $$ This can be rewritten in terms of ${\cal R}$ as:
+	
+	\begin{equation}
+		\label{emergeExtinction}
+		y_e = 1 - p_{\nu}(1-1/{\cal R}).	
+	\end{equation}
+	Furthermore, when  larvipositing females are counted, $p_m$ will be equal to 1. The extinction probability $y_o$ for a population of tsetse starting with a single larvipositing female tsetse in the initial population is, therefore:
+	
+	$$y_o = \frac{1-p_{\ell}}{p_{d}p_{e}p_{\nu}p_{\ell}}.$$
+	
+	This can be expressed in terms of ${\cal R}$ as:
+	
+	\begin{equation}
+		\label{matureExtinction}
+		y_o = 1/{\cal R}	
+	\end{equation}
+	
+	It is easily verifiable that whenever ${\cal R}>1$ the following inequality holds:
+	\begin{equation}
+		\label{Aretsetsetheorem}
+		y_{o}\leq y_{e} \leq y_{l}
+	\end{equation} 
+	
+	
+	\subsection*{\bf Remarks}
+	\begin{itemize}
+		\item[•] In our analysis so far, we have focused on populations starting with a single individual in the initial population. In the general case, assuming extinction probabilities for the population starting from each individual for each counting points are independent, the extinction probability for a population starting with $N_l$ larvae, $N_e$ newly emerged adult females and $N_o$ larvipositing adult females, is just the product of the individual extinction probabilities. 
+		
+		$$\tilde{y_c}=y_l^{N_l} y_e^{N_e} y_o^{N_o}.$$
+		
+		\item[•] The current analysis focuses strictly on female tsetse populations. We can account for this  by expressing  $p_d$ (probability of depositing a live female larva) as:  $p_d =\delta \beta$, where $\delta$ is the probability that a deposited larva is alive, and $\beta$ the probability that a deposited larva is female.  These two parameters ($\delta$ and $\beta$) will allow us to capture both male:female sex ratio in the population, and  the abortion rates in tsetse population.  If we set $\beta = 0.5$ and $\delta = 1$, the current model corresponds to the model presented in \cite{Hargrove2005a}. 
+	\end{itemize}
+	
+	\subsection{Example 1}
+	
+	We provide an example to show that previous estimates for extinction probabilities for tsetse populations are special cases of the current framework. It can be shown easily that previous models \cite{Hargrove2005a,Kajunguri2019,Are2019} correspond to the scenario presented above - counting newly emerged adults. In \cite{Are2019}, the following parameters and descriptions were used to derive a probability distribution function for female tsetse populations: 
+	\begin{itemize}
+		\item $\epsilon$, the probability that a female is inseminated by a fertile male 
+		\item $\Omega^{\nu}$,  the probability that a newly emerged adult survives until first larviposition
+		\item $ \lambda^{\tau}$, the probability that an adult survives until it deposits a pupa (completes a cycle)
+		\item $\beta$,  the probability that a deposited pupa is female 
+		\item $\phi^{\sigma}$  the probability that a deposited pupa emerges
+	\end{itemize}
+	Here, the exponents are associated with daily probabilities and represent the number of days an insect needs to survive a given stage.
+	
+	The probability that a female tsetse produces exactly $k$ surviving daughters in her lifetime is $p_{k}$, given as:
+	
+	\begin{equation}
+		\label{Johnframework}
+		p_{k}= \frac{\epsilon \Omega^{\nu}\lambda^{k\tau}(1-\lambda^{\tau})\beta^{k}\phi^{k\sigma}}{(1-\beta \lambda^\tau(\frac{1}{\beta} -\phi^{\sigma}))^{k+1}},   k>0   
+	\end{equation}
+	
+	Setting  $ p_{\nu}= \epsilon \Omega^{\nu}$ , $p_{\ell} =\lambda^{\tau} $, $p_{d}=\beta$  and $p_{e} = \phi^{\sigma} $ in  $G(s)$ above,   shows that the models used in the works cited above, are special cases of the current model. 
+	
+	\section{Results and Discussion}
+	\label{section8}
+	
+	Previous estimates of extinction probabilities for tsetse populations rely on the assumption that the pioneer population is initiated with a number of newly emerged adult female flies, and the probability that such populations go extinct is estimated as a function of different vital rates in the tsetse life cycle. The life cycle of holometabolous insects, such as tsetse, can be divided into five distinct stages, egg, larva, pupa, immature adult, mature (larvipositing) adult - each with distinct physiological features, and with differing responses to various environmental factors. In tsetse, for example, the most vulnerable stage is the newly emerged adult, which also appears to be particularly susceptible to high temperatures \cite{Ackley2017a}. Tsetse are unusual in that survival probability is high in the egg and larval stages, which are retained in the mother's uterus \cite{Hargrove1999a}. Here, we have developed a simple, unified model to analyse extinction probabilities when starting from different life stages. 
+	
+	
+	While extinction probabilities change with the life stage of pioneer individuals, decreasing as we move from larvae to mature adults,  we have confirmed that the basic reproduction number remains the same for all counting points under a given set of parameters. When the reproduction number is ${\cal R} \leq 1$, extinction is certain for all the counting systems. Once \Rx\ crosses 1, the extinction probability will fall to zero as \Rx\ increases (Fig. \ref{ExtPoineerSize}). This drop-off gets faster for larger populations: thus, the extinction probability as a function of parameters approaches a step function. This effect can be seen in Figure \ref{ExtLarviposMort15indiv}, where a starting point of 15 larvipositing adults is already stable enough that the extinction probability begins to look like a step function of underlying parameters.
+	
+	\begin{figure*}[h]
+		\includegraphics[width=0.75\textwidth]{ExtinctionRepNumberPoineerPop.png}
+		\caption{{\bf: Extinction probability as a function of the size of the pioneer population, for different values of the basic reproduction number.} When ${\cal R}=1$, the extinction probability is 1 regardless of initial population size.}
+		\label{ExtPoineerSize}
+	\end{figure*}
+	
+	\newpage
+	Our modelling framework unifies existing methods for estimating extinction probabilities for tsetse populations. The model only requires a good estimate of the probabilities of recruitment between tsetse life stages to estimate extinction probabilities. Our model presents an opportunity to compare previous estimates for extinction probabilities within a simple unified framework.
+	
+	When populations are large, extinction probability is either 0 or 1 for all the counting stages. In such situations any life stage can be used as a proxy to estimate extinction probabilities for tsetse populations, as has been done previously \cite{Hargrove2005a,Kajunguri2019}. At low populations, however, counting points become extremely important. For small populations, previous estimates for extinction probabilities underestimated tsetse population persistence when ${\cal R} > 1$. But their conclusions are valid for large populations, as well as for the point where extinction becomes certain.
+	
+	We considered field situations where the population consists of individuals in the three different life stages, and we made a simplifying assumption that the probability of survival and reproduction, in populations starting with any of the life stages, is independent of the individuals in the other life stages. We then obtained the probability that a population which has individuals in all the three life stages goes extinct as the product of the probabilities of extinction for populations starting with only larvae, newly emerged adult or larvipositing adults, respectively. 
+	
+	Figure \ref{ExtLarviposMort15indiv} shows extinction probabilities as a function of the daily mortality rates for larvipositing adults, for situations where the initial population has either only larvae, newly emerged adults, larvipositing females or individuals of all of the life stages. Current results suggest that $\Rx<1$ when adult mortality is around 3.5\% or higher. Thus, if this level of mortality is sustained, we expect population extinction regardless of initial population size or stage distribution (Fig \ref{ExtLarviposMort15indiv}). This is in good agreement with earlier studies that have suggested the same level of mortality for ensuring eradication of tsetse populations \cite{Hargrove2005a,Kajunguri2019}.
+	
+	\begin{figure*}[h]
+		\includegraphics[width=0.7\textwidth]{Extinction15individuals.png}
+		\caption{{\bf Extinction probability as a function of daily mortality rate for larvipositing adults for different counting systems.}  Pioneer populations consist of 15 larvipositing or 15 newly emerged adults or 15 larvae or, more realistically, 5 individuals in each of the three life stages.}
+		
+		\label{ExtLarviposMort15indiv}
+	\end{figure*}
+	
+	
+	The theoretical framework developed previously for estimating extinction probabilities for tsetse populations assumed that the population starts with a finite number of newly emerged adults. We have shown here that the results remain similar when we consider different life stages in the starting population. In particular, if starting population size is large, the distribution does not matter and survival depends only on the average value of \Rx.  
+	
+	\section{Conclusion}
+	\label{Conclusion}
+	The general model works for all counting points, for different decompositions of the recruitment rates between the life stages. We showed that extinction probabilities calculated using different stages for counting depend on the probability of recruitment between these stages. We found that previous models used to estimate extinction probability for tsetse populations are special cases of the general model. Our results suggest that previous methods which used newly emerged adults as a proxy for estimating extinction probabilities give  results consistent with the estimates obtained when we considered all life stages. And this is true for both large and small population sizes.
+	
+	We can predict insect population persistence only if we count and calculate carefully, taking account of different stages. We caution that the basic reproduction number is not sufficient to accurately determine insect population persistence. Our results offer insights into population dynamics and provide tools that will help with more detailed models of insect populations. Finally, we advise that demographic studies of insects should be clear about life stages and counting points.
+	
+	
+	%\begin{acknowledgements}
+	%If you'd like to thank anyone, place your comments here
+	%and remove the percent signs.
+	%\end{acknowledgements}
+	
+	% Authors must disclose all relationships or interests that 
+	% could have direct or potential influence or impart bias on 
+	% the work: 
+	%
+	\section*{Conflict of interest}
+	%
+	The authors declare that they have no conflict of interest.
+	
+	% BibTeX users please use one of
+	%\bibliographystyle{spbasic}      % basic style, author-year citations
+	%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+	%\bibliographystyle{spphys}       % APS-like style for physics
+	\bibliographystyle{ieeetr} %ieeetr spmpsci
+	\nocite{*}
+	\bibliography{mybibloInsectdemo}   % name your BibTeX data base
+	%\printbibliography
+	% Non-BibTeX users please use
+	%\begin{thebibliography}{}
+	%
+	% and use \bibitem to create references. Consult the Instructions
+	% for authors for reference list style.
+	%
+	%\bibitem{RefJ}
+	%% Format for Journal Reference
+	%Author, Article title, Journal, Volume, page numbers (year)
+	% Format for books
+	%\bibitem{RefB}
+	%Author, Book title, page numbers. Publisher, place (year)
+	% etc
+	%\end{thebibliography}
+	
 \end{document}
 % end of file template.tex
-
-
